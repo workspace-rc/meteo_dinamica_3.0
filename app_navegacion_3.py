@@ -102,7 +102,7 @@ def main():
                     lluvia_prob = horario['precipitation_probability'][idx]
                     altitud = data['elevation_msnm']
                     hielo = horario['freezing_level_height'][idx]
-                    presion atm = horario['surface_pressure'][idx]
+                    presion_atm = horario['surface_pressure'][idx]
 
                     # --- LÓGICA DE ALERTAS ---
                     alertas = []
