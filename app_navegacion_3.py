@@ -110,25 +110,39 @@ def main():
                     # Extraer valores
                     temp = horario['temperature_2m'][idx]
                     viento = horario['windspeed_10m'][idx]
-                    prob_lluvia = horario['precipitation_probability'][idx]
+                    nubosidad = horario['cloud_cover'][idx]
+                    lluvia_cant = horario['rain'][idx]
+                    lluvia_prob = horario['precipitation_probability'][idx]
                     rafagas = horario['windgusts_10m'][idx]
+                    presion_api = horario['surface_pressure'][idx]
                     nivel_hielo = horario['freezing_level_height'][idx]
-                    
+
+                    sunrise = data['daily']['sunrise'][-1][-5:] if 'daily' in data else '--:--'
+                    sunset  = data['daily']['sunset'][-1][-5:]  if 'daily' in data els
+                
                     # Lógica de Alertas Absolutas
                     alertas = []
                     if viento > 45: alertas.append("💨 VIENTO FUERTE")
                     if temp < 3: alertas.append("❄️ RIESGO HIELO")
                     if prob_lluvia > 70: alertas.append("🌧️ ALTA PROB. LLUVIA")
+                    if lluvia_cant > 3: alertas.append("🧥 USA TRAJE")
                     
                     resultados.append({
-                        "KM": i * DIST_SUBTRAMO,
-                        "HORA": hora_paso.strftime('%H:%M'),
-                        "Temp (°C)": temp,
-                        "Viento (km/h)": round(viento, 1),
-                        "Ráfagas (km/h)": round(rafagas, 1),
-                        "Lluvia (%)": prob_lluvia,
-                        "Altitud 0°C (m)": nivel_hielo,
                         "ALERTAS": " | ".join(alertas),
+                        "KM": i * DIST_SUBTRAMO,
+                        "Altitud (msnm)": int(altitud_m)
+                        "HORA": hora_paso.strftime('%H:%M'),
+                        "Primera luz": sunrise,
+                        "Última luz": sunset,
+                        "Temp (°C)": temp,
+                        "Lluvia (mm)": lluvia_cant,
+                        "Lluvia (%)": lluvia_prob,
+                        "Nubes (%)": nubosidad,
+                        "Viento (km/h)": viento,
+                        "Ráfagas (km/h)": rafagas,
+                        "Presión (hpa)": presion_api,
+                        "Altitud 0°C (m)": nivel_hielo,
+                        
                         "lat": lat,
                         "lon": lon
                     })
