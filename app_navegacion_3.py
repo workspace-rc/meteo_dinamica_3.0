@@ -6,6 +6,7 @@ import numpy as np
 from shapely.geometry import LineString
 from datetime import datetime, timedelta
 import os
+import re
 
 # --- 1. CONFIGURACIÓN DE PÁGINA ---
 st.set_page_config(page_title="Navegador Meteorológico Chile", layout="wide")
@@ -57,7 +58,13 @@ HORA_FORMATEADA = f"{int(HORA_SALIDA):02d}:00"
 VEL_PROMEDIO = st.sidebar.slider("Velocidad promedio (km/h)", 20, 120, 50, step=10)
 DIST_SUBTRAMO = st.sidebar.slider("Resolución: Chequeo cada (km)", 0, 100, 20, step=10)
 
-archivos_disponibles = [f for f in os.listdir('.') if f.endswith(".csv")]
+# solo archivos que empiecen con "prevision_dia" y terminen en ".csv"
+archivos_disponibles = [f for f in os.listdir('.') if f.startswith("prevision_dia") and f.endswith(".csv")]
+
+# comando de ordenamiento
+archivos_disponibles.sort(key=lambda f: int(re.search(r'\d+', f).group()) if re.search(r'\d+', f) else 0)
+
+# presentacion
 CSV_RUTA = st.sidebar.selectbox("Archivo de ruta:", options=archivos_disponibles) if archivos_disponibles else None
 
 # --- 4. LÓGICA PRINCIPAL ---
