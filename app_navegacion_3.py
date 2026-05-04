@@ -125,7 +125,7 @@ def main():
                         "Lluvia (%)": lluvia_prob,
                         "Lluvia (mm)": lluvia_cant,
                         "Viento (km/h)": viento,
-                        "hPa": presion atm,
+                        "hPa": presion_atm,
                         "lat": lat, "lon": lon
                     })
 
