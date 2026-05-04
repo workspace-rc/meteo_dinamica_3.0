@@ -102,6 +102,7 @@ def main():
                     lluvia_prob = horario['precipitation_probability'][idx]
                     altitud = data['elevation_msnm']
                     hielo = horario['freezing_level_height'][idx]
+                    presion atm = horario['surface_pressure'][idx]
 
                     # --- LÓGICA DE ALERTAS ---
                     alertas = []
@@ -118,12 +119,13 @@ def main():
                         "KM": int(i * DIST_SUBTRAMO),
                         "HORA": hora_paso.strftime('%H:%M'),
                         "ALTITUD (m)": int(altitud),
-                        "ALERTAS": " | ".join(alertas),
+                        "ALERTAS": " | | ".join(alertas),
                         "Temp (°C)": temp,
-                        "Lluvia (mm)": lluvia_cant,
-                        "Lluvia (%)": lluvia_prob,
-                        "Viento (km/h)": viento,
                         "Altitud 0°C (m)": hielo,
+                        "Lluvia (%)": lluvia_prob,
+                        "Lluvia (mm)": lluvia_cant,
+                        "Viento (km/h)": viento,
+                        "hPa": presion atm,
                         "lat": lat, "lon": lon
                     })
 
