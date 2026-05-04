@@ -126,23 +126,68 @@ def main():
                         "lat": lat, "lon": lon
                     })
 
+            # --- SECCIÓN DE VISUALIZACIÓN (CÓDIGO IDEAL) ---
             if resultados:
+                estado_simulacion.success(f"✅ Plan de navegación completado para {FECHA_TRAMO}")
                 df_final = pd.DataFrame(resultados)
-                st.subheader("📋 Planificación por Subtramos")
-                st.dataframe(df_final.drop(columns=['lat', 'lon']), use_container_width=True)
 
-                # Mapa
-                view_state = pdk.ViewState(latitude=df_final['lat'].mean(), longitude=df_final['lon'].mean(), zoom=6)
+                st.subheader("📋 Resultados del Análisis")
+                st.dataframe(df_final, use_container_width=True)
+
+                st.subheader("🗺️ Trazado de la Ruta y Puntos de Análisis")
+                
+                view_state = pdk.ViewState(
+                    latitude=df_final['lat'].mean(),
+                    longitude=df_final['lon'].mean(),
+                    zoom=6,
+                    pitch=0
+                )
+
+                capa_ruta = pdk.Layer(
+                    "PathLayer",
+                    data=[{"path": df_final[['lon', 'lat']].values.tolist()}],
+                    get_path="path",
+                    get_color=[255, 0, 0, 150], 
+                    get_width=5,
+                    width_min_pixels=3,
+                )
+
+                capa_puntos = pdk.Layer(
+                    "ScatterplotLayer",
+                    data=df_final,
+                    get_position="[lon, lat]",
+                    get_color=[30, 144, 255, 200], 
+                    get_radius=1500,
+                    radius_min_pixels=6,
+                    pickable=True,
+                )
+
                 st.pydeck_chart(pdk.Deck(
+                    # MAPA SATELITAL
+                    map_style="mapbox://styles/mapbox/satellite-streets-v11",
                     initial_view_state=view_state,
-                    layers=[
-                        pdk.Layer("PathLayer", data=[{"path": df_final[['lon', 'lat']].values.tolist()}], get_path="path", get_color=[255, 0, 0], get_width=8),
-                        pdk.Layer("ScatterplotLayer", data=df_final, get_position="[lon, lat]", get_color=[30, 144, 255], get_radius=1500, pickable=True)
-                    ],
-                    tooltip={"text": "KM: {KM}\nAltitud: {ALTITUD (m)}m\nAlertas: {ALERTAS}"}
+                    layers=[capa_ruta, capa_puntos],
+                    tooltip={
+                        "html": "<b>Subtramo:</b> {KM} km<br/><b>Altitud:</b> {Altitud (msnm)} msnm<br/><b>Hora:</b> {HORA}<br/><b>Alertas:</b> {ALERTAS}",
+                        "style": {"backgroundColor": "#002b36", "color": "white"}
+                    }
                 ))
+
+                # --- Lógica de Descarga ---
+                dia_num = CSV_RUTA.replace("prevision_dia ", "").replace(".csv", "")
+                ahora_analisis = datetime.now().strftime("%Y%m%d_%H%M")
+                nombre_salida = f"Tramo{dia_num}_{FECHA_TRAMO}_Analizado_{ahora_analisis}.csv"
+                csv_bytes = df_final.to_csv(index=False).encode('utf-8')
+                
+                st.download_button(
+                    label=f"📥 Descargar {nombre_salida}",
+                    data=csv_bytes,
+                    file_name=nombre_salida,
+                    mime='text/csv'
+                )
+
         except Exception as e:
-            st.error(f"Error: {e}")
+            st.error(f"❌ Error durante el proceso: {e}")
 
 if __name__ == "__main__":
     main()
