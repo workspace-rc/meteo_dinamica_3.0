@@ -151,7 +151,7 @@ def main():
 
             # --- VISUALIZACIÓN ---
                 df_final = pd.DataFrame(resultados)
-
+            
                 # Tabla
                 st.subheader("📋 Planificación por Subtramos")
                 st.dataframe(df_final, use_container_width=True)
@@ -159,48 +159,16 @@ def main():
                 # Mapa
                 st.subheader("🗺️ Visualización Geográfica")
                 view_state = pdk.ViewState(latitude=df_final['lat'].mean(), longitude=df_final['lon'].mean(), zoom=7)
-
-                # 1. Preparar datos
-                ruta_coords = df_final[['lon', 'lat']].values.tolist()
-                view_state = pdk.ViewState(
-                    latitude=df_final['lat'].mean(),
-                    longitude=df_final['lon'].mean(),
-                    zoom=6,
-                    pitch=0
-                )
-
-                # 2. Definir capas
-                capa_ruta = pdk.Layer(
-                    "PathLayer",
-                    data=[{"path": df_final[['lon', 'lat']].values.tolist()}],
-                    get_path="path",
-                    get_color=[255, 0, 0, 150], 
-                    get_width=5,
-                    width_min_pixels=3,
-                )
-
-                capa_puntos = pdk.Layer(
-                    "ScatterplotLayer",
-                    data=df_final,
-                    get_position="[lon, lat]",
-                    get_color=[30, 144, 255, 200], 
-                    get_radius=1500, #radio en metros
-                    radius_min_pixels=6,
-                    pickable=True,
-                )
-
-                # 3. Renderizar
+            
                 st.pydeck_chart(pdk.Deck(
-                    # Usamos un estilo de mapa base de Pydeck que siempre funciona
-                    map_provider="carto",
-                    map_style="light", 
+                    map_style="mapbox://styles/mapbox/light-v9",
                     initial_view_state=view_state,
-                    layers=[capa_ruta, capa_puntos],
-                    tooltip={
-                        "html": "<b>Subtramo:</b> {KM} km<br/><b>Altitud:</b> {Altitud (msnm)} msnm<br/><b>Hora:</b> {HORA}<br/><b>Alertas:</b> {ALERTAS}",
-                        "style": {"backgroundColor": "#002b36", "color": "white"}
-                    }
-                ))
+                    layers=[
+                        pdk.Layer("PathLayer", data=[{"path": df_final[['lon', 'lat']].values.tolist()}], get_path="path", get_color=[255, 0, 0], get_width=5),
+                        pdk.Layer("ScatterplotLayer", data=df_final, get_position="[lon, lat]", get_color=[30, 144, 255], get_radius=1000)
+                    ],
+                    tooltip={"text": "KM: {KM}\nHora: {HORA}\nAlertas: {ALERTAS}"}
+                ))
 
         except Exception as e:
             st.error(f"Hubo un problema al procesar el archivo: {e}")
