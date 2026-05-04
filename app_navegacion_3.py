@@ -26,7 +26,7 @@ def consultar_api(lat, lon, fecha_str):
         "hourly": [
             "temperature_2m",
             "precipitation_probability",
-            "precipitation",
+            "rain",
             "cloud_cover",
             "windspeed_10m",
             "winddirection_10m",
@@ -130,7 +130,7 @@ def main():
                     resultados.append({
                         "ALERTAS": " | ".join(alertas),
                         "KM": i * DIST_SUBTRAMO,
-                        "Altitud (msnm)": int(altitud_m)
+                        "Altitud (msnm)": int(altitud_m),
                         "HORA": hora_paso.strftime('%H:%M'),
                         "Primera luz": sunrise,
                         "Última luz": sunset,
