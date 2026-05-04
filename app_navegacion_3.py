@@ -150,7 +150,9 @@ def main():
                     continue
 
             # --- VISUALIZACIÓN ---
-            # 1. Preparar datos
+                df_final = pd.DataFrame(resultados)
+
+                # 1. Preparar datos
                 ruta_coords = df_final[['lon', 'lat']].values.tolist()
                 view_state = pdk.ViewState(
                     latitude=df_final['lat'].mean(),
