@@ -149,7 +149,16 @@ def main():
                 st.subheader("📋 Resultados del Análisis")
                 st.dataframe(df_final, use_container_width=True)
 
+                # distancia total
+                distancia_final = df_final['KM'].max()
+
+                #tiempo total estimado según velocidad promedio
+                tiempo_total_horas = distancia_final / VEL_PROMEDIO
+                horas = int(tiempo_total_horas)
+                minutos = int((tiempo_total_horas - horas) * 60)
+                
                 st.subheader("🗺️ Trazado de la Ruta y Puntos de Análisis")
+                st.markdown(f"##### 📍 **Distancia Total:** {distancia_final} km | ⏳ **Tiempo Estimado:** {horas}h {minutos}min (@{VEL_PROMEDIO} km/h)")
                 
                 view_state = pdk.ViewState(
                     latitude=df_final['lat'].mean(),
