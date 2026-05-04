@@ -104,8 +104,8 @@ def main():
                     hielo = horario['freezing_level_height'][idx]
                     presion_atm = horario['surface_pressure'][idx]
                     nubosidad = horario['cloud_cover'][idx]
-                    amanece = data['sunrise'][idx]
-                    anochece = data['sunset'][idx]
+                    amanece = horario['sunrise'][idx]
+                    anochece = horario['sunset'][idx]
 
                     # --- LÓGICA DE ALERTAS ---
                     alertas = []
