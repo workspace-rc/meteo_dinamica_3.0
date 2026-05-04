@@ -77,7 +77,7 @@ def main():
             distancia_total_km = linea.length * 111.1 
             
             num_subtramos = int(distancia_total_km // DIST_SUBTRAMO) + 1
-            hora_inicio = datetime.strptime(f"{FECHA_TRAMO} {HORA_SALIDA}", "%Y-%m-%d %H:%M")
+            hora_inicio = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
             
             resultados = []
             barra_progreso = st.progress(0)
