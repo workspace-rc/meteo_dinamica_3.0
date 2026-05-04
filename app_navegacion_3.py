@@ -118,7 +118,7 @@ def main():
                     nivel_hielo = horario['freezing_level_height'][idx]
 
                     sunrise = data['daily']['sunrise'][-1][-5:] if 'daily' in data else '--:--'
-                    sunset  = data['daily']['sunset'][-1][-5:]  if 'daily' in data els
+                    sunset  = data['daily']['sunset'][-1][-5:]  if 'daily' in data else '--:--'
                 
                     # Lógica de Alertas Absolutas
                     alertas = []
