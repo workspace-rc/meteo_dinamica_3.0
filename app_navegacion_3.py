@@ -103,6 +103,9 @@ def main():
                     altitud = data['elevation_msnm']
                     hielo = horario['freezing_level_height'][idx]
                     presion_atm = horario['surface_pressure'][idx]
+                    nubosidad = horario['cloud_cover'][idx]
+                    amanece = data['sunrise'][idx]
+                    anochece = data['sunset'][idx]
 
                     # --- LÓGICA DE ALERTAS ---
                     alertas = []
@@ -120,10 +123,13 @@ def main():
                         "HORA": hora_paso.strftime('%H:%M'),
                         "ALERTAS": " | | ".join(alertas),
                         "ALTITUD (m)": int(altitud),
+                        "Amanece": amanece,
+                        "Anochece": anochece,
                         "Temp (°C)": temp,
                         "Altitud 0°C (m)": hielo,
                         "Lluvia (%)": lluvia_prob,
                         "Lluvia (mm)": lluvia_cant,
+                        "Nubes": nubosidad,
                         "Viento (km/h)": viento,
                         "hPa": presion_atm,
                         "lat": lat, "lon": lon
