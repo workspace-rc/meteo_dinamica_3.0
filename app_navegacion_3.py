@@ -152,6 +152,14 @@ def main():
             # --- VISUALIZACIÓN ---
                 df_final = pd.DataFrame(resultados)
 
+                # Tabla
+                st.subheader("📋 Planificación por Subtramos")
+                st.dataframe(df_final, use_container_width=True)
+
+                # Mapa
+                st.subheader("🗺️ Visualización Geográfica")
+                view_state = pdk.ViewState(latitude=df_final['lat'].mean(), longitude=df_final['lon'].mean(), zoom=7)
+
                 # 1. Preparar datos
                 ruta_coords = df_final[['lon', 'lat']].values.tolist()
                 view_state = pdk.ViewState(
