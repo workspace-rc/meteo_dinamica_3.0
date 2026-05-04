@@ -128,7 +128,7 @@ def main():
 
             # --- SECCIÓN DE VISUALIZACIÓN (CÓDIGO IDEAL) ---
             if resultados:
-                estado_simulacion.success(f"✅ Plan de navegación completado para {FECHA_TRAMO}")
+                contenedor_estado.success(f"✅ Plan de navegación completado para {FECHA_TRAMO}")
                 df_final = pd.DataFrame(resultados)
 
                 st.subheader("📋 Resultados del Análisis")
