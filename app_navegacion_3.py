@@ -53,7 +53,7 @@ st.sidebar.header("⚙️ Parámetros de Travesía")
 fecha_dt = st.sidebar.date_input("Fecha del tramo", value=datetime.now())
 FECHA_TRAMO = fecha_dt.strftime("%Y-%m-%d")
 HORA_SALIDA = st.sidebar.number_input("Hora de salida (0-23)", min_value=0, max_value=23, value=9, step=1)
-HORA_FORMATEADA = f"{int(HORA_SOLO):02d}:00"
+HORA_FORMATEADA = f"{int(HORA_SALIDA):02d}:00"
 VEL_PROMEDIO = st.sidebar.slider("Velocidad promedio (km/h)", 5, 120, 50, step=10)
 DIST_SUBTRAMO = st.sidebar.slider("Resolución: Chequeo cada (km)", 5, 100, 20, step=10)
 
