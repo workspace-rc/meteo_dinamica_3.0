@@ -163,7 +163,7 @@ def main():
 
                 st.pydeck_chart(pdk.Deck(
                     # MAPA SATELITAL
-                    map_style="mapbox://styles/mapbox/satellite-streets-v11",
+                    map_style="mapbox://styles/mapbox/light-v9",
                     initial_view_state=view_state,
                     layers=[capa_ruta, capa_puntos],
                     tooltip={
