@@ -118,8 +118,8 @@ def main():
                     resultados.append({
                         "KM": int(i * DIST_SUBTRAMO),
                         "HORA": hora_paso.strftime('%H:%M'),
-                        "ALTITUD (m)": int(altitud),
                         "ALERTAS": " | | ".join(alertas),
+                        "ALTITUD (m)": int(altitud),
                         "Temp (°C)": temp,
                         "Altitud 0°C (m)": hielo,
                         "Lluvia (%)": lluvia_prob,
