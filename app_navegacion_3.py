@@ -104,9 +104,9 @@ def main():
                     hielo = horario['freezing_level_height'][idx]
                     presion_atm = horario['surface_pressure'][idx]
                     nubosidad = horario['cloud_cover'][idx]
-                    amanece = daily['sunrise'][idx]
-                    anochece = daily['sunset'][idx]
-
+                    amanece = data['daily']['sunrise'][0][-5:]
+                    anochece = data['daily']['sunset'][0][-5:]
+                    
                     # --- LÓGICA DE ALERTAS ---
                     alertas = []
                     if viento > 45: alertas.append("💨 VIENTO")
