@@ -71,39 +71,58 @@ CSV_RUTA = st.sidebar.selectbox("Archivo de ruta:", options=archivos_disponibles
 def main():
     st.title("🛰️ Navegador Meteorológico Táctico")
     
+    # Contenedor para mensajes de estado
+    contenedor_estado = st.empty()
+
     if CSV_RUTA and st.sidebar.button("🚀 Iniciar Análisis", use_container_width=True):
+        contenedor_estado.info("⏳ Procesando archivo de ruta...")
+        
         try:
-            df_ruta = pd.read_csv(CSV_RUTA)
-            
-            # --- NORMALIZACIÓN DE COLUMNAS (Para evitar el error 'X') ---
-            # Convertimos todos los nombres de columnas a minúsculas para comparar
-            columnas_actuales = {col.lower(): col for col in df_ruta.columns}
-            
-            # Buscamos posibles nombres para Longitud (X) y Latitud (Y)
-            posibles_x = ['x', 'lon', 'longitude', 'longitud', 'lng']
-            posibles_y = ['y', 'lat', 'latitude', 'latitud']
-            
-            col_x = next((columnas_actuales[p] for p in posibles_x if p in columnas_actuales), None)
-            col_y = next((columnas_actuales[p] for p in posibles_y if p in columnas_actuales), None)
+            # --- 1. LEER EL ARCHIVO COMO TEXTO PLANO ---
+            with open(CSV_RUTA, 'r', encoding='utf-8') as f:
+                contenido = f.read()
 
-            if not col_x or not col_y:
-                st.error(f"❌ El CSV no tiene columnas de coordenadas reconocibles. Columnas detectadas: {list(df_ruta.columns)}")
-                st.stop()
+            # --- 2. EXTRAER COORDENADAS (Soporta GPX y CSV) ---
+            import re
+            # Esta línea busca lat="número" y lon="número" (formato de tu archivo OsmAnd)
+            lats = re.findall(r'lat="([-?0-9.]+)"', contenido)
+            lons = re.findall(r'lon="([-?0-9.]+)"', contenido)
 
-            # Renombramos internamente para trabajar tranquilos
-            df_ruta = df_ruta.rename(columns={col_x: 'X', col_y: 'Y'})
+            if lats and lons:
+                # Si encontró el formato GPX/XML
+                puntos_ruta = []
+                for la, lo in zip(lats, lons):
+                    puntos_ruta.append({'X': float(lo), 'Y': float(la)})
+                df_ruta = pd.DataFrame(puntos_ruta)
+            else:
+                # Si no es GPX, intentamos leerlo como CSV normal (tu código anterior)
+                import io
+                df_ruta = pd.read_csv(io.StringIO(contenido))
+                
+                columnas_actuales = {col.lower(): col for col in df_ruta.columns}
+                posibles_x = ['x', 'lon', 'longitude', 'longitud', 'lng']
+                posibles_y = ['y', 'lat', 'latitude', 'latitud']
+                
+                col_x = next((columnas_actuales[p] for p in posibles_x if p in columnas_actuales), None)
+                col_y = next((columnas_actuales[p] for p in posibles_y if p in columnas_actuales), None)
 
-            # Limpieza de datos (por si vienen con comillas o formatos extraños)
-            for col in ['X', 'Y']:
-                if df_ruta[col].dtype == object:
-                    df_ruta[col] = pd.to_numeric(df_ruta[col].str.replace('"', '').str.replace("'", "").str.replace(",", "."), errors='coerce')
-            
-            # Eliminar filas con coordenadas nulas
+                if col_x and col_y:
+                    df_ruta = df_ruta.rename(columns={col_x: 'X', col_y: 'Y'})
+                else:
+                    st.error(f"❌ No se hallaron coordenadas. Columnas detectadas: {list(df_ruta.columns)}")
+                    st.stop()
+
+            # --- 3. LIMPIEZA FINAL Y GEOMETRÍA ---
+            df_ruta['X'] = pd.to_numeric(df_ruta['X'], errors='coerce')
+            df_ruta['Y'] = pd.to_numeric(df_ruta['Y'], errors='coerce')
             df_ruta = df_ruta.dropna(subset=['X', 'Y'])
             
             puntos = list(zip(df_ruta['X'], df_ruta['Y']))
             linea = LineString(puntos)
-            distancia_total_km = linea.length * 111.1 
+            distancia_total_km = linea.length * 111.1
+            
+            # A partir de aquí sigue el resto de tu código (num_subtramos, for i in range...)
+
             
             num_subtramos = int(distancia_total_km // DIST_SUBTRAMO) + 1
             hora_inicio = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
