@@ -65,7 +65,7 @@ archivos_disponibles = [f for f in os.listdir('.') if f.startswith("prevision_di
 archivos_disponibles.sort(key=lambda f: int(re.search(r'\d+', f).group()) if re.search(r'\d+', f) else 0)
 
 # presentacion
-CSV_RUTA = st.sidebar.selectbox("Archivo de ruta:", options=archivos_disponibles) if archivos_disponibles else None
+CSV_RUTA = st.sidebar.selectbox("Archivo de ruta:", options=archivos_disponibles) if archivos_disponibles else L ---
 
 # --- 4. LÓGICA PRINCIPAL ---
 def main():
@@ -120,6 +120,9 @@ def main():
             puntos = list(zip(df_ruta['X'], df_ruta['Y']))
             linea = LineString(puntos)
             distancia_total_km = linea.length * 111.1
+            
+            # A partir de aquí sigue el resto de tu código (num_subtramos, for i in range...)
+
             
             # A partir de aquí sigue el resto de tu código (num_subtramos, for i in range...)
 
