@@ -79,7 +79,6 @@ def main():
         contenedor_estado.info("⏳ Extrayendo ruta desde OsmAnd GPX...")
         CU
         try:
-                    try:
             # --- 1. LEER EL ARCHIVO ---
             with open(CSV_RUTA, 'r', encoding='utf-8') as f:
                 contenido = f.read()
