@@ -77,47 +77,72 @@ def main():
     contenedor_estado = st.empty()
 
     if CSV_RUTA and st.sidebar.button("🚀 Iniciar Análisis", use_container_width=True):
-        contenedor_estado.info(f"⏳ Analizando ruta para el {FECHA_TRAMO}...")
+        contenedor_estado = st.empty()
+        contenedor_estado.info(f"⏳ Procesando ruta: {CSV_RUTA}...")
         
         try:
-            # --- LÓGICA DE LECTURA ROBUSTA (Para GPX y CSV) ---
-            with open(CSV_RUTA, 'r', encoding='utf-8') as f:
-                contenido = f.read()
-
             import re
-            # Extraemos lat y lon directamente del texto (ideal para tu archivo OsmAnd)
-            lats = re.findall(r'lat="?([-?0-9.]+)"?', contenido)
-            lons = re.findall(r'lon="?([-?0-9.]+)"?', contenido)
+            import zipfile
+            import io
 
-            if lats and lons:
-                puntos_ruta = []
-                for la, lo in zip(lats, lons):
-                    puntos_ruta.append({'X': float(lo), 'Y': float(la)})
-                df_ruta = pd.DataFrame(puntos_ruta)
+            # --- 1. LECTURA DEL ARCHIVO (Soporta KMZ, KML, GPX, CSV) ---
+            if CSV_RUTA.endswith(".kmz"):
+                with zipfile.ZipFile(CSV_RUTA, 'r') as z:
+                    kml_name = [f for f in z.namelist() if f.endswith('.kml')][0]
+                    with z.open(kml_name) as f:
+                        contenido = f.read().decode('utf-8')
             else:
-                # Si no es GPX, procesar como CSV normal
-                import io
-                df_ruta = pd.read_csv(io.StringIO(contenido))
-                columnas_actuales = {col.lower(): col for col in df_ruta.columns}
-                posibles_x = ['x', 'lon', 'longitude', 'longitud', 'lng']
-                posibles_y = ['y', 'lat', 'latitude', 'latitud']
-                
-                col_x = next((columnas_actuales[p] for p in posibles_x if p in columnas_actuales), None)
-                col_y = next((columnas_actuales[p] for p in posibles_y if p in columnas_actuales), None)
+                with open(CSV_RUTA, 'r', encoding='utf-8') as f:
+                    contenido = f.read()
 
-                if col_x and col_y:
-                    df_ruta = df_ruta.rename(columns={col_x: 'X', col_y: 'Y'})
-                else:
-                    st.error(f"❌ No se hallaron coordenadas. Columnas: {list(df_ruta.columns)}")
-                    st.stop()
-
-            # Limpieza de datos
-            df_ruta = df_ruta.dropna(subset=['X', 'Y'])
+            # --- 2. EXTRACCIÓN DE COORDENADAS ---
+            puntos_ruta = []
             
-            # --- A PARTIR DE AQUÍ SIGUE TU CÓDIGO ORIGINAL SIN CAMBIOS ---
+            # Caso KML (Google Earth)
+            if "<coordinates>" in contenido:
+                coord_bloques = re.findall(r'<coordinates>(.*?)</coordinates>', contenido, re.DOTALL)
+                all_coords = " ".join(coord_bloques).replace('\n', ' ').strip().split()
+                for entry in all_coords:
+                    parts = entry.split(',')
+                    if len(parts) >= 2:
+                        puntos_ruta.append({'X': float(parts[0]), 'Y': float(parts[1])})
+            
+            # Caso GPX (OsmAnd) - FILTRADO PARA EVITAR EL SALTO AL INICIO
+            # Buscamos SOLO etiquetas <trkpt>, ignorando los <wpt> (Waypoints)
+            elif '<trkpt' in contenido:
+                # Esta regex es más estricta: solo captura puntos dentro de tracks
+                segmentos = re.findall(r'<trkpt.*?lat="([-?0-9.]+)" lon="([-?0-9.]+)".*?>', contenido, re.DOTALL)
+                for la, lo in segmentos:
+                    puntos_ruta.append({'X': float(lo), 'Y': float(la)})
+            
+            # Caso CSV convencional
+            else:
+                df_temp = pd.read_csv(io.StringIO(contenido))
+                cols = {c.lower(): c for c in df_temp.columns}
+                col_x = next((cols[p] for p in ['x', 'lon', 'longitude', 'lng'] if p in cols), None)
+                col_y = next((cols[p] for p in ['y', 'lat', 'latitude'] if p in cols), None)
+                if col_x and col_y:
+                    for _, row in df_temp.iterrows():
+                        puntos_ruta.append({'X': float(row[col_x]), 'Y': float(row[col_y])})
+
+            # --- 3. VALIDACIÓN Y LIMPIEZA ---
+            if not puntos_ruta:
+                st.error("No se encontraron puntos de coordenadas válidos.")
+                st.stop()
+
+            df_ruta = pd.DataFrame(puntos_ruta)
+            df_ruta = df_ruta.dropna(subset=['X', 'Y'])
+            # Eliminar duplicados de posición consecutivos
+            df_ruta = df_ruta[(df_ruta[['X', 'Y']].shift() != df_ruta[['X', 'Y']]).any(axis=1)]
+
+            # --- 4. CÁLCULO DE GEOMETRÍA (Aquí se define la línea) ---
             puntos = list(zip(df_ruta['X'], df_ruta['Y']))
             linea = LineString(puntos)
             distancia_total_km = linea.length * 111.1
+            
+            # --- CONTINÚA TU CÓDIGO ORIGINAL DESDE AQUÍ ---
+            # (El bucle for de consulta de clima, la tabla de resultados y el mapa)
+
 
             num_subtramos = int(distancia_total_km // DIST_SUBTRAMO) + 1
             hora_inicio = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
