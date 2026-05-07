@@ -65,9 +65,8 @@ archivos_disponibles = [f for f in os.listdir('.') if f.startswith("prevision_di
 archivos_disponibles.sort(key=lambda f: int(re.search(r'\d+', f).group()) if re.search(r'\d+', f) else 0)
 
 # presentacion
-CSV_RUTA = st.sidebar.selectbox("Archivo de ruta:", options=archivos_disponibles) if archivos_disponibles else L ---
+CSV_RUTA = st.sidebar.selectbox("Archivo de ruta:", options=archivos_disponibles) if archivos_disponibles else None
 
-# --- 4. LÓGICA PRINCIPAL ---
 # --- 4. LÓGICA PRINCIPAL ---
 def main():
     st.title("🛰️ Navegador Meteorológico Táctico")
