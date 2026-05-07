@@ -68,6 +68,7 @@ archivos_disponibles.sort(key=lambda f: int(re.search(r'\d+', f).group()) if re.
 CSV_RUTA = st.sidebar.selectbox("Archivo de ruta:", options=archivos_disponibles) if archivos_disponibles else L ---
 
 # --- 4. LÓGICA PRINCIPAL ---
+# --- 4. LÓGICA PRINCIPAL ---
 def main():
     st.title("🛰️ Navegador Meteorológico Táctico")
     
@@ -123,10 +124,8 @@ def main():
             
             # A partir de aquí sigue el resto de tu código (num_subtramos, for i in range...)
 
-            
             # A partir de aquí sigue el resto de tu código (num_subtramos, for i in range...)
 
-            
             num_subtramos = int(distancia_total_km // DIST_SUBTRAMO) + 1
             hora_inicio = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
             
