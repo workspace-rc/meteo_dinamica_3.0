@@ -59,14 +59,16 @@ HORA_FORMATEADA = f"{int(HORA_SALIDA):02d}:00"
 VEL_PROMEDIO = st.sidebar.slider("Velocidad promedio (km/h)", 20, 120, 50, step=10)
 DIST_SUBTRAMO = st.sidebar.slider("Resolución: Chequeo cada (km)", 0, 100, 20, step=10)
 
-# solo archivos que empiecen con "prevision_dia" y terminen en ".csv"
-archivos_disponibles = [f for f in os.listdir('.') if f.startswith("prevision_dia") and f.endswith(".csv")]
 
-# comando de ordenamiento
+# --- 3. INTERFAZ (SIDEBAR) ---
+# Filtramos archivos que terminen en .csv O .gpx
+archivos_disponibles = [f for f in os.listdir('.') if f.endswith(".csv") or f.endswith(".gpx")]
+
+# Ordenamiento natural (01, 02, 10...)
 archivos_disponibles.sort(key=lambda f: int(re.search(r'\d+', f).group()) if re.search(r'\d+', f) else 0)
 
-# presentacion
 CSV_RUTA = st.sidebar.selectbox("Archivo de ruta:", options=archivos_disponibles) if archivos_disponibles else None
+
 
 # --- 4. LÓGICA PRINCIPAL ---
 def main():
@@ -75,60 +77,50 @@ def main():
 
     if CSV_RUTA and st.sidebar.button("🚀 Iniciar Análisis", use_container_width=True):
         contenedor_estado.info("⏳ Extrayendo ruta desde OsmAnd GPX...")
-        
+        CU
         try:
-            # 1. Leer el archivo completo como texto
+                    try:
+            # --- 1. LEER EL ARCHIVO ---
             with open(CSV_RUTA, 'r', encoding='utf-8') as f:
                 contenido = f.read()
 
-            # 2. Buscar coordenadas con Regex (Formato OsmAnd: lat="-39.642" lon="-72.333")
-            # Buscamos tanto en etiquetas de puntos de track <trkpt> como de waypoints <wpt>
-            lats = re.findall(r'lat="([-?0-9.]+)"', contenido)
-            lons = re.findall(r'lon="([-?0-9.]+)"', contenido)
+            # --- 2. INTENTO DE LECTURA GPX (OsmAnd) ---
+            import re
+            lats = re.findall(r'lat="?([-?0-9.]+)"?', contenido)
+            lons = re.findall(r'lon="?([-?0-9.]+)"?', contenido)
 
-            if lats and lons and len(lats) == len(lons):
-                # Si encontró el formato GPX, creamos el DataFrame directamente
+            if lats and lons:
                 puntos_ruta = []
                 for la, lo in zip(lats, lons):
                     puntos_ruta.append({'X': float(lo), 'Y': float(la)})
                 df_ruta = pd.DataFrame(puntos_ruta)
-                
-                # Eliminamos duplicados consecutivos (común en GPX)
-                df_ruta = df_ruta[(df_ruta[['X', 'Y']].shift() != df_ruta[['X', 'Y']]).any(axis=1)]
-                
             else:
-                # Si no parece un GPX, intentamos cargarlo como CSV convencional
+                # --- 3. SI NO ES GPX, INTENTO DE LECTURA CSV ---
+                import io
                 df_ruta = pd.read_csv(io.StringIO(contenido))
-                # (Aquí iría tu lógica anterior de buscar columnas lon/lat en el CSV)
-                columnas_actuales = {col.lower(): col for col in df_ruta.columns}
-                col_x = next((columnas_actuales[p] for p in ['x', 'lon', 'longitude', 'lng'] if p in columnas_actuales), None)
-                col_y = next((columnas_actuales[p] for p in ['y', 'lat', 'latitude'] if p in columnas_actuales), None)
                 
+                columnas_actuales = {col.lower(): col for col in df_ruta.columns}
+                posibles_x = ['x', 'lon', 'longitude', 'longitud', 'lng']
+                posibles_y = ['y', 'lat', 'latitude', 'latitud']
+                
+                col_x = next((columnas_actuales[p] for p in posibles_x if p in columnas_actuales), None)
+                col_y = next((columnas_actuales[p] for p in posibles_y if p in columnas_actuales), None)
+
                 if col_x and col_y:
                     df_ruta = df_ruta.rename(columns={col_x: 'X', col_y: 'Y'})
                 else:
-                    st.error("No se encontraron coordenadas válidas en el archivo.")
+                    st.error(f"❌ No se hallaron coordenadas. Columnas: {list(df_ruta.columns)}")
                     st.stop()
 
-            # 3. Limpieza y validación de datos
-            df_ruta['X'] = pd.to_numeric(df_ruta['X'], errors='coerce')
-            df_ruta['Y'] = pd.to_numeric(df_ruta['Y'], errors='coerce')
+            # --- 4. LIMPIEZA Y GEOMETRÍA (Lo que sigue en tu código) ---
             df_ruta = df_ruta.dropna(subset=['X', 'Y'])
-
-            if len(df_ruta) < 2:
-                st.error("La ruta debe tener al menos 2 puntos.")
-                st.stop()
+            puntos = list(zip(df_ruta['X'], df_ruta['Y']))
+            linea = LineString(puntos)
 
             # 4. Procesamiento Geométrico
             puntos = list(zip(df_ruta['X'], df_ruta['Y']))
             linea = LineString(puntos)
-            distancia_total_km = linea.length * 111.1
-            
-            # --- CONTINÚA EL RESTO DE TU CÓDIGO (Bucle de clima, etc.) ---
-            # ...
-
-
-            # A partir de aquí sigue el resto de tu código (num_subtramos, for i in range...)
+            distancia_total_km = linea.length * 
 
             num_subtramos = int(distancia_total_km // DIST_SUBTRAMO) + 1
             hora_inicio = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
