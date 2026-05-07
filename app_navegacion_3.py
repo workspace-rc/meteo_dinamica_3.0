@@ -69,22 +69,23 @@ archivos_disponibles.sort(key=lambda f: int(re.search(r'\d+', f).group()) if re.
 
 CSV_RUTA = st.sidebar.selectbox("Archivo de ruta:", options=archivos_disponibles) if archivos_disponibles else None
 
-
 # --- 4. LÓGICA PRINCIPAL ---
 def main():
     st.title("🛰️ Navegador Meteorológico Táctico")
+    
+    # Reparación del error CU: Definición completa de la variable
     contenedor_estado = st.empty()
 
     if CSV_RUTA and st.sidebar.button("🚀 Iniciar Análisis", use_container_width=True):
-        contenedor_estado.info("⏳ Extrayendo ruta desde OsmAnd GPX...")
-        CU
+        contenedor_estado.info(f"⏳ Analizando ruta para el {FECHA_TRAMO}...")
+        
         try:
-            # --- 1. LEER EL ARCHIVO ---
+            # --- LÓGICA DE LECTURA ROBUSTA (Para GPX y CSV) ---
             with open(CSV_RUTA, 'r', encoding='utf-8') as f:
                 contenido = f.read()
 
-            # --- 2. INTENTO DE LECTURA GPX (OsmAnd) ---
             import re
+            # Extraemos lat y lon directamente del texto (ideal para tu archivo OsmAnd)
             lats = re.findall(r'lat="?([-?0-9.]+)"?', contenido)
             lons = re.findall(r'lon="?([-?0-9.]+)"?', contenido)
 
@@ -94,10 +95,9 @@ def main():
                     puntos_ruta.append({'X': float(lo), 'Y': float(la)})
                 df_ruta = pd.DataFrame(puntos_ruta)
             else:
-                # --- 3. SI NO ES GPX, INTENTO DE LECTURA CSV ---
+                # Si no es GPX, procesar como CSV normal
                 import io
                 df_ruta = pd.read_csv(io.StringIO(contenido))
-                
                 columnas_actuales = {col.lower(): col for col in df_ruta.columns}
                 posibles_x = ['x', 'lon', 'longitude', 'longitud', 'lng']
                 posibles_y = ['y', 'lat', 'latitude', 'latitud']
@@ -111,12 +111,10 @@ def main():
                     st.error(f"❌ No se hallaron coordenadas. Columnas: {list(df_ruta.columns)}")
                     st.stop()
 
-            # --- 4. LIMPIEZA Y GEOMETRÍA (Lo que sigue en tu código) ---
+            # Limpieza de datos
             df_ruta = df_ruta.dropna(subset=['X', 'Y'])
-            puntos = list(zip(df_ruta['X'], df_ruta['Y']))
-            linea = LineString(puntos)
-
-            # 4. Procesamiento Geométrico
+            
+            # --- A PARTIR DE AQUÍ SIGUE TU CÓDIGO ORIGINAL SIN CAMBIOS ---
             puntos = list(zip(df_ruta['X'], df_ruta['Y']))
             linea = LineString(puntos)
             distancia_total_km = linea.length * 111.1
