@@ -74,10 +74,32 @@ def main():
     if CSV_RUTA and st.sidebar.button("🚀 Iniciar Análisis", use_container_width=True):
         try:
             df_ruta = pd.read_csv(CSV_RUTA)
-            # Limpieza de coordenadas
+            
+            # --- NORMALIZACIÓN DE COLUMNAS (Para evitar el error 'X') ---
+            # Convertimos todos los nombres de columnas a minúsculas para comparar
+            columnas_actuales = {col.lower(): col for col in df_ruta.columns}
+            
+            # Buscamos posibles nombres para Longitud (X) y Latitud (Y)
+            posibles_x = ['x', 'lon', 'longitude', 'longitud', 'lng']
+            posibles_y = ['y', 'lat', 'latitude', 'latitud']
+            
+            col_x = next((columnas_actuales[p] for p in posibles_x if p in columnas_actuales), None)
+            col_y = next((columnas_actuales[p] for p in posibles_y if p in columnas_actuales), None)
+
+            if not col_x or not col_y:
+                st.error(f"❌ El CSV no tiene columnas de coordenadas reconocibles. Columnas detectadas: {list(df_ruta.columns)}")
+                st.stop()
+
+            # Renombramos internamente para trabajar tranquilos
+            df_ruta = df_ruta.rename(columns={col_x: 'X', col_y: 'Y'})
+
+            # Limpieza de datos (por si vienen con comillas o formatos extraños)
             for col in ['X', 'Y']:
                 if df_ruta[col].dtype == object:
-                    df_ruta[col] = pd.to_numeric(df_ruta[col].str.replace('"', '').str.replace("'", ""))
+                    df_ruta[col] = pd.to_numeric(df_ruta[col].str.replace('"', '').str.replace("'", "").str.replace(",", "."), errors='coerce')
+            
+            # Eliminar filas con coordenadas nulas
+            df_ruta = df_ruta.dropna(subset=['X', 'Y'])
             
             puntos = list(zip(df_ruta['X'], df_ruta['Y']))
             linea = LineString(puntos)
