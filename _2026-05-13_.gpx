@@ -63,163 +63,205 @@
         </extensions>
     </wpt>
     <rte>
-        <rtept lat="-37.3108406" lon="-73.3688192">
+        <rtept lat="-37.2438168" lon="-73.3202348">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
                 <osmand:trkpt_idx>0</osmand:trkpt_idx>
+            </extensions>
+        </rtept>
+        <rtept lat="-37.2451576" lon="-73.3217166">
+            <extensions>
+                <osmand:profile>motorcycle_1778244898</osmand:profile>
+                <osmand:trkpt_idx>21</osmand:trkpt_idx>
+            </extensions>
+        </rtept>
+        <rtept lat="-37.2455386" lon="-73.3244509">
+            <extensions>
+                <osmand:profile>motorcycle_1778244898</osmand:profile>
+                <osmand:trkpt_idx>30</osmand:trkpt_idx>
+            </extensions>
+        </rtept>
+        <rtept lat="-37.2459343" lon="-73.327231">
+            <extensions>
+                <osmand:profile>motorcycle_1778244898</osmand:profile>
+                <osmand:trkpt_idx>40</osmand:trkpt_idx>
+            </extensions>
+        </rtept>
+        <rtept lat="-37.2462423" lon="-73.3292604">
+            <extensions>
+                <osmand:profile>motorcycle_1778244898</osmand:profile>
+                <osmand:trkpt_idx>49</osmand:trkpt_idx>
+            </extensions>
+        </rtept>
+        <rtept lat="-37.2695494" lon="-73.3542508">
+            <extensions>
+                <osmand:profile>motorcycle_1778244898</osmand:profile>
+                <osmand:trkpt_idx>186</osmand:trkpt_idx>
+            </extensions>
+        </rtept>
+        <rtept lat="-37.2867799" lon="-73.3551297">
+            <extensions>
+                <osmand:profile>motorcycle_1778244898</osmand:profile>
+                <osmand:trkpt_idx>278</osmand:trkpt_idx>
+            </extensions>
+        </rtept>
+        <rtept lat="-37.3108406" lon="-73.3688192">
+            <extensions>
+                <osmand:profile>motorcycle_1778244898</osmand:profile>
+                <osmand:trkpt_idx>430</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.3061097" lon="-73.4373833">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>410</osmand:trkpt_idx>
+                <osmand:trkpt_idx>840</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.3009628" lon="-73.4399753">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>449</osmand:trkpt_idx>
+                <osmand:trkpt_idx>879</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.3182182" lon="-73.5373263">
             <extensions>
                 <osmand:profile>motorcycle</osmand:profile>
-                <osmand:trkpt_idx>1052</osmand:trkpt_idx>
+                <osmand:trkpt_idx>1482</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.5882573" lon="-73.6357161">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>2322</osmand:trkpt_idx>
+                <osmand:trkpt_idx>2752</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.5787675" lon="-73.6413039">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>2467</osmand:trkpt_idx>
+                <osmand:trkpt_idx>2897</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.5825331" lon="-73.6419465">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>2609</osmand:trkpt_idx>
+                <osmand:trkpt_idx>3039</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.5980468" lon="-73.654854">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>2644</osmand:trkpt_idx>
+                <osmand:trkpt_idx>3074</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.6044449" lon="-73.6470341">
             <extensions>
                 <osmand:profile>motorcycle</osmand:profile>
-                <osmand:trkpt_idx>2691</osmand:trkpt_idx>
+                <osmand:trkpt_idx>3121</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.627818" lon="-73.4564406">
             <extensions>
                 <osmand:profile>motorcycle</osmand:profile>
-                <osmand:trkpt_idx>3089</osmand:trkpt_idx>
+                <osmand:trkpt_idx>3519</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.6713489" lon="-73.3889659">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>3292</osmand:trkpt_idx>
+                <osmand:trkpt_idx>3722</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.6716308" lon="-73.3892445">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>3299</osmand:trkpt_idx>
+                <osmand:trkpt_idx>3729</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.6782171" lon="-73.3977362">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>3335</osmand:trkpt_idx>
+                <osmand:trkpt_idx>3765</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.7073741" lon="-73.4159796">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>3395</osmand:trkpt_idx>
+                <osmand:trkpt_idx>3825</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.7691183" lon="-73.4373345">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>3520</osmand:trkpt_idx>
+                <osmand:trkpt_idx>3950</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.7780701" lon="-73.4301598">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>3526</osmand:trkpt_idx>
+                <osmand:trkpt_idx>3956</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.7834111" lon="-73.4216448">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>3538</osmand:trkpt_idx>
+                <osmand:trkpt_idx>3968</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.793718" lon="-73.4146794">
             <extensions>
                 <osmand:profile>motorcycle_1778244898</osmand:profile>
-                <osmand:trkpt_idx>3563</osmand:trkpt_idx>
+                <osmand:trkpt_idx>3993</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.801653" lon="-73.4047795">
             <extensions>
                 <osmand:profile>motorcycle</osmand:profile>
-                <osmand:trkpt_idx>3587</osmand:trkpt_idx>
+                <osmand:trkpt_idx>4017</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.8032509" lon="-73.4020043">
             <extensions>
                 <osmand:profile>motorcycle</osmand:profile>
-                <osmand:trkpt_idx>3608</osmand:trkpt_idx>
+                <osmand:trkpt_idx>4038</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-37.8046451" lon="-73.4023791">
             <extensions>
                 <osmand:profile>motorcycle</osmand:profile>
-                <osmand:trkpt_idx>3615</osmand:trkpt_idx>
+                <osmand:trkpt_idx>4045</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-38.3472315" lon="-73.4899295">
             <extensions>
                 <osmand:profile>motorcycle</osmand:profile>
-                <osmand:trkpt_idx>4441</osmand:trkpt_idx>
+                <osmand:trkpt_idx>4871</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
         <rtept lat="-38.7136291" lon="-73.1670944">
             <extensions>
-                <osmand:trkpt_idx>6351</osmand:trkpt_idx>
+                <osmand:trkpt_idx>6781</osmand:trkpt_idx>
                 <osmand:color>#00000000</osmand:color>
             </extensions>
         </rtept>
@@ -227,6 +269,1296 @@
     <trk>
         <name>_2026-05-13_</name>
         <trkseg>
+            <trkpt lat="-37.2438317" lon="-73.3202315">
+                <ele>11</ele>
+            </trkpt>
+            <trkpt lat="-37.243837" lon="-73.3202675">
+                <ele>11</ele>
+            </trkpt>
+            <trkpt lat="-37.2440228" lon="-73.3214664">
+                <ele>11.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2440292" lon="-73.3215013">
+                <ele>11.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2440441" lon="-73.3216006">
+                <ele>11</ele>
+            </trkpt>
+            <trkpt lat="-37.2440057" lon="-73.3216086">
+                <ele>11</ele>
+            </trkpt>
+            <trkpt lat="-37.2439971" lon="-73.3216301">
+                <ele>11</ele>
+            </trkpt>
+            <trkpt lat="-37.2439907" lon="-73.3216569">
+                <ele>11</ele>
+            </trkpt>
+            <trkpt lat="-37.2439907" lon="-73.321681">
+                <ele>11</ele>
+            </trkpt>
+            <trkpt lat="-37.2439971" lon="-73.3217105">
+                <ele>11</ele>
+            </trkpt>
+            <trkpt lat="-37.2440078" lon="-73.3217347">
+                <ele>11</ele>
+            </trkpt>
+            <trkpt lat="-37.2440249" lon="-73.3217588">
+                <ele>11.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2440591" lon="-73.3217508">
+                <ele>11.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2440911" lon="-73.3217454">
+                <ele>11.3</ele>
+            </trkpt>
+            <trkpt lat="-37.2441829" lon="-73.3217266">
+                <ele>11.4</ele>
+            </trkpt>
+            <trkpt lat="-37.2450583" lon="-73.321555">
+                <ele>13</ele>
+            </trkpt>
+            <trkpt lat="-37.2451395" lon="-73.3215389">
+                <ele>13</ele>
+            </trkpt>
+            <trkpt lat="-37.2451822" lon="-73.3215308">
+                <ele>13</ele>
+            </trkpt>
+            <trkpt lat="-37.2451928" lon="-73.321622">
+                <ele>13</ele>
+            </trkpt>
+            <trkpt lat="-37.2452014" lon="-73.3216757">
+                <ele>13</ele>
+            </trkpt>
+            <trkpt lat="-37.2452053" lon="-73.321707">
+                <ele>13</ele>
+            </trkpt>
+            <trkpt lat="-37.2452053" lon="-73.321707">
+                <ele>13</ele>
+            </trkpt>
+            <trkpt lat="-37.2453359" lon="-73.3227271">
+                <ele>13.2</ele>
+            </trkpt>
+            <trkpt lat="-37.245353" lon="-73.3228558">
+                <ele>13.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2453701" lon="-73.3229819">
+                <ele>13</ele>
+            </trkpt>
+            <trkpt lat="-37.2453786" lon="-73.323065">
+                <ele>12.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2454042" lon="-73.3232689">
+                <ele>12.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2455281" lon="-73.324264">
+                <ele>14.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2455451" lon="-73.3243927">
+                <ele>14.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2455516" lon="-73.3244486">
+                <ele>14.6</ele>
+            </trkpt>
+            <trkpt lat="-37.2455516" lon="-73.3244486">
+                <ele>14.6</ele>
+            </trkpt>
+            <trkpt lat="-37.2455601" lon="-73.3245215">
+                <ele>14.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2456049" lon="-73.3248729">
+                <ele>15</ele>
+            </trkpt>
+            <trkpt lat="-37.2457138" lon="-73.3257365">
+                <ele>15.9</ele>
+            </trkpt>
+            <trkpt lat="-37.2457245" lon="-73.3258143">
+                <ele>16</ele>
+            </trkpt>
+            <trkpt lat="-37.2457416" lon="-73.3259538">
+                <ele>16</ele>
+            </trkpt>
+            <trkpt lat="-37.2457928" lon="-73.3263481">
+                <ele>15.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2458825" lon="-73.3270669">
+                <ele>15</ele>
+            </trkpt>
+            <trkpt lat="-37.2459017" lon="-73.3272117">
+                <ele>15</ele>
+            </trkpt>
+            <trkpt lat="-37.2459049" lon="-73.3272371">
+                <ele>15.1</ele>
+            </trkpt>
+            <trkpt lat="-37.2459049" lon="-73.3272371">
+                <ele>15.1</ele>
+            </trkpt>
+            <trkpt lat="-37.2459124" lon="-73.3272949">
+                <ele>15.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2459999" lon="-73.3279788">
+                <ele>14.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2461152" lon="-73.3288667">
+                <ele>13.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2461344" lon="-73.3290195">
+                <ele>13.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2461643" lon="-73.3292556">
+                <ele>13</ele>
+            </trkpt>
+            <trkpt lat="-37.2461921" lon="-73.3292502">
+                <ele>13.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2462327" lon="-73.3292475">
+                <ele>13.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2462441" lon="-73.3292516">
+                <ele>13.6</ele>
+            </trkpt>
+            <trkpt lat="-37.2462441" lon="-73.3292516">
+                <ele>13.6</ele>
+            </trkpt>
+            <trkpt lat="-37.2462647" lon="-73.3292583">
+                <ele>13.8</ele>
+            </trkpt>
+            <trkpt lat="-37.246301" lon="-73.329277">
+                <ele>14</ele>
+            </trkpt>
+            <trkpt lat="-37.2463437" lon="-73.3293173">
+                <ele>14.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2464867" lon="-73.3294728">
+                <ele>16</ele>
+            </trkpt>
+            <trkpt lat="-37.2466768" lon="-73.3296901">
+                <ele>16.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2467622" lon="-73.3297867">
+                <ele>17.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2470547" lon="-73.3301219">
+                <ele>17.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2471871" lon="-73.3302721">
+                <ele>17.3</ele>
+            </trkpt>
+            <trkpt lat="-37.2473323" lon="-73.330425">
+                <ele>17</ele>
+            </trkpt>
+            <trkpt lat="-37.2480539" lon="-73.3311653">
+                <ele>18.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2481329" lon="-73.3312511">
+                <ele>19.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2482055" lon="-73.3313236">
+                <ele>20</ele>
+            </trkpt>
+            <trkpt lat="-37.2482738" lon="-73.3314013">
+                <ele>20.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2483721" lon="-73.331522">
+                <ele>21</ele>
+            </trkpt>
+            <trkpt lat="-37.248735" lon="-73.3320209">
+                <ele>24</ele>
+            </trkpt>
+            <trkpt lat="-37.2491813" lon="-73.3324125">
+                <ele>27.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2493222" lon="-73.3325145">
+                <ele>28.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2494652" lon="-73.3325762">
+                <ele>30</ele>
+            </trkpt>
+            <trkpt lat="-37.2496531" lon="-73.3325681">
+                <ele>33.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2499862" lon="-73.3325011">
+                <ele>40.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2502381" lon="-73.3325064">
+                <ele>45</ele>
+            </trkpt>
+            <trkpt lat="-37.2504388" lon="-73.3325842">
+                <ele>47</ele>
+            </trkpt>
+            <trkpt lat="-37.2506011" lon="-73.3327425">
+                <ele>47.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2510067" lon="-73.3334854">
+                <ele>45</ele>
+            </trkpt>
+            <trkpt lat="-37.2511476" lon="-73.333641">
+                <ele>44.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2513184" lon="-73.3337483">
+                <ele>45.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2515575" lon="-73.3338046">
+                <ele>47</ele>
+            </trkpt>
+            <trkpt lat="-37.2520635" lon="-73.3338475">
+                <ele>51.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2525076" lon="-73.3339709">
+                <ele>53.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2527574" lon="-73.3341184">
+                <ele>54.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2530136" lon="-73.3344081">
+                <ele>57.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2531545" lon="-73.3347246">
+                <ele>59.2</ele>
+            </trkpt>
+            <trkpt lat="-37.253178" lon="-73.3349606">
+                <ele>60.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2532079" lon="-73.3352181">
+                <ele>62</ele>
+            </trkpt>
+            <trkpt lat="-37.253225" lon="-73.3352959">
+                <ele>62.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2532463" lon="-73.3353683">
+                <ele>62.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2532698" lon="-73.3354408">
+                <ele>63</ele>
+            </trkpt>
+            <trkpt lat="-37.2533082" lon="-73.3355212">
+                <ele>63.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2533509" lon="-73.3355963">
+                <ele>64</ele>
+            </trkpt>
+            <trkpt lat="-37.2533979" lon="-73.3356687">
+                <ele>64.5</ele>
+            </trkpt>
+            <trkpt lat="-37.253874" lon="-73.3362266">
+                <ele>70.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2539615" lon="-73.3363152">
+                <ele>71.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2540533" lon="-73.3363929">
+                <ele>72.8</ele>
+            </trkpt>
+            <trkpt lat="-37.254143" lon="-73.3364573">
+                <ele>73.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2542327" lon="-73.336511">
+                <ele>74.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2543266" lon="-73.3365592">
+                <ele>75.2</ele>
+            </trkpt>
+            <trkpt lat="-37.255488" lon="-73.3371171">
+                <ele>86.2</ele>
+            </trkpt>
+            <trkpt lat="-37.255584" lon="-73.3371708">
+                <ele>87.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2556801" lon="-73.3372271">
+                <ele>88.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2557719" lon="-73.3372915">
+                <ele>89</ele>
+            </trkpt>
+            <trkpt lat="-37.2558936" lon="-73.33738">
+                <ele>89.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2560089" lon="-73.3374792">
+                <ele>89.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2561669" lon="-73.3376294">
+                <ele>89.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2563206" lon="-73.337785">
+                <ele>88.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2566024" lon="-73.3381122">
+                <ele>87.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2568052" lon="-73.3384529">
+                <ele>86.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2570678" lon="-73.3390805">
+                <ele>88</ele>
+            </trkpt>
+            <trkpt lat="-37.257277" lon="-73.3396947">
+                <ele>92.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2573581" lon="-73.3401212">
+                <ele>94.5</ele>
+            </trkpt>
+            <trkpt lat="-37.257531" lon="-73.3414167">
+                <ele>96.8</ele>
+            </trkpt>
+            <trkpt lat="-37.257657" lon="-73.3436295">
+                <ele>100.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2578449" lon="-73.3457351">
+                <ele>96</ele>
+            </trkpt>
+            <trkpt lat="-37.2578897" lon="-73.3466041">
+                <ele>93.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2577979" lon="-73.34934">
+                <ele>85.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2577765" lon="-73.3520275">
+                <ele>91.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2578171" lon="-73.3523092">
+                <ele>94</ele>
+            </trkpt>
+            <trkpt lat="-37.2579132" lon="-73.3525774">
+                <ele>97</ele>
+            </trkpt>
+            <trkpt lat="-37.2582526" lon="-73.3533338">
+                <ele>102</ele>
+            </trkpt>
+            <trkpt lat="-37.2584938" lon="-73.3538675">
+                <ele>101.2</ele>
+            </trkpt>
+            <trkpt lat="-37.258686" lon="-73.3543316">
+                <ele>98.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2587543" lon="-73.3544683">
+                <ele>97.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2588525" lon="-73.3546212">
+                <ele>97</ele>
+            </trkpt>
+            <trkpt lat="-37.2591876" lon="-73.3551067">
+                <ele>95.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2592688" lon="-73.3552569">
+                <ele>94</ele>
+            </trkpt>
+            <trkpt lat="-37.2594331" lon="-73.3555466">
+                <ele>91.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2596295" lon="-73.3559087">
+                <ele>90</ele>
+            </trkpt>
+            <trkpt lat="-37.2598345" lon="-73.3562654">
+                <ele>89.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2600458" lon="-73.3566141">
+                <ele>90.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2602123" lon="-73.3568797">
+                <ele>92</ele>
+            </trkpt>
+            <trkpt lat="-37.2603831" lon="-73.3571398">
+                <ele>94</ele>
+            </trkpt>
+            <trkpt lat="-37.260556" lon="-73.3573973">
+                <ele>95.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2607033" lon="-73.3575583">
+                <ele>97.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2608528" lon="-73.3577085">
+                <ele>99.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2610086" lon="-73.3578533">
+                <ele>100.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2611708" lon="-73.3579901">
+                <ele>102.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2613096" lon="-73.3581001">
+                <ele>103</ele>
+            </trkpt>
+            <trkpt lat="-37.2614505" lon="-73.3582047">
+                <ele>103.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2615956" lon="-73.3583012">
+                <ele>104</ele>
+            </trkpt>
+            <trkpt lat="-37.2617002" lon="-73.3583844">
+                <ele>104.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2618006" lon="-73.3584729">
+                <ele>104.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2619073" lon="-73.3585748">
+                <ele>105</ele>
+            </trkpt>
+            <trkpt lat="-37.2620076" lon="-73.3586875">
+                <ele>105.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2621016" lon="-73.3588055">
+                <ele>105.5</ele>
+            </trkpt>
+            <trkpt lat="-37.262187" lon="-73.3589342">
+                <ele>105.1</ele>
+            </trkpt>
+            <trkpt lat="-37.2622168" lon="-73.3589852">
+                <ele>105</ele>
+            </trkpt>
+            <trkpt lat="-37.2624602" lon="-73.358953">
+                <ele>104</ele>
+            </trkpt>
+            <trkpt lat="-37.2625072" lon="-73.3589476">
+                <ele>104</ele>
+            </trkpt>
+            <trkpt lat="-37.2625093" lon="-73.3587787">
+                <ele>103.9</ele>
+            </trkpt>
+            <trkpt lat="-37.2625157" lon="-73.3586392">
+                <ele>103.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2625349" lon="-73.3584809">
+                <ele>103.6</ele>
+            </trkpt>
+            <trkpt lat="-37.2625627" lon="-73.358328">
+                <ele>103.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2625797" lon="-73.3582503">
+                <ele>103.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2626011" lon="-73.3581752">
+                <ele>102.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2626374" lon="-73.3580625">
+                <ele>102</ele>
+            </trkpt>
+            <trkpt lat="-37.2626801" lon="-73.3579552">
+                <ele>101.2</ele>
+            </trkpt>
+            <trkpt lat="-37.262742" lon="-73.3578265">
+                <ele>100.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2628124" lon="-73.3577031">
+                <ele>98.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2628893" lon="-73.3575878">
+                <ele>97</ele>
+            </trkpt>
+            <trkpt lat="-37.2629789" lon="-73.3574778">
+                <ele>96</ele>
+            </trkpt>
+            <trkpt lat="-37.263107" lon="-73.3573624">
+                <ele>94.8</ele>
+            </trkpt>
+            <trkpt lat="-37.263852" lon="-73.3567911">
+                <ele>87</ele>
+            </trkpt>
+            <trkpt lat="-37.2643003" lon="-73.3564639">
+                <ele>83.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2647293" lon="-73.3561528">
+                <ele>82.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2649855" lon="-73.3559731">
+                <ele>83</ele>
+            </trkpt>
+            <trkpt lat="-37.2651627" lon="-73.3558524">
+                <ele>83.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2653398" lon="-73.3557397">
+                <ele>84.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2655149" lon="-73.3556324">
+                <ele>85.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2657027" lon="-73.3555251">
+                <ele>86.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2658842" lon="-73.3554232">
+                <ele>87</ele>
+            </trkpt>
+            <trkpt lat="-37.266072" lon="-73.3553267">
+                <ele>87.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2662684" lon="-73.3552355">
+                <ele>87.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2664648" lon="-73.3551496">
+                <ele>87.8</ele>
+            </trkpt>
+            <trkpt lat="-37.266563" lon="-73.3551094">
+                <ele>87.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2666313" lon="-73.3550826">
+                <ele>87.9</ele>
+            </trkpt>
+            <trkpt lat="-37.2667593" lon="-73.3550289">
+                <ele>87.9</ele>
+            </trkpt>
+            <trkpt lat="-37.2668682" lon="-73.3549941">
+                <ele>88</ele>
+            </trkpt>
+            <trkpt lat="-37.2670198" lon="-73.3549458">
+                <ele>88.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2675299" lon="-73.3547983">
+                <ele>90.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2680443" lon="-73.3546534">
+                <ele>96</ele>
+            </trkpt>
+            <trkpt lat="-37.2686676" lon="-73.354471">
+                <ele>103</ele>
+            </trkpt>
+            <trkpt lat="-37.2691137" lon="-73.3543101">
+                <ele>105.5</ele>
+            </trkpt>
+            <trkpt lat="-37.269229" lon="-73.3542645">
+                <ele>105.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2693037" lon="-73.3542269">
+                <ele>105.6</ele>
+            </trkpt>
+            <trkpt lat="-37.2693934" lon="-73.3541733">
+                <ele>105.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2694723" lon="-73.3541223">
+                <ele>105.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2694802" lon="-73.354116">
+                <ele>105.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2694802" lon="-73.354116">
+                <ele>105.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2695684" lon="-73.3540446">
+                <ele>105</ele>
+            </trkpt>
+            <trkpt lat="-37.2696495" lon="-73.3541411">
+                <ele>105.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2701874" lon="-73.3548358">
+                <ele>106</ele>
+            </trkpt>
+            <trkpt lat="-37.2705161" lon="-73.3552542">
+                <ele>105.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2716196" lon="-73.3566758">
+                <ele>102.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2717733" lon="-73.3568689">
+                <ele>103</ele>
+            </trkpt>
+            <trkpt lat="-37.2719056" lon="-73.3570218">
+                <ele>103.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2720017" lon="-73.3571157">
+                <ele>103.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2720806" lon="-73.3571908">
+                <ele>104</ele>
+            </trkpt>
+            <trkpt lat="-37.2721447" lon="-73.3572444">
+                <ele>104.2</ele>
+            </trkpt>
+            <trkpt lat="-37.272213" lon="-73.3572954">
+                <ele>104.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2722813" lon="-73.357341">
+                <ele>104.1</ele>
+            </trkpt>
+            <trkpt lat="-37.2724456" lon="-73.3574376">
+                <ele>104</ele>
+            </trkpt>
+            <trkpt lat="-37.27261" lon="-73.3575153">
+                <ele>103.5</ele>
+            </trkpt>
+            <trkpt lat="-37.272881" lon="-73.3576334">
+                <ele>103</ele>
+            </trkpt>
+            <trkpt lat="-37.2730838" lon="-73.3577219">
+                <ele>102.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2732567" lon="-73.3577809">
+                <ele>102</ele>
+            </trkpt>
+            <trkpt lat="-37.2733549" lon="-73.3578104">
+                <ele>101.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2734509" lon="-73.3578318">
+                <ele>101.7</ele>
+            </trkpt>
+            <trkpt lat="-37.2735491" lon="-73.3578452">
+                <ele>101.6</ele>
+            </trkpt>
+            <trkpt lat="-37.273643" lon="-73.3578533">
+                <ele>101.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2737369" lon="-73.3578533">
+                <ele>101.4</ele>
+            </trkpt>
+            <trkpt lat="-37.2738287" lon="-73.3578452">
+                <ele>101.4</ele>
+            </trkpt>
+            <trkpt lat="-37.2739482" lon="-73.3578211">
+                <ele>101.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2740635" lon="-73.3577809">
+                <ele>100.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2742193" lon="-73.3577111">
+                <ele>99.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2743324" lon="-73.3576468">
+                <ele>98.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2744135" lon="-73.3575958">
+                <ele>97.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2744797" lon="-73.3575529">
+                <ele>96.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2745693" lon="-73.3574885">
+                <ele>95.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2746355" lon="-73.3574402">
+                <ele>95.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2747059" lon="-73.3573839">
+                <ele>94.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2747742" lon="-73.3573222">
+                <ele>93.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2748361" lon="-73.3572552">
+                <ele>93</ele>
+            </trkpt>
+            <trkpt lat="-37.2752993" lon="-73.3566999">
+                <ele>89.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2755618" lon="-73.3563808">
+                <ele>88.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2756151" lon="-73.3563164">
+                <ele>88.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2756749" lon="-73.3562601">
+                <ele>88.6</ele>
+            </trkpt>
+            <trkpt lat="-37.2757368" lon="-73.3562118">
+                <ele>88.6</ele>
+            </trkpt>
+            <trkpt lat="-37.2758222" lon="-73.3561555">
+                <ele>88.6</ele>
+            </trkpt>
+            <trkpt lat="-37.2759097" lon="-73.3561125">
+                <ele>88.7</ele>
+            </trkpt>
+            <trkpt lat="-37.2760015" lon="-73.356075">
+                <ele>88.7</ele>
+            </trkpt>
+            <trkpt lat="-37.2760996" lon="-73.3560482">
+                <ele>88.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2761871" lon="-73.3560348">
+                <ele>88.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2762768" lon="-73.3560294">
+                <ele>88.9</ele>
+            </trkpt>
+            <trkpt lat="-37.2763664" lon="-73.3560374">
+                <ele>88.9</ele>
+            </trkpt>
+            <trkpt lat="-37.2764582" lon="-73.3560508">
+                <ele>89</ele>
+            </trkpt>
+            <trkpt lat="-37.276567" lon="-73.3560723">
+                <ele>89.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2766759" lon="-73.3561045">
+                <ele>89.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2776342" lon="-73.3564425">
+                <ele>92</ele>
+            </trkpt>
+            <trkpt lat="-37.2785754" lon="-73.3567482">
+                <ele>92.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2794995" lon="-73.357062">
+                <ele>89.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2803084" lon="-73.3573329">
+                <ele>91.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2807139" lon="-73.3574805">
+                <ele>93</ele>
+            </trkpt>
+            <trkpt lat="-37.2808035" lon="-73.3575046">
+                <ele>93</ele>
+            </trkpt>
+            <trkpt lat="-37.2808953" lon="-73.3575234">
+                <ele>93.1</ele>
+            </trkpt>
+            <trkpt lat="-37.2809913" lon="-73.3575341">
+                <ele>93.1</ele>
+            </trkpt>
+            <trkpt lat="-37.2811279" lon="-73.3575502">
+                <ele>93.2</ele>
+            </trkpt>
+            <trkpt lat="-37.281352" lon="-73.3575502">
+                <ele>93.3</ele>
+            </trkpt>
+            <trkpt lat="-37.28183" lon="-73.3575583">
+                <ele>93.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2819453" lon="-73.3575475">
+                <ele>94</ele>
+            </trkpt>
+            <trkpt lat="-37.2820605" lon="-73.3575287">
+                <ele>94.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2821544" lon="-73.3575073">
+                <ele>95</ele>
+            </trkpt>
+            <trkpt lat="-37.2822462" lon="-73.3574751">
+                <ele>95.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2824596" lon="-73.3573946">
+                <ele>95.4</ele>
+            </trkpt>
+            <trkpt lat="-37.2833495" lon="-73.3570138">
+                <ele>95</ele>
+            </trkpt>
+            <trkpt lat="-37.2835138" lon="-73.3569413">
+                <ele>95.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2836782" lon="-73.3568823">
+                <ele>96.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2838041" lon="-73.3568421">
+                <ele>97.5</ele>
+            </trkpt>
+            <trkpt lat="-37.28393" lon="-73.3568099">
+                <ele>98.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2841285" lon="-73.3567724">
+                <ele>100.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2846812" lon="-73.3566651">
+                <ele>104.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2848071" lon="-73.3566383">
+                <ele>105.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2849309" lon="-73.3566087">
+                <ele>106</ele>
+            </trkpt>
+            <trkpt lat="-37.2850568" lon="-73.3565685">
+                <ele>106.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2851912" lon="-73.3565202">
+                <ele>106</ele>
+            </trkpt>
+            <trkpt lat="-37.2853257" lon="-73.3564639">
+                <ele>105.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2855839" lon="-73.3563325">
+                <ele>103.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2857866" lon="-73.3562171">
+                <ele>101.8</ele>
+            </trkpt>
+            <trkpt lat="-37.285857" lon="-73.3561662">
+                <ele>100.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2859253" lon="-73.3561125">
+                <ele>99.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2859872" lon="-73.3560508">
+                <ele>98.8</ele>
+            </trkpt>
+            <trkpt lat="-37.286047" lon="-73.3559838">
+                <ele>98</ele>
+            </trkpt>
+            <trkpt lat="-37.2861003" lon="-73.3559114">
+                <ele>97.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2861473" lon="-73.3558363">
+                <ele>96.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2864524" lon="-73.3553588">
+                <ele>91</ele>
+            </trkpt>
+            <trkpt lat="-37.2865207" lon="-73.3552569">
+                <ele>90.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2865933" lon="-73.3551711">
+                <ele>90.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2866573" lon="-73.3550987">
+                <ele>90.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2867149" lon="-73.3550397">
+                <ele>90</ele>
+            </trkpt>
+            <trkpt lat="-37.2867255" lon="-73.3550306">
+                <ele>90</ele>
+            </trkpt>
+            <trkpt lat="-37.2867255" lon="-73.3550306">
+                <ele>90</ele>
+            </trkpt>
+            <trkpt lat="-37.2867768" lon="-73.354986">
+                <ele>90.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2868686" lon="-73.3549029">
+                <ele>90.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2869795" lon="-73.3548117">
+                <ele>91</ele>
+            </trkpt>
+            <trkpt lat="-37.2870948" lon="-73.3547285">
+                <ele>91.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2871823" lon="-73.3546695">
+                <ele>91.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2872719" lon="-73.3546159">
+                <ele>92.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2873466" lon="-73.3545756">
+                <ele>92.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2874234" lon="-73.3545408">
+                <ele>93</ele>
+            </trkpt>
+            <trkpt lat="-37.2875002" lon="-73.3545139">
+                <ele>93.1</ele>
+            </trkpt>
+            <trkpt lat="-37.2875877" lon="-73.3544925">
+                <ele>93.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2876773" lon="-73.3544791">
+                <ele>93.8</ele>
+            </trkpt>
+            <trkpt lat="-37.287767" lon="-73.3544737">
+                <ele>94</ele>
+            </trkpt>
+            <trkpt lat="-37.2881148" lon="-73.354471">
+                <ele>93</ele>
+            </trkpt>
+            <trkpt lat="-37.2884136" lon="-73.3544818">
+                <ele>92.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2885288" lon="-73.3544925">
+                <ele>92.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2886462" lon="-73.3545086">
+                <ele>92</ele>
+            </trkpt>
+            <trkpt lat="-37.2887529" lon="-73.35453">
+                <ele>92.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2888681" lon="-73.3545595">
+                <ele>92.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2889769" lon="-73.354589">
+                <ele>92.6</ele>
+            </trkpt>
+            <trkpt lat="-37.2890858" lon="-73.3546212">
+                <ele>92.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2892458" lon="-73.3546802">
+                <ele>93.2</ele>
+            </trkpt>
+            <trkpt lat="-37.289408" lon="-73.3547446">
+                <ele>93.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2895616" lon="-73.3548117">
+                <ele>94</ele>
+            </trkpt>
+            <trkpt lat="-37.2897153" lon="-73.3548841">
+                <ele>93.6</ele>
+            </trkpt>
+            <trkpt lat="-37.2900161" lon="-73.3550262">
+                <ele>92.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2903192" lon="-73.3551764">
+                <ele>90</ele>
+            </trkpt>
+            <trkpt lat="-37.290571" lon="-73.3553025">
+                <ele>86.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2908249" lon="-73.3554339">
+                <ele>83.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2909401" lon="-73.3554929">
+                <ele>82.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2910554" lon="-73.355552">
+                <ele>81.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2911983" lon="-73.3556324">
+                <ele>80</ele>
+            </trkpt>
+            <trkpt lat="-37.2913413" lon="-73.3557209">
+                <ele>78.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2914928" lon="-73.3558175">
+                <ele>77.5</ele>
+            </trkpt>
+            <trkpt lat="-37.291672" lon="-73.3559409">
+                <ele>76.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2918513" lon="-73.3560669">
+                <ele>77.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2921991" lon="-73.3563244">
+                <ele>80.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2923762" lon="-73.3564585">
+                <ele>82.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2926024" lon="-73.3566087">
+                <ele>84</ele>
+            </trkpt>
+            <trkpt lat="-37.2927923" lon="-73.3567241">
+                <ele>85.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2929865" lon="-73.3568367">
+                <ele>86</ele>
+            </trkpt>
+            <trkpt lat="-37.2932831" lon="-73.3570004">
+                <ele>86.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2936245" lon="-73.3571801">
+                <ele>85</ele>
+            </trkpt>
+            <trkpt lat="-37.2938016" lon="-73.3572686">
+                <ele>83.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2939595" lon="-73.3573571">
+                <ele>81.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2941046" lon="-73.357451">
+                <ele>78.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2941857" lon="-73.35751">
+                <ele>76.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2943244" lon="-73.3576146">
+                <ele>73.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2943927" lon="-73.3576602">
+                <ele>72</ele>
+            </trkpt>
+            <trkpt lat="-37.2944609" lon="-73.3577058">
+                <ele>70.5</ele>
+            </trkpt>
+            <trkpt lat="-37.294557" lon="-73.3577567">
+                <ele>68.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2946551" lon="-73.3578023">
+                <ele>66</ele>
+            </trkpt>
+            <trkpt lat="-37.2950819" lon="-73.3579713">
+                <ele>59.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2951971" lon="-73.3580223">
+                <ele>58.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2952483" lon="-73.3580491">
+                <ele>58</ele>
+            </trkpt>
+            <trkpt lat="-37.2952974" lon="-73.3580813">
+                <ele>57.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2953422" lon="-73.3581188">
+                <ele>56.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2953891" lon="-73.3581671">
+                <ele>56</ele>
+            </trkpt>
+            <trkpt lat="-37.2954297" lon="-73.3582181">
+                <ele>55.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2954681" lon="-73.3582744">
+                <ele>54.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2955982" lon="-73.3585158">
+                <ele>52.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2956452" lon="-73.3585963">
+                <ele>52</ele>
+            </trkpt>
+            <trkpt lat="-37.2956964" lon="-73.358674">
+                <ele>51.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2957519" lon="-73.3587465">
+                <ele>51</ele>
+            </trkpt>
+            <trkpt lat="-37.2958095" lon="-73.3588189">
+                <ele>50.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2962277" lon="-73.3593097">
+                <ele>47.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2964859" lon="-73.3596289">
+                <ele>48</ele>
+            </trkpt>
+            <trkpt lat="-37.2965606" lon="-73.3597174">
+                <ele>48</ele>
+            </trkpt>
+            <trkpt lat="-37.2966395" lon="-73.3598006">
+                <ele>48.1</ele>
+            </trkpt>
+            <trkpt lat="-37.2967206" lon="-73.3598703">
+                <ele>48.1</ele>
+            </trkpt>
+            <trkpt lat="-37.2968038" lon="-73.359932">
+                <ele>48.1</ele>
+            </trkpt>
+            <trkpt lat="-37.2969105" lon="-73.3600071">
+                <ele>48.2</ele>
+            </trkpt>
+            <trkpt lat="-37.297062" lon="-73.3601117">
+                <ele>48.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2971452" lon="-73.3601734">
+                <ele>48.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2972263" lon="-73.3602458">
+                <ele>48.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2972967" lon="-73.3603209">
+                <ele>49</ele>
+            </trkpt>
+            <trkpt lat="-37.2973628" lon="-73.3604041">
+                <ele>49.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2974226" lon="-73.3604899">
+                <ele>50</ele>
+            </trkpt>
+            <trkpt lat="-37.2975079" lon="-73.3606347">
+                <ele>50.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2975591" lon="-73.3607125">
+                <ele>50.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2976189" lon="-73.3607849">
+                <ele>50.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2976786" lon="-73.3608466">
+                <ele>50.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2977469" lon="-73.360903">
+                <ele>51</ele>
+            </trkpt>
+            <trkpt lat="-37.2978088" lon="-73.3609486">
+                <ele>51.1</ele>
+            </trkpt>
+            <trkpt lat="-37.2979667" lon="-73.3610585">
+                <ele>51.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2981438" lon="-73.3611766">
+                <ele>51.5</ele>
+            </trkpt>
+            <trkpt lat="-37.298323" lon="-73.3612892">
+                <ele>52</ele>
+            </trkpt>
+            <trkpt lat="-37.2985726" lon="-73.3614394">
+                <ele>52.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2986345" lon="-73.361477">
+                <ele>52.3</ele>
+            </trkpt>
+            <trkpt lat="-37.2987007" lon="-73.3615091">
+                <ele>52.3</ele>
+            </trkpt>
+            <trkpt lat="-37.298786" lon="-73.361544">
+                <ele>52.4</ele>
+            </trkpt>
+            <trkpt lat="-37.2988735" lon="-73.3615708">
+                <ele>52.4</ele>
+            </trkpt>
+            <trkpt lat="-37.299025" lon="-73.3616138">
+                <ele>52.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2991125" lon="-73.3616352">
+                <ele>52.8</ele>
+            </trkpt>
+            <trkpt lat="-37.2992021" lon="-73.3616647">
+                <ele>52.6</ele>
+            </trkpt>
+            <trkpt lat="-37.2992938" lon="-73.3617049">
+                <ele>52.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2993856" lon="-73.3617532">
+                <ele>52.2</ele>
+            </trkpt>
+            <trkpt lat="-37.2996139" lon="-73.3618578">
+                <ele>52.5</ele>
+            </trkpt>
+            <trkpt lat="-37.2998379" lon="-73.3619356">
+                <ele>52.8</ele>
+            </trkpt>
+            <trkpt lat="-37.3000086" lon="-73.3619946">
+                <ele>54</ele>
+            </trkpt>
+            <trkpt lat="-37.3002582" lon="-73.3621019">
+                <ele>55.5</ele>
+            </trkpt>
+            <trkpt lat="-37.3007575" lon="-73.3623245">
+                <ele>59</ele>
+            </trkpt>
+            <trkpt lat="-37.3011138" lon="-73.3625472">
+                <ele>60</ele>
+            </trkpt>
+            <trkpt lat="-37.3020163" lon="-73.3630273">
+                <ele>61</ele>
+            </trkpt>
+            <trkpt lat="-37.3025305" lon="-73.3632874">
+                <ele>60.8</ele>
+            </trkpt>
+            <trkpt lat="-37.3028164" lon="-73.3634055">
+                <ele>62</ele>
+            </trkpt>
+            <trkpt lat="-37.3030276" lon="-73.3634537">
+                <ele>63.2</ele>
+            </trkpt>
+            <trkpt lat="-37.3031919" lon="-73.3635637">
+                <ele>64.5</ele>
+            </trkpt>
+            <trkpt lat="-37.3033242" lon="-73.3636925">
+                <ele>65.8</ele>
+            </trkpt>
+            <trkpt lat="-37.3034714" lon="-73.3638158">
+                <ele>66.8</ele>
+            </trkpt>
+            <trkpt lat="-37.3036293" lon="-73.3639687">
+                <ele>67.8</ele>
+            </trkpt>
+            <trkpt lat="-37.3036997" lon="-73.3640197">
+                <ele>68</ele>
+            </trkpt>
+            <trkpt lat="-37.3037722" lon="-73.3640599">
+                <ele>68.2</ele>
+            </trkpt>
+            <trkpt lat="-37.3038469" lon="-73.3640921">
+                <ele>68.5</ele>
+            </trkpt>
+            <trkpt lat="-37.3039237" lon="-73.3641136">
+                <ele>68.8</ele>
+            </trkpt>
+            <trkpt lat="-37.3050011" lon="-73.3642933">
+                <ele>67.8</ele>
+            </trkpt>
+            <trkpt lat="-37.3053574" lon="-73.3643845">
+                <ele>69.5</ele>
+            </trkpt>
+            <trkpt lat="-37.3058524" lon="-73.3645588">
+                <ele>74</ele>
+            </trkpt>
+            <trkpt lat="-37.3060977" lon="-73.3646902">
+                <ele>77</ele>
+            </trkpt>
+            <trkpt lat="-37.3063516" lon="-73.3648968">
+                <ele>80.2</ele>
+            </trkpt>
+            <trkpt lat="-37.3065159" lon="-73.3649826">
+                <ele>84</ele>
+            </trkpt>
+            <trkpt lat="-37.3065671" lon="-73.3650014">
+                <ele>84.2</ele>
+            </trkpt>
+            <trkpt lat="-37.3067932" lon="-73.3650362">
+                <ele>83.5</ele>
+            </trkpt>
+            <trkpt lat="-37.3069255" lon="-73.3650926">
+                <ele>82.2</ele>
+            </trkpt>
+            <trkpt lat="-37.3070087" lon="-73.3652079">
+                <ele>82.5</ele>
+            </trkpt>
+            <trkpt lat="-37.3070599" lon="-73.3654869">
+                <ele>84.8</ele>
+            </trkpt>
+            <trkpt lat="-37.307126" lon="-73.3655968">
+                <ele>84</ele>
+            </trkpt>
+            <trkpt lat="-37.3072647" lon="-73.3656558">
+                <ele>81</ele>
+            </trkpt>
+            <trkpt lat="-37.3074439" lon="-73.3657497">
+                <ele>78</ele>
+            </trkpt>
+            <trkpt lat="-37.3075442" lon="-73.3658516">
+                <ele>76.5</ele>
+            </trkpt>
+            <trkpt lat="-37.3077106" lon="-73.3659241">
+                <ele>73.2</ele>
+            </trkpt>
+            <trkpt lat="-37.3079218" lon="-73.3659482">
+                <ele>68.5</ele>
+            </trkpt>
+            <trkpt lat="-37.3080925" lon="-73.3659589">
+                <ele>64.2</ele>
+            </trkpt>
+            <trkpt lat="-37.3082845" lon="-73.366034">
+                <ele>60.2</ele>
+            </trkpt>
+            <trkpt lat="-37.3084893" lon="-73.3661923">
+                <ele>55.5</ele>
+            </trkpt>
+            <trkpt lat="-37.3088797" lon="-73.3664659">
+                <ele>45</ele>
+            </trkpt>
+            <trkpt lat="-37.3090866" lon="-73.3665597">
+                <ele>40.5</ele>
+            </trkpt>
+            <trkpt lat="-37.3093234" lon="-73.3667448">
+                <ele>35.8</ele>
+            </trkpt>
+            <trkpt lat="-37.3097437" lon="-73.3673429">
+                <ele>26</ele>
+            </trkpt>
+            <trkpt lat="-37.3099805" lon="-73.3675227">
+                <ele>23</ele>
+            </trkpt>
+            <trkpt lat="-37.3102621" lon="-73.3677265">
+                <ele>21.5</ele>
+            </trkpt>
+            <trkpt lat="-37.3105501" lon="-73.3679169">
+                <ele>20.8</ele>
+            </trkpt>
+            <trkpt lat="-37.3105906" lon="-73.3679464">
+                <ele>20.9</ele>
+            </trkpt>
+            <trkpt lat="-37.310629" lon="-73.367984">
+                <ele>21</ele>
+            </trkpt>
+            <trkpt lat="-37.3106653" lon="-73.3680269">
+                <ele>21.2</ele>
+            </trkpt>
+            <trkpt lat="-37.3106952" lon="-73.3680752">
+                <ele>21.5</ele>
+            </trkpt>
+            <trkpt lat="-37.3107165" lon="-73.3681235">
+                <ele>21.8</ele>
+            </trkpt>
+            <trkpt lat="-37.3107336" lon="-73.3681771">
+                <ele>21</ele>
+            </trkpt>
+            <trkpt lat="-37.3107464" lon="-73.3682308">
+                <ele>21</ele>
+            </trkpt>
+            <trkpt lat="-37.3107997" lon="-73.3685929">
+                <ele>20.8</ele>
+            </trkpt>
+            <trkpt lat="-37.3108402" lon="-73.3688155">
+                <ele>20.2</ele>
+            </trkpt>
+            <trkpt lat="-37.310841" lon="-73.3688192">
+                <ele>20.2</ele>
+            </trkpt>
             <trkpt lat="-37.310841" lon="-73.368819">
                 <ele>20.2</ele>
             </trkpt>
@@ -19285,261 +20617,302 @@
             </trkpt>
             <extensions>
                 <osmand:route>
-                    <segment id="1151369514" length="33" startTrkptIdx="0" segmentTime="60.48" speed="12.50" turnType="C" turnAngle="" types="0,1,2,3,4" pointTypes=";5;6;;;;;;;;;;6;;;;;;6;;;;;;;;;6;7;7;8;8;8" names="0,0,64,65"/>
-                    <segment id="1150865584" length="2" startTrkptIdx="32" segmentTime="1.63" speed="12.50" turnType="" turnAngle="" types="9,0,10,11,2,3,4" pointTypes="" names="0,0,64,65"/>
-                    <segment id="1151369518" length="28" startTrkptIdx="33" segmentTime="41.17" speed="12.50" turnType="" turnAngle="" types="0,1,2,3,4" pointTypes=";5;5;5;8;5;;;;;;;;;;;;;;;;6;5;7;7;6;6;" names="0,0,64,65"/>
-                    <segment id="1151366175" length="44" startTrkptIdx="60" segmentTime="62.70" speed="12.50" turnType="" turnAngle="" types="0,12,13,2,3,4" pointTypes=";;;;;;;;;;;7;7;;14;14;7;;;;;;;;;;;;;;;;;;;;;;;;;8;;14" names="0,0,64,65"/>
-                    <segment id="1151369519" length="36" startTrkptIdx="103" segmentTime="26.39" speed="12.50" turnType="" turnAngle="" types="0,1,2,3,4" pointTypes=";;;;14;;;;;;;14;;8;6;;;;;;6;5;;;;;;;;;;;;;;" names="0,0,64,65"/>
-                    <segment id="1151369521" length="24" startTrkptIdx="138" segmentTime="23.01" speed="13.89" turnType="" turnAngle="" types="0,12,15,16,17,3,4" pointTypes=";;;;;;;;;;;;;;;;;;;;;6;6;" names="0,0,64,65"/>
-                    <segment id="1151369523" length="4" startTrkptIdx="161" segmentTime="5.03" speed="13.89" turnType="" turnAngle="" types="0,12,15,16,17,3,4" pointTypes=";;;" names="0,0,64,65"/>
-                    <segment id="1151369524" length="2" startTrkptIdx="164" segmentTime="3.54" speed="13.89" turnType="" turnAngle="" types="0,12,15,16,17,3,4" pointTypes=";" names="0,0,64,65"/>
-                    <segment id="1151369524" length="2" startTrkptIdx="165" segmentTime="2.60" speed="13.89" turnType="" turnAngle="" types="0,12,15,16,17,3,4" pointTypes=";6" names="0,0,64,65"/>
-                    <segment id="1151369526" length="14" startTrkptIdx="166" segmentTime="25.20" speed="13.89" turnType="" turnAngle="" types="0,12,15,16,17,3,4" pointTypes=";;;;;6;;6;6;;6" names="0,0,64,65"/>
-                    <segment id="1151366171" length="5" startTrkptIdx="179" segmentTime="4.37" speed="13.89" turnType="" turnAngle="" types="0,12,15,16,17,3,4" pointTypes=";;;;" names="0,0,64,65"/>
-                    <segment id="1151366176" length="4" startTrkptIdx="183" segmentTime="3.13" speed="12.50" turnType="KR" turnAngle="38.53" types="0,12,18,16,17,3,4" pointTypes=";19,20;;6" names="0,0,66,67"/>
-                    <segment id="1151366172" length="2" startTrkptIdx="186" segmentTime="1.31" speed="12.50" turnType="" turnAngle="" types="0,12,16,17,3,4" pointTypes=";5" names="0,0,66,67"/>
-                    <segment id="1151366172" length="6" startTrkptIdx="187" segmentTime="3.66" speed="12.50" turnType="" turnAngle="" types="0,12,16,17,3,4" pointTypes="5;8;8;7;7;7" names="0,0,66,67"/>
-                    <segment id="1151366177" length="25" startTrkptIdx="192" segmentTime="36.27" speed="12.50" turnType="" turnAngle="" types="0,12,16,17,3,4" pointTypes=";8;8;6;;;;;;;;;;;;;;6;6;;5;5" names="0,0,66,67"/>
-                    <segment id="27636114" length="194" startTrkptIdx="216" segmentTime="362.68" speed="12.50" turnType="" turnAngle="" types="0,21,22,3,4" pointTypes=";;;;;;;;;;;;;;;;;;;6;6;5;6;6;6;8;5;5;5;8;8;5;;;;6;5;;;;6;;;;;;;;;;;;;;;;;;;;;;;6;5;5;8;8;8;7;7;8;8;6;6;6;5;5;6;;6;;;8;5;8;6;;;;;;;;;;;;;;;;;;;;;;;;6;6;6;6;6;6;5;6;5;;;;;;;;;;;;;;;;;;;;6;6;6;6;5;5;5;6;;;;;;;;;;;;;;;;;;;;;;;;;6;8;7;6;;;;6;6;5;8;6;6;;;;;;;;;;;" names="0,0,66,67"/>
-                    <segment id="27636114" length="2" startTrkptIdx="410" segmentTime="2.48" speed="12.50" turnType="C" turnAngle="" types="0,21,22,3,4" pointTypes=";6" names="0,0,66,67"/>
-                    <segment id="1114959502" length="37" startTrkptIdx="411" segmentTime="52.52" speed="12.50" turnType="TR" turnAngle="71.74" types="0,12,16,17,3,4" pointTypes=";;;;;;;;;;6;5;6;;;;;;;;;;;;;;;;;;;;;;;;" names="0,0,68,69"/>
-                    <segment id="528872404" length="2" startTrkptIdx="447" segmentTime="0.32" speed="12.50" turnType="TSHL" turnAngle="-139.08" types="0,21,22,3,4" pointTypes=";" names="0,0,70,71"/>
-                    <segment id="528872404" length="48" startTrkptIdx="449" segmentTime="150.13" speed="12.50" turnType="C" turnAngle="" types="0,21,22,3,4" pointTypes=";14;14;;8;5;8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;;;;;;;;;;;;" names="0,0,70,71"/>
-                    <segment id="528872406" length="2" startTrkptIdx="496" segmentTime="1.26" speed="12.50" turnType="" turnAngle="" types="9,0,21,22,3,4" pointTypes="" names="0,0,70,71"/>
-                    <segment id="27636856" length="46" startTrkptIdx="497" segmentTime="197.25" speed="12.50" turnType="" turnAngle="" types="0,21,22,3,4" pointTypes=";8;;;;;;;;6;6;;14;14;;7;8;5;8;7;;7;7;7;7;8;7;14;14;14;7;;5;8;8;14;14;;7;5;5;;6;;6;6" names="0,0,70,71"/>
-                    <segment id="27636856" length="5" startTrkptIdx="542" segmentTime="9.42" speed="12.50" turnType="" turnAngle="" types="0,21,22,3,4" pointTypes="6;6;;;" names="0,0,70,71"/>
-                    <segment id="27636856" length="358" startTrkptIdx="546" segmentTime="654.90" speed="12.50" turnType="C" turnAngle="2.67" types="0,21,22,3,4" pointTypes=";5;5;6;6;;;;;;;;;;;;;;;5;7;14;;;;;14;14;14;14;;14;7;5;8;8;5;6;;;;;;;;;;;;;;;;;;;;;5;5;6;;;;;;;;;;;;;;;;;;6;7;14;;;;;;8;7;8;;;;;14;7;7;7;7;8;5;5;5;6;6;8;5;5;6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;6;6;6;6;6;6;6;6;6;;6;5;8;5;8;5;6;5;8;7;7;;8;6;8;;;;;;;;;7;8;5;7;;14;;;7;8;;;;;;;;;;;;;;;8;6;;;;;6;6;7;7;7;7;5;7;5;8;7;8;5;5;5;5;;;;;;;;;;;;;;;6;5;5;6;5;5;6;;6;6;;;6;;;;;;6;5;5;5;8;7;7;8;8;8;5;6;6;;;;;;;;;;;;;;;6;;;;;;;;;;;5;5;5;5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;6;5;8;7;7;8;5;7;7;6;6;;;;;;;;;;;;;;;;;;;;;;5;5;;5" names="0,0,70,71"/>
-                    <segment id="27636856" length="20" startTrkptIdx="903" segmentTime="28.04" speed="12.50" turnType="" turnAngle="" types="0,21,22,3,4" pointTypes="5;;;;;;6;5;5;5;5;8;8;8;8;;7;8;5;5" names="0,0,70,71"/>
-                    <segment id="27636856" length="128" startTrkptIdx="922" segmentTime="149.03" speed="12.50" turnType="" turnAngle="" types="0,21,22,3,4" pointTypes="5;;;;;;;;;;6;;;;6;5;8;6;;6;5;5;5;;;;;;6;;6;;;;;;;;;;;;;;;;;5;8;;;8;8;5;6;5;5;5;;;;;;;;;8;8;;;;;;;;8;14;;;5;;;;;;;;;;;;;;;;;;;;5;8;;;14;5;;;;;;5;14;7;;;;;;;;;;;;;;;" names="0,0,70,71"/>
-                    <segment id="567545448" length="3" startTrkptIdx="1049" segmentTime="1.27" speed="13.89" turnType="TL" turnAngle="-66.00" types="23,12,15,16,24,17,3,4" pointTypes="8;6;" names="0,0,72,73,74,75,76"/>
-                    <segment id="567545448" length="33" startTrkptIdx="1052" segmentTime="51.83" speed="13.89" turnType="C" turnAngle="" types="23,12,15,16,24,17,3,4" pointTypes=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;" names="0,0,72,73,74,75,76"/>
-                    <segment id="567545448" length="23" startTrkptIdx="1084" segmentTime="31.92" speed="13.89" turnType="" turnAngle="" types="23,12,15,16,24,17,3,4" pointTypes=";;6;;;;;;;;;;;;;;;;;;;;" names="0,0,72,73,74,75,76"/>
-                    <segment id="567545447" length="26" startTrkptIdx="1106" segmentTime="49.91" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";;;6;;;;;;;;;;;;;8;5;6;5;5;5;5;;;" names="0,0,72,73,74,75,76"/>
-                    <segment id="297136469" length="63" startTrkptIdx="1131" segmentTime="86.31" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";;;;;;;;;5;;7;5;6;6;5;5;5;5;5;5;5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;;;;;;;" names="0,0,72,73,74,75,76"/>
-                    <segment id="297136469" length="21" startTrkptIdx="1193" segmentTime="38.95" speed="18.85" turnType="C" turnAngle="-1.13" types="23,12,25,16,24,17,3,4" pointTypes=";;;;5;6;;;;;;;;;;;;6;6;5;5" names="0,0,72,73,74,75,76"/>
-                    <segment id="297136469" length="171" startTrkptIdx="1213" segmentTime="344.39" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes="5;6;5;5;6;;;;;;;;;;;;;;;;6;;;8;5;6;5;5;5;6;5;7;8;;;;6;5;8;8;7;7;8;5;5;8;8;8;8;7;7;;;14;;7;;;;;6;5;5;;;;;;;;;;;;;;6;5;7;7;5;5;5;6;;;;;;;;;;;;;;;;;6;8;8;;;14;7;6;5;8;7;8;7;;;7;7;7;7;;;;;;;;;;;;;;8;8;8;6;5;6;6;6;5;5;6;;6;6;;;;;;;;;;;;;;;;;;;;;;;;;" names="0,0,72,73,74,75,76"/>
-                    <segment id="797195897" length="10" startTrkptIdx="1383" segmentTime="43.96" speed="13.89" turnType="" turnAngle="" types="23,12,15,16,24,17,3,4" pointTypes=";;;;8;6;5;7;;14" names="0,0,72,73,74,75,76"/>
-                    <segment id="797195898" length="171" startTrkptIdx="1392" segmentTime="254.38" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";7;7;7;8;8;8;5;5;6;5;6;;;;;;;6;8;8;5;5;5;8;8;7;7;7;5;5;5;5;8;7;6;5;6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;6;5;8;8;5;8;5;6;;;5;8;;7;7;;;7;14;;;;14;;7;7;;7;7;;7;7;5;6;;;;;6;5;8;14;;8;7;8;7;7;7;8;7;7;7;;7;8;8;7;7;5;7;;7;8;7;;;14;14;;14;14;;14;14;14;14;;;;14;14;;;7;7;7;7;5;5" names="0,0,72,73,74,75,76"/>
-                    <segment id="297136470" length="2" startTrkptIdx="1562" segmentTime="1.88" speed="18.85" turnType="" turnAngle="" types="9,23,12,25,18,16,24,17,3,4" pointTypes="" names="0,0,72,73,74,75,76"/>
-                    <segment id="161852162" length="214" startTrkptIdx="1563" segmentTime="285.17" speed="18.52" turnType="" turnAngle="" types="23,12,25,18,16,24,17,3,4" pointTypes=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;5;5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;;;;;;;;;;;;6;;;;;;;;5;8;7;8;5;5;8;5;6;;;;;;26,27;;;;;;;" names="0,0,72,73,74,75,76"/>
-                    <segment id="161852162" length="130" startTrkptIdx="1776" segmentTime="217.53" speed="18.85" turnType="C" turnAngle="2.38" types="23,12,25,18,16,24,17,3,4" pointTypes=";;6;6;;;;;6;6;5;5;5;8;5;5;8;5;7;7;5;6;;;;;;;6;6;6;8;7;8;8;6;;;;;;;;6;;;;;;;;;;;;;;;;;;;;;;;;;;5;6;8;;5;5;5;5;5;5;5;5;6;5;8;7;;8;8;8;8;5;5;5;5;5;5;7;;;;14;;;;;;;;;14;;7;;;;;14;8;8;8;8;8;7;8;8;8;7;8;;8" names="0,0,72,73,74,75,76"/>
-                    <segment id="797195899" length="83" startTrkptIdx="1905" segmentTime="80.09" speed="13.89" turnType="" turnAngle="" types="23,12,15,18,16,24,17,3,4" pointTypes=";;14;14;;14;14;;;;;14;;;;7;7;8;6;;;;5;;;;;;;;;;;;14;7;8;8;7;14;;7;7;;14;8;5;8;7;8;;14;14;;;;;;7;8;8;8;8;5;5;6;6;6;;;;6;5;5;6" names="0,0,72,73,74,75,76"/>
-                    <segment id="524272021" length="2" startTrkptIdx="1987" segmentTime="1.09" speed="18.85" turnType="" turnAngle="" types="9,23,12,25,18,16,24,17,3,4" pointTypes="" names="0,0,72,73,74,75,76"/>
-                    <segment id="524272020" length="287" startTrkptIdx="1988" segmentTime="424.24" speed="18.85" turnType="" turnAngle="" types="23,12,25,18,16,24,17,3,4" pointTypes=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;6;6;5;8;;;5;7;5;8;5;;;;;5;;;;;;;;;;;;5;5;5;5;5;8;8;8;14;;;;;;;;;14;7;;7;7;8;8;7;8;5;;;;;5;7;;;;14;14;7;;;;;;;;;5;8;8;8;7;14;;7;7;7;7;7;7;7;7;;7;8;8;8;8;8;;14;;14;14;;14;14;14;7;5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;6;;6;5;5;8;8;8;5;6;;;;;;;;;;;6;6;6;5;5;5;6;;;;;;;;;;;;;;;;;;6;5;6;;;" names="0,0,72,73,74,75,76"/>
-                    <segment id="524272020" length="2" startTrkptIdx="2274" segmentTime="4.76" speed="18.85" turnType="" turnAngle="" types="23,12,25,18,16,24,17,3,4" pointTypes=";" names="0,0,72,73,74,75,76"/>
-                    <segment id="528876324" length="23" startTrkptIdx="2275" segmentTime="54.17" speed="13.89" turnType="" turnAngle="" types="23,12,15,18,16,24,17,3,4" pointTypes=";;;;;;6;5;7;;14;14;;14;;14;14;14;;;;;14" names="0,0,72,73,74,75,76"/>
-                    <segment id="528876321" length="25" startTrkptIdx="2297" segmentTime="24.16" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";14;;14;14;;;;14;;;;;8;5;5;5;5;5;7;7;8;7;;" names="0,0,72,73,74,75,76"/>
-                    <segment id="528876321" length="3" startTrkptIdx="2322" segmentTime="5.13" speed="18.85" turnType="C" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";;7" names="0,0,72,73,74,75,76"/>
-                    <segment id="1206304035" length="5" startTrkptIdx="2324" segmentTime="26.25" speed="9.72" turnType="TR" turnAngle="89.57" types="28,21,22" pointTypes=";8;7;5;6" names="0"/>
-                    <segment id="1319391809" length="16" startTrkptIdx="2328" segmentTime="33.81" speed="9.72" turnType="TR" turnAngle="87.10" types="28,21,22" pointTypes=";;;;;;;;;;;;;;;" names="0"/>
-                    <segment id="27637031" length="8" startTrkptIdx="2343" segmentTime="11.34" speed="12.50" turnType="TL" turnAngle="-108.45" types="0,12,29,30,31,13,17" pointTypes="7;5;5;8;5;6;;" names="0"/>
-                    <segment id="364256156" length="117" startTrkptIdx="2350" segmentTime="191.55" speed="9.72" turnType="TR" turnAngle="82.89" types="32,29,30,31,16,33" pointTypes=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8;14;;;;;;;14;5;;8;;;;;;;;;14;;5;5;;;;;7;7;7;;;;;;;;;7;8;6;;;;;;5;14;;34,5;;;5;;;;;;;;14;5;;;;" names="0"/>
-                    <segment id="364256156" length="117" startTrkptIdx="2467" segmentTime="191.55" speed="9.72" turnType="C" turnAngle="" types="32,29,30,31,16,33" pointTypes=";;;;5;14;;;;;;;;5;;;34,5;;14;5;;;;;;6;8;7;;;;;;;;;7;7;7;;;;;5;5;;14;;;;;;;;;8;;5;14;;;;;;;14;8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;" names="0"/>
-                    <segment id="27637031" length="17" startTrkptIdx="2583" segmentTime="47.72" speed="12.50" turnType="TR" turnAngle="85.48" types="0,12,29,30,31,13,17" pointTypes=";;;6;;6;;;;;;;;5;8;8;" names="0"/>
-                    <segment id="161793779" length="5" startTrkptIdx="2599" segmentTime="1.48" speed="12.50" turnType="" turnAngle="" types="0,12,35,30,31,16,33" pointTypes=";;5;;" names="0"/>
-                    <segment id="161793779" length="6" startTrkptIdx="2603" segmentTime="0.67" speed="12.50" turnType="TL" turnAngle="-68.09" types="0,12,35,30,31,16,33" pointTypes=";;;;;" names="0"/>
-                    <segment id="161793779" length="35" startTrkptIdx="2609" segmentTime="170.94" speed="12.50" turnType="C" turnAngle="" types="0,12,35,30,31,16,33" pointTypes=";;;8;5;6;;;;;;;;;;;6;6;;;;;;;;;;;;;;" names="0"/>
-                    <segment id="161793779" length="2" startTrkptIdx="2644" segmentTime="0.18" speed="12.50" turnType="C" turnAngle="" types="0,12,35,30,31,16,33" pointTypes="" names="0"/>
-                    <segment id="93518845" length="46" startTrkptIdx="2645" segmentTime="128.38" speed="9.72" turnType="TR" turnAngle="78.62" types="32,12,29,30,31,16,33" pointTypes=";;;;;;;;;;6;;6;;;;;;;6;;6;6;6;;;;;5;;;5;5;5;8;5;5;;;;;;;;;" names="0"/>
-                    <segment id="93518845" length="2" startTrkptIdx="2691" segmentTime="0.51" speed="9.72" turnType="C" turnAngle="" types="32,12,29,30,31,16,33" pointTypes=";" names="0"/>
-                    <segment id="1216137280" length="2" startTrkptIdx="2692" segmentTime="4.16" speed="13.89" turnType="TR" turnAngle="89.61" types="23,12,15,36,24,2,3,4" pointTypes="6;5" names="0,0,72,73,74,75,76"/>
-                    <segment id="139333798" length="2" startTrkptIdx="2693" segmentTime="14.19" speed="13.89" turnType="" turnAngle="" types="9,23,12,15,36,24,2,3,4" pointTypes="" names="0,0,72,73,74,75,76"/>
-                    <segment id="443530635" length="6" startTrkptIdx="2694" segmentTime="14.66" speed="13.89" turnType="" turnAngle="" types="23,12,15,36,24,2,3,4" pointTypes=";;;;;" names="0,0,72,73,74,75,76"/>
-                    <segment id="161851278" length="2" startTrkptIdx="2699" segmentTime="0.57" speed="17.65" turnType="TR" turnAngle="102.41" types="23,12,37,36,2" pointTypes=";6" names="0"/>
-                    <segment id="51778880" length="10" startTrkptIdx="2700" segmentTime="32.82" speed="17.65" turnType="TSLL" turnAngle="-37.29" types="38,23,12,37,13,2" pointTypes=";5;;;;;;;6;" names="0"/>
-                    <segment id="528806918" length="18" startTrkptIdx="2709" segmentTime="41.31" speed="13.38" turnType="TL" turnAngle="-90.88" types="23,12,13,2" pointTypes=";;;;;;;;;;39;;;;;;;" names="0"/>
-                    <segment id="161779929" length="12" startTrkptIdx="2726" segmentTime="40.08" speed="12.16" turnType="TR" turnAngle="90.12" types="23,12,15,36,40,2,3,4" pointTypes="6;27,41,26;;6;7;14;7;7;;7;8;" names="0,0,77,78,79,80,81"/>
-                    <segment id="796741360" length="25" startTrkptIdx="2737" segmentTime="18.40" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,40,17,3,4" pointTypes="14;;14;;7;8;7;8;5;7;;14;;;7;7;8;8;8;8;8;5;5;7;7" names="0,0,77,78,79,80,81"/>
-                    <segment id="796741360" length="35" startTrkptIdx="2761" segmentTime="72.74" speed="18.85" turnType="C" turnAngle="-1.29" types="23,12,25,16,40,17,3,4" pointTypes="7;;7;;;7;;14;8;5;5;;;5;6;;5;5;5;5;8;8;6;6;6;;6;5;5;8;5;;6;6;" names="0,0,77,78,79,80,81"/>
-                    <segment id="796741360" length="164" startTrkptIdx="2795" segmentTime="613.28" speed="18.85" turnType="C" turnAngle="1.05" types="23,12,25,16,40,17,3,4" pointTypes=";6;6;7;6;6;5;8;7;;7;;;;14;14;14;;7;8;5;8;7;7;8;8;8;5;8;6;6;6;5;;5;;5;14;7;7;7;7;8;5;;;6;;;;;;;;5;6;6;;;;;6;;;8;6;;;;;;;;5;5;5;6;6;5;5;6;;;;;;;;;;;;;;;6;;6;7;8;7;5;6;;5;6;;;;;;;;;;;;6;;;;;;;;;;;;;;;;;6;;;;;6;6;;6;6;;6;;;;;5;6;;;;;;5;5;;;;;6" names="0,0,77,78,79,80,81"/>
-                    <segment id="796741360" length="13" startTrkptIdx="2958" segmentTime="60.37" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,40,17,3,4" pointTypes="6;;;;;;;6;;;;;" names="0,0,77,78,79,80,81"/>
-                    <segment id="796741359" length="23" startTrkptIdx="2970" segmentTime="84.47" speed="13.89" turnType="" turnAngle="" types="23,12,15,16,40,17,3,4" pointTypes="5;6;;;;;;;7;5;;;;;;;;;;;;;" names="0,0,77,78,79,80,81"/>
-                    <segment id="796741358" length="42" startTrkptIdx="2992" segmentTime="363.33" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,40,17,3,4" pointTypes="6;6;;;;;;;;;;;;;;;;;6;6;;;;;6;5;6;6;;6;5;6;;;;;;;;;;" names="0,0,77,78,79,80,81"/>
-                    <segment id="51756776" length="25" startTrkptIdx="3033" segmentTime="56.98" speed="13.89" turnType="" turnAngle="" types="23,12,15,16,40,17,3,4" pointTypes="8;8;8;8;5;;;;;;;;;;;;;;;;;;;;" names="0,0,77,78,79,80,81"/>
-                    <segment id="342413239" length="10" startTrkptIdx="3057" segmentTime="24.57" speed="13.89" turnType="" turnAngle="" types="23,12,15,36,40,2,3,4" pointTypes="6;;;;6;6;;6;6;" names="0,0,77,78,79,80,81"/>
-                    <segment id="342413239" length="7" startTrkptIdx="3066" segmentTime="32.75" speed="13.89" turnType="" turnAngle="" types="23,12,15,36,40,2,3,4" pointTypes=";;;;;;" names="0,0,77,78,79,80,81"/>
-                    <segment id="706094833" length="7" startTrkptIdx="3072" segmentTime="15.26" speed="13.89" turnType="" turnAngle="" types="23,42,15,18,36,40,2,3,4" pointTypes="6;;5;5;6;;" names="0,0,77,78,79,80,81"/>
-                    <segment id="706094832" length="4" startTrkptIdx="3078" segmentTime="9.03" speed="13.89" turnType="" turnAngle="" types="23,12,15,37,36,40,2,3,4" pointTypes=";;;" names="0,0,77,78,79,80,81"/>
-                    <segment id="1303732113" length="2" startTrkptIdx="3081" segmentTime="8.19" speed="13.89" turnType="" turnAngle="" types="23,12,15,37,36,40,2,3,4" pointTypes=";" names="0,0,77,78,79,80,81"/>
-                    <segment id="342413240" length="6" startTrkptIdx="3082" segmentTime="28.32" speed="13.89" turnType="" turnAngle="" types="23,12,15,37,36,40,2,3,4" pointTypes=";" names="0,0,77,78,79,80,81"/>
-                    <segment id="342413240" length="2" startTrkptIdx="3087" segmentTime="2.35" speed="13.89" turnType="C" turnAngle="" types="23,12,15,37,36,40,2,3,4" pointTypes="" names="0,0,77,78,79,80,81"/>
-                    <segment id="706094829" length="2" startTrkptIdx="3089" segmentTime="14.14" speed="13.89" turnType="" turnAngle="" types="23,12,15,37,36,40,2,3,4" pointTypes=";" names="0,0,77,78,79,80,81"/>
-                    <segment id="51758160" length="4" startTrkptIdx="3090" segmentTime="14.72" speed="13.89" turnType="" turnAngle="" types="23,42,15,18,36,40,2,3,4" pointTypes=";;;" names="0,0,77,78,79,80,81"/>
-                    <segment id="51758160" length="2" startTrkptIdx="3093" segmentTime="4.43" speed="13.89" turnType="" turnAngle="" types="23,42,15,18,36,40,2,3,4" pointTypes=";" names="0,0,77,78,79,80,81"/>
-                    <segment id="706094830" length="3" startTrkptIdx="3094" segmentTime="25.18" speed="13.89" turnType="" turnAngle="" types="23,12,15,36,40,2,3,4" pointTypes=";" names="0,0,77,78,79,80,81"/>
-                    <segment id="197536322" length="19" startTrkptIdx="3096" segmentTime="172.66" speed="13.89" turnType="" turnAngle="" types="23,12,15,16,40,17,3,4" pointTypes=";6;6;;;;;;;;;;;;;;6;;6" names="0,0,77,78,79,80,81"/>
-                    <segment id="197536322" length="10" startTrkptIdx="3114" segmentTime="33.82" speed="13.89" turnType="" turnAngle="" types="23,12,15,16,40,17,3,4" pointTypes="6;6;;;;;6;;;" names="0,0,77,78,79,80,81"/>
-                    <segment id="1213418114" length="2" startTrkptIdx="3123" segmentTime="1.14" speed="13.89" turnType="" turnAngle="" types="23,12,15,16,40,17,3,4" pointTypes=";" names="0,0,77,78,79,80,81"/>
-                    <segment id="777533731" length="5" startTrkptIdx="3124" segmentTime="4.23" speed="13.89" turnType="" turnAngle="" types="43,23,12,15,16,40,17,3,4" pointTypes=";;;6;" names="0,0,77,78,79,80,81"/>
-                    <segment id="322781958" length="4" startTrkptIdx="3128" segmentTime="26.97" speed="1.29" turnType="" turnAngle="" types="43,23,12,37,16,40,17,3,4" pointTypes=";26;20;" names="0,0,77,78,79,80,81"/>
-                    <segment id="1056244441" length="5" startTrkptIdx="3131" segmentTime="1.57" speed="17.65" turnType="RNDB1" turnAngle="43.56" types="43,23,44,12,37,36,40,2,3,4" pointTypes="" names="0,0,77,82,78,79,80,81,83"/>
-                    <segment id="322781959" length="6" startTrkptIdx="3135" segmentTime="17.31" speed="2.35" turnType="" turnAngle="" types="43,23,12,37,36,24,2,3,4" pointTypes=";26;;;6;8" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="27637043" length="2" startTrkptIdx="3140" segmentTime="1.25" speed="17.65" turnType="" turnAngle="" types="43,23,12,36,24,2,3,4" pointTypes=";8" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="332190753" length="4" startTrkptIdx="3141" segmentTime="4.21" speed="17.65" turnType="" turnAngle="" types="43,23,12,36,24,2,3,4" pointTypes=";6;6;5" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="930875621" length="2" startTrkptIdx="3144" segmentTime="2.63" speed="17.65" turnType="" turnAngle="" types="23,12,45,36,24,2,3,4" pointTypes=";6" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="930875620" length="7" startTrkptIdx="3145" segmentTime="43.88" speed="16.44" turnType="" turnAngle="" types="23,12,46,36,24,2,3,4" pointTypes=";7;;;;;" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="398637471" length="24" startTrkptIdx="3151" segmentTime="47.37" speed="13.89" turnType="" turnAngle="" types="23,12,15,16,24,17,3,4" pointTypes=";;;;;;;;;;;;5;6;5;6;;;5;5;6;;;" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="398637472" length="59" startTrkptIdx="3174" segmentTime="127.37" speed="16.96" turnType="" turnAngle="" types="23,12,45,47,16,24,17,3,4" pointTypes=";14;14;;;;;;;;;;;;;;;;;;;;;;;;;6;6;5;5;8;8;6;;;;;;;;;;;;;;;;;;;;;27,41,26;;;6;6" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="398637472" length="35" startTrkptIdx="3232" segmentTime="105.53" speed="16.81" turnType="C" turnAngle="-4.06" types="23,12,45,47,16,24,17,3,4" pointTypes="6;6;6;27,41,26;;;;;;;;6;8;8;6;6;;5;6;;6;;;;;;;;6;6;;;;;" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="1052544079" length="7" startTrkptIdx="3266" segmentTime="41.60" speed="12.22" turnType="" turnAngle="" types="23,12,15,16,24,17,3,4" pointTypes=";6;;6;8;27,41,26,8;5" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="1052544078" length="5" startTrkptIdx="3272" segmentTime="5.53" speed="17.65" turnType="" turnAngle="" types="23,12,48,49,16,24,17,3,4" pointTypes=";6;6;6;6" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="1052559204" length="11" startTrkptIdx="3276" segmentTime="47.38" speed="14.71" turnType="" turnAngle="" types="23,12,46,16,24,17,3,4" pointTypes=";6;5;6;6;6;;;;27,41,26;" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="1052559200" length="4" startTrkptIdx="3286" segmentTime="5.31" speed="16.44" turnType="" turnAngle="" types="23,12,46,16,24,17,3,4" pointTypes=";5;5;" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="1052559200" length="2" startTrkptIdx="3289" segmentTime="0.07" speed="16.44" turnType="C" turnAngle="" types="23,12,46,16,24,17,3,4" pointTypes=";8" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="1158562227" length="5" startTrkptIdx="3290" segmentTime="3.17" speed="12.50" turnType="TR" turnAngle="45.06" types="0,50,37,16,17,3,4" pointTypes=";5;5;6" names="0,0,88,89"/>
-                    <segment id="814006423" length="2" startTrkptIdx="3294" segmentTime="0.11" speed="12.50" turnType="" turnAngle="" types="0,12,16,17,3,4" pointTypes=";" names="0,0,88,89"/>
-                    <segment id="814006423" length="4" startTrkptIdx="3295" segmentTime="5.22" speed="12.50" turnType="C" turnAngle="" types="0,12,16,17,3,4" pointTypes=";6;6;" names="0,0,88,89"/>
-                    <segment id="207327172" length="2" startTrkptIdx="3299" segmentTime="10.03" speed="9.72" turnType="TR" turnAngle="92.57" types="28,21,22" pointTypes=";" names="0"/>
-                    <segment id="207327166" length="5" startTrkptIdx="3300" segmentTime="15.78" speed="9.72" turnType="TL" turnAngle="-89.28" types="28,21,22" pointTypes=";;;5;" names="0"/>
-                    <segment id="207327171" length="20" startTrkptIdx="3304" segmentTime="40.94" speed="9.72" turnType="TL" turnAngle="-102.51" types="28,21,22" pointTypes=";;;;;;;;;;;;;;;;;;;" names="0"/>
-                    <segment id="814006415" length="3" startTrkptIdx="3323" segmentTime="1.87" speed="12.50" turnType="TL" turnAngle="-91.13" types="0,12,16,17,3,4" pointTypes=";;" names="0,0,88,89"/>
-                    <segment id="207327186" length="6" startTrkptIdx="3325" segmentTime="52.02" speed="9.72" turnType="TR" turnAngle="79.73" types="28,21,22" pointTypes=";;;;6;" names="0"/>
-                    <segment id="207327186" length="2" startTrkptIdx="3330" segmentTime="20.21" speed="9.72" turnType="C" turnAngle="" types="28,21,22" pointTypes=";6" names="0"/>
-                    <segment id="207327163" length="2" startTrkptIdx="3331" segmentTime="6.87" speed="9.72" turnType="TL" turnAngle="-91.92" types="28,21,22" pointTypes=";" names="0"/>
-                    <segment id="814006422" length="2" startTrkptIdx="3332" segmentTime="16.57" speed="12.50" turnType="TL" turnAngle="-92.56" types="0,12,16,17,3,4" pointTypes=";" names="0,0,88,89"/>
-                    <segment id="814006422" length="11" startTrkptIdx="3333" segmentTime="99.49" speed="12.50" turnType="" turnAngle="" types="0,12,16,17,3,4" pointTypes=";6;8;8;5;6;6;;;;6" names="0,0,88,89"/>
-                    <segment id="139500845" length="46" startTrkptIdx="3343" segmentTime="197.34" speed="12.50" turnType="" turnAngle="" types="0,12,16,17,3,4" pointTypes=";;;;;;6;5;6;6;;6;;;;;6;6;;;;;;6;;6;6;6;6;5;5;8;7;7;7;7;7;7;8;5;6;6;5;7;7;" names="0,0,88,89"/>
-                    <segment id="139500845" length="86" startTrkptIdx="3388" segmentTime="325.83" speed="12.50" turnType="C" turnAngle="" types="0,12,16,17,3,4" pointTypes=";8;;;;;;;;;;;;;;;;;;;;;;;;;6;6;;;;;;;;;;;;;;;;;6;;;;;;;;;;6;5;6;;;;;;6;6;6;6;5;;;;;6;6;;;;;;6;;;;;6;6;" names="0,0,88,89"/>
-                    <segment id="139500845" length="39" startTrkptIdx="3473" segmentTime="269.75" speed="12.50" turnType="" turnAngle="" types="0,12,16,17,3,4" pointTypes=";;;;;;;;;;;;;6;;;;;;6;6;;;;;;;;;;;;;;;;;6;" names="0,0,88,89"/>
-                    <segment id="139500845" length="3" startTrkptIdx="3511" segmentTime="94.38" speed="12.50" turnType="C" turnAngle="" types="0,12,16,17,3,4" pointTypes=";6;6" names="0,0,88,89"/>
-                    <segment id="957145164" length="3" startTrkptIdx="3513" segmentTime="2.57" speed="5.56" turnType="TR" turnAngle="92.29" types="51,52" pointTypes=";;" names="0"/>
-                    <segment id="957145164" length="3" startTrkptIdx="3515" segmentTime="2.57" speed="5.56" turnType="C" turnAngle="" types="51,52" pointTypes=";;" names="0"/>
-                    <segment id="139500845" length="10" startTrkptIdx="3517" segmentTime="76.28" speed="12.50" turnType="TR" turnAngle="84.93" types="0,12,16,17,3,4" pointTypes="6;;6;5;5;6;6;6;;" names="0,0,88,89"/>
-                    <segment id="139500845" length="24" startTrkptIdx="3526" segmentTime="110.61" speed="12.50" turnType="C" turnAngle="" types="0,12,16,17,3,4" pointTypes=";;;;;;;;;;;;;;;;5;;;6;5;6;;" names="0,0,88,89"/>
-                    <segment id="139500845" length="3" startTrkptIdx="3549" segmentTime="3.67" speed="12.50" turnType="C" turnAngle="" types="0,12,16,17,3,4" pointTypes=";6;6" names="0,0,88,89"/>
-                    <segment id="1154342351" length="3" startTrkptIdx="3551" segmentTime="16.33" speed="9.72" turnType="TL" turnAngle="-52.90" types="28,21,22" pointTypes=";;5" names="0"/>
-                    <segment id="1228642479" length="3" startTrkptIdx="3553" segmentTime="12.24" speed="9.72" turnType="TR" turnAngle="112.04" types="28,21,22" pointTypes=";;" names="0"/>
-                    <segment id="139500845" length="9" startTrkptIdx="3555" segmentTime="60.88" speed="12.50" turnType="TL" turnAngle="-69.40" types="0,12,16,17,3,4" pointTypes=";6;;;6;7;;;" names="0,0,88,89"/>
-                    <segment id="397563145" length="7" startTrkptIdx="3563" segmentTime="28.67" speed="11.11" turnType="" turnAngle="" types="0,12,53,18,36,2,3,4" pointTypes=";6;;;;;" names="0,0,88,89"/>
-                    <segment id="139500844" length="2" startTrkptIdx="3569" segmentTime="5.29" speed="8.33" turnType="" turnAngle="" types="9,0,12,54,36,2" pointTypes="" names="0"/>
-                    <segment id="139500843" length="2" startTrkptIdx="3570" segmentTime="1.11" speed="13.89" turnType="" turnAngle="" types="0,12,15,36,2" pointTypes=";" names="0"/>
-                    <segment id="139500843" length="20" startTrkptIdx="3571" segmentTime="24.29" speed="13.89" turnType="C" turnAngle="" types="0,12,15,36,2" pointTypes=";;;;;;;;;;;;;;;;;;;" names="0"/>
-                    <segment id="161761798" length="2" startTrkptIdx="3590" segmentTime="0.58" speed="13.89" turnType="" turnAngle="" types="0,12,15,37,36,2" pointTypes=";" names="0"/>
-                    <segment id="161761798" length="3" startTrkptIdx="3591" segmentTime="1.04" speed="13.89" turnType="C" turnAngle="" types="0,12,15,37,36,2" pointTypes=";;" names="0"/>
-                    <segment id="281221801" length="4" startTrkptIdx="3593" segmentTime="25.92" speed="5.85" turnType="TR" turnAngle="60.17" types="55,12,15,37,36,2" pointTypes=";;56;" names="0"/>
-                    <segment id="86888534" length="2" startTrkptIdx="3596" segmentTime="0.03" speed="12.50" turnType="TL" turnAngle="-91.98" types="0,37,17" pointTypes=";" names="0"/>
-                    <segment id="86888534" length="3" startTrkptIdx="3597" segmentTime="22.77" speed="4.26" turnType="C" turnAngle="" types="0,37,17" pointTypes=";56,6;5" names="0"/>
-                    <segment id="524246114" length="3" startTrkptIdx="3599" segmentTime="20.26" speed="4.92" turnType="" turnAngle="" types="28,37,17" pointTypes=";20,5;" names="0"/>
-                    <segment id="524245114" length="2" startTrkptIdx="3601" segmentTime="5.82" speed="16.44" turnType="TR" turnAngle="92.91" types="55,37,17" pointTypes="6;6" names="0"/>
-                    <segment id="524243912" length="3" startTrkptIdx="3602" segmentTime="20.99" speed="4.69" turnType="" turnAngle="" types="55,37,17" pointTypes=";56,7;14" names="0"/>
-                    <segment id="524243914" length="5" startTrkptIdx="3604" segmentTime="30.70" speed="9.37" turnType="TL" turnAngle="-90.58" types="55,12,15,18,36,2" pointTypes=";;39;;6" names="0"/>
-                    <segment id="524243914" length="7" startTrkptIdx="3608" segmentTime="27.92" speed="13.89" turnType="C" turnAngle="0.13" types="55,12,15,18,36,2" pointTypes="6;6;5;5;5;7;14" names="0"/>
-                    <segment id="1052559186" length="2" startTrkptIdx="3615" segmentTime="10.03" speed="13.89" turnType="" turnAngle="" types="55,12,15,18,36,2" pointTypes=";6" names="0"/>
-                    <segment id="281151405" length="4" startTrkptIdx="3616" segmentTime="1.92" speed="17.65" turnType="KR" turnAngle="29.21" types="57,37,17" pointTypes=";" names="0"/>
-                    <segment id="1052559189" length="5" startTrkptIdx="3619" segmentTime="30.92" speed="13.89" turnType="" turnAngle="" types="23,12,15,18,16,24,17,3,4" pointTypes=";;6;6;" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="139500867" length="2" startTrkptIdx="3623" segmentTime="2.77" speed="13.89" turnType="" turnAngle="" types="9,23,12,15,16,24,17,3,4" pointTypes="" names="0,0,84,82,73,85,86,87,83,90"/>
-                    <segment id="525502763" length="2" startTrkptIdx="3624" segmentTime="2.08" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="525502763" length="9" startTrkptIdx="3625" segmentTime="64.76" speed="18.85" turnType="C" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";;;;;;;6;" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="525502763" length="53" startTrkptIdx="3633" segmentTime="223.80" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";;;;;;;6;6;;;6;;6;5;5;8;7;8;;;;;;;;;;;;6;6;;;;8;;;5;6;;;;6;5;5;5;;;6;;;6" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="799010615" length="13" startTrkptIdx="3685" segmentTime="41.86" speed="13.89" turnType="" turnAngle="" types="23,12,15,16,24,17,3,4" pointTypes=";6;7;7;8;5;8;8;5;5;8;6;" names="0,0,84,82,73,85,86,87,83"/>
-                    <segment id="525502762" length="3" startTrkptIdx="3697" segmentTime="14.19" speed="17.65" turnType="KR" turnAngle="2.02" types="23,12,36,24,2,3,4" pointTypes=";19,56;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="51715389" length="2" startTrkptIdx="3699" segmentTime="22.25" speed="13.89" turnType="" turnAngle="" types="23,12,15,36,24,2,3,4" pointTypes=";5" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="808608391" length="65" startTrkptIdx="3700" segmentTime="234.75" speed="18.85" turnType="" turnAngle="" types="23,12,25,36,24,2,3,4" pointTypes=";;6;;;;;;;;;;;;6;5;6;6;6;5;6;;6;5;5;8;7;8;5;5;5;6;;;;;;;;;;;;;;;;;;6;6;6;;;;;6;;;;;;6;6;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="143840510" length="2" startTrkptIdx="3764" segmentTime="2.55" speed="18.85" turnType="" turnAngle="" types="9,23,12,25,36,24,2,3,4" pointTypes="" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="143840511" length="3" startTrkptIdx="3765" segmentTime="1.98" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="143840511" length="64" startTrkptIdx="3767" segmentTime="334.35" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5;8;5;;;6;6;5;6;;;;;;;;;;;;6;;;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="1203034572" length="3" startTrkptIdx="3830" segmentTime="2.79" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes="" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="1203034571" length="21" startTrkptIdx="3832" segmentTime="207.82" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";;6;5;7;;;;;;;;;;;;6;;;;5" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="1203034573" length="2" startTrkptIdx="3852" segmentTime="2.69" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="1203034574" length="40" startTrkptIdx="3853" segmentTime="295.96" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";;6;6;6;6;;6;6;;;6;6;;6;5;6;;;6;6;6;;;;;;;;6;;5;6;6;5;5;6;6;5;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="808608392" length="15" startTrkptIdx="3892" segmentTime="124.32" speed="13.89" turnType="" turnAngle="" types="23,12,15,36,24,2,3,4" pointTypes=";;;;;;;;6;;;;;;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="808608393" length="18" startTrkptIdx="3906" segmentTime="284.14" speed="18.85" turnType="" turnAngle="" types="23,12,25,36,24,2,3,4" pointTypes=";;;6;5;;;;;6;;;;;;;;6" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="808608393" length="12" startTrkptIdx="3923" segmentTime="69.40" speed="18.85" turnType="" turnAngle="" types="23,12,25,36,24,2,3,4" pointTypes="6;;;6;6;6;;;;6;6;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="142750409" length="2" startTrkptIdx="3934" segmentTime="2.14" speed="18.85" turnType="" turnAngle="" types="9,23,12,25,36,24,2,3,4" pointTypes="" names="0,0,91,82,73,92,93,94,83,95"/>
-                    <segment id="142750410" length="52" startTrkptIdx="3935" segmentTime="442.31" speed="18.85" turnType="" turnAngle="" types="23,12,25,36,24,2,3,4" pointTypes=";;;;;;;;;;;;;6;;;6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;5;6" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="808608394" length="13" startTrkptIdx="3986" segmentTime="75.14" speed="13.89" turnType="" turnAngle="" types="23,12,15,36,24,2,3,4" pointTypes=";;;6;5;6;6;;;6;;6;6" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="808608395" length="18" startTrkptIdx="3998" segmentTime="182.79" speed="18.85" turnType="" turnAngle="" types="23,12,25,36,24,2,3,4" pointTypes=";;;6;6;;;;;;6;6;6;;6;6;;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="733351016" length="2" startTrkptIdx="4015" segmentTime="0.73" speed="18.85" turnType="" turnAngle="" types="9,23,12,25,36,24,2,3,4" pointTypes="" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="733351017" length="11" startTrkptIdx="4016" segmentTime="34.50" speed="18.85" turnType="" turnAngle="" types="23,12,25,36,24,2,3,4" pointTypes=";;;;;;;;;;6" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="733351017" length="44" startTrkptIdx="4026" segmentTime="154.76" speed="18.85" turnType="" turnAngle="" types="23,12,25,36,24,2,3,4" pointTypes="6;6;8;;;;;;6;6;;5;;;5;6;;6;8;6;8;8;6;6;5;6;;;6;5;8;7;6;6;6;6;8;7;;7;6;;6;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="518844994" length="37" startTrkptIdx="4069" segmentTime="117.42" speed="13.89" turnType="" turnAngle="" types="23,12,15,36,24,2,3,4" pointTypes=";;;6;6;6;;;;6;;;;;6;6;6;5;6;6;6;5;;;;;;;;;;;6;5;6;6;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="92483240" length="2" startTrkptIdx="4105" segmentTime="2.19" speed="13.89" turnType="" turnAngle="" types="9,23,12,15,36,24,2,3,4" pointTypes="" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="92483216" length="57" startTrkptIdx="4106" segmentTime="118.40" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";;;;;;;;7;;8;5;6;6;;;;;;;;;;;;;;;;;;;6;6;;;;;;;;;;;;;;;;;;;;;;6;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="92483216" length="110" startTrkptIdx="4162" segmentTime="244.17" speed="18.85" turnType="C" turnAngle="-0.31" types="23,12,25,16,24,17,3,4" pointTypes=";;;5;5;8;8;8;5;6;6;;;;;6;6;;6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;;;;6;6;;;;;6;;;;5;6;5;6;;6;;;;;;5;6;5;5;6;6;6;6;5;8;8;5;6;6;6;;;6;6;6;6;5;8;6;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="92483216" length="122" startTrkptIdx="4271" segmentTime="258.66" speed="18.85" turnType="" turnAngle="" types="23,12,25,16,24,17,3,4" pointTypes=";;;;;;;;;;;6;;5;5;5;5;8;7;;;7;7;7;14;;;;;7;7;8;5;6;;;;;;;;;;;;;;;;;;;;;;;;;;;;5;;;;6;;;;;6;6;6;;;6;5;7;;;8;8;8;7;;14;14;14;7;7;7;7;7;;;;;;;;;;;;6;6;8;8;8;8;8;8;8;8;7;;14;14;;7;;7" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="152857294" length="15" startTrkptIdx="4392" segmentTime="23.65" speed="18.85" turnType="" turnAngle="" types="23,12,35,25,16,24,17,3,4" pointTypes=";5;6;6;;5;;;6;5;5;;;;6" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="447782570" length="2" startTrkptIdx="4406" segmentTime="7.23" speed="13.89" turnType="TL" turnAngle="-89.22" types="55,12,35,15,36,2" pointTypes="6;" names="0"/>
-                    <segment id="92475544" length="7" startTrkptIdx="4407" segmentTime="29.82" speed="13.89" turnType="TR" turnAngle="89.96" types="55,12,35,15,36,2" pointTypes=";;;;6;6;5" names="0"/>
-                    <segment id="443533896" length="2" startTrkptIdx="4413" segmentTime="2.61" speed="13.89" turnType="" turnAngle="" types="23,35,15,24,17,3,4" pointTypes=";5" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="27636369" length="2" startTrkptIdx="4414" segmentTime="11.20" speed="13.89" turnType="" turnAngle="" types="9,23,12,15,36,24,2,3,4" pointTypes="" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="242416471" length="9" startTrkptIdx="4415" segmentTime="12.18" speed="13.89" turnType="" turnAngle="" types="23,12,15,18,16,24,17,3,4" pointTypes=";;;;;;;;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="242416471" length="7" startTrkptIdx="4423" segmentTime="12.39" speed="13.89" turnType="C" turnAngle="" types="23,12,15,18,16,24,17,3,4" pointTypes=";;;;;;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="242416471" length="2" startTrkptIdx="4429" segmentTime="0.52" speed="13.89" turnType="" turnAngle="" types="23,12,15,18,16,24,17,3,4" pointTypes=";" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="1114710911" length="218" startTrkptIdx="4430" segmentTime="322.01" speed="18.56" turnType="" turnAngle="" types="23,12,25,18,16,24,17,3,4" pointTypes=";;;;6;6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;;;;;;;;;6;5;6;6;6;6;;;;;;6;5;;6;6;;;;;;;;;;;;;;;;;;;;;;;6;8;8;7;6;;;;;;;6;6;5;5;5;5;5;5;8;6;8;6;5;6;6;6;;6;;;;;;;;;;;;;;;;;27,41,26;;;;;;;;;;;;;6;8;8;8;14;;14;7;8;8;6;;;;;;;;;;;;;;;;;;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="1114710910" length="2" startTrkptIdx="4647" segmentTime="2.92" speed="18.85" turnType="" turnAngle="" types="23,12,25,18,16,24,17,3,4" pointTypes=";" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="1114710909" length="3" startTrkptIdx="4648" segmentTime="3.49" speed="18.85" turnType="" turnAngle="" types="23,12,25,18,16,24,17,3,4" pointTypes=";;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="1114710908" length="2" startTrkptIdx="4650" segmentTime="3.31" speed="18.85" turnType="" turnAngle="" types="23,12,25,18,16,24,17,3,4" pointTypes=";" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="1468586458" length="111" startTrkptIdx="4651" segmentTime="185.83" speed="18.85" turnType="" turnAngle="" types="23,12,25,18,16,24,17,3,4" pointTypes=";6;6;5;5;5;8;8;5;6;6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;8;5;8;7;;8;8;8;5;;;6;;;;;6;6;6;;;6;6;5;6;6;;;;;;;;;;;;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="1468586458" length="15" startTrkptIdx="4761" segmentTime="45.38" speed="18.85" turnType="" turnAngle="" types="23,12,25,18,16,24,17,3,4" pointTypes=";;;;;;;;6;8;8;8;8;7;14" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="1468586457" length="3" startTrkptIdx="4775" segmentTime="3.32" speed="18.85" turnType="" turnAngle="" types="23,12,25,18,16,24,17,3,4" pointTypes=";;27,41,26" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="808608396" length="265" startTrkptIdx="4777" segmentTime="398.79" speed="18.62" turnType="" turnAngle="" types="23,12,25,18,16,24,17,3,4" pointTypes="27,41,26;7;;7;7;7;7;7;8;8;5;;5;5;5;6;5;7;5;6;5;6;;;;;;;;6;8;7;7;7;7;;;7;;;7;7;7;8;7;;7;;14;7;8;6;6;8;7;7;8;;;14;;14;;;8;6;5;7;7;7;7;7;;14;14;14;14;;;7;8;8;8;8;7;5;8;7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5;8;5;5;8;7;8;8;8;8;5;;;;;;;;;;;;;;;;;;;;;;;;;;6;;;;;;;;;;;;;;;;;;;;;;6;6;6;5;7;7;;;6;;;;;;;;;;;;;;6;;6;5;5;8;7;8;5;6;6;;;;;;;;;;;;;;5;7;7;;7;5;6;6;;;;;;;;;;;;;" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="808608396" length="20" startTrkptIdx="5041" segmentTime="31.14" speed="18.85" turnType="" turnAngle="" types="23,12,25,18,16,24,17,3,4" pointTypes=";8;7;8;8;5;6;8;7;7;;14;14;;14;14;14;;7;8" names="0,0,91,82,73,92,93,94,83"/>
-                    <segment id="25756290" length="48" startTrkptIdx="5060" segmentTime="96.38" speed="17.65" turnType="" turnAngle="" types="23,12,16,17,3,4" pointTypes=";6;;;;;;;;;;;;;;;6;;;;;;;;;6;;;6;6;;6;6;6;6;6;6;6;;;;;;;;;;" names="0,0,96,97,98,99"/>
-                    <segment id="377569080" length="82" startTrkptIdx="5107" segmentTime="251.03" speed="17.65" turnType="" turnAngle="" types="23,12,16,17,3,4" pointTypes=";;;;;8;7;8;8;6;8;8;8;5;8;8;8;5;6;;6;6;;;;;;;;;;;;;;;;;;;;;;;;;;6;8;7;5;5;6;6;5;5;5;8;8;8;6;;;;;6;6;;;;;;5;5;8;7;8;6;7;8;;" names="0,0,96,97,98,99"/>
-                    <segment id="377569080" length="172" startTrkptIdx="5188" segmentTime="276.06" speed="17.65" turnType="" turnAngle="" types="23,12,16,17,3,4" pointTypes=";;;;;;;5;5;5;8;7;7;7;7;;7;;8;5;6;6;;;;;;;;;;;;;;;;;;;6;;8;14;;;14;14;14;14;7;;6;8;8;8;7;;;;7;8;5;8;14;14;;;14;14;;7;8;5;6;;;;;;;;;;;;;;;;;;;;6;6;6;;6;7;7;;;;14;14;;;;;;14;;;;;;;7;7;8;8;7;7;8;5;5;5;;;8;8;8;8;8;6;6;5;8;7;7;8;7;;7;7;7;7;7;8;5;5;5;5;5;5;8;7;8;8;5;6;;;;;;;;;;" names="0,0,96,97,98,99"/>
-                    <segment id="1364569937" length="2" startTrkptIdx="5359" segmentTime="4.02" speed="17.65" turnType="" turnAngle="" types="23,12,16,17,3,4" pointTypes=";" names="0,0,96,97,98,99"/>
-                    <segment id="1364569939" length="4" startTrkptIdx="5360" segmentTime="3.37" speed="17.65" turnType="" turnAngle="" types="23,12,16,17,3,4" pointTypes=";;;" names="0,0,96,97,98,99"/>
-                    <segment id="1446187725" length="35" startTrkptIdx="5363" segmentTime="50.34" speed="17.65" turnType="" turnAngle="" types="23,12,16,17,3,4" pointTypes=";;;;;;;;;;;;6;6;5;6;6;5;8;5;5;5;8;8;8;5;6;5;;;;;;;" names="0,0,96,97,98,99"/>
-                    <segment id="1446187724" length="6" startTrkptIdx="5397" segmentTime="3.36" speed="17.65" turnType="" turnAngle="" types="23,12,16,17,3,4" pointTypes=";;;;;" names="0,0,96,97,98,99"/>
-                    <segment id="1364569938" length="110" startTrkptIdx="5402" segmentTime="137.12" speed="17.65" turnType="" turnAngle="" types="23,12,16,17,3,4" pointTypes=";;;;6;5;5;5;5;8;7;7;5;;;6;5;;;6;6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;;;;;;;;;;;;;;5;5;5;6;6;5;5;5;5;8;7;;7;8;8;8;8;7;7;7;7;5;5;8;7;8;;;;;;5;5;8" names="0,0,96,97,98,99"/>
-                    <segment id="1446187723" length="3" startTrkptIdx="5511" segmentTime="3.01" speed="17.65" turnType="" turnAngle="" types="23,12,16,17,3,4" pointTypes=";8;7" names="0,0,96,97,98,99"/>
-                    <segment id="1446187722" length="19" startTrkptIdx="5513" segmentTime="16.70" speed="17.65" turnType="" turnAngle="" types="23,12,16,17,3,4" pointTypes=";5;5;5;6;;;;;;;;;;;;" names="0,0,96,97,98,99"/>
-                    <segment id="529332389" length="244" startTrkptIdx="5531" segmentTime="441.89" speed="17.65" turnType="" turnAngle="" types="23,12,16,17,3,4" pointTypes=";;5;8;7;;;7;8;7;7;;7;5;5;7;7;;14;14;;14;14;14;7;5;6;6;;6;6;;;;6;5;6;5;6;;;;;;;6;6;6;;;6;6;;;;6;;;;;;;;5;6;;;;;;;;;;;;;;;;;6;5;7;;7;14;14;7;5;6;5;;;;;;;6;5;5;8;7;;8;7;14;7;8;8;6;6;;;5;5;6;5;8;;;7;5;;6;;6;5;;7;14;14;14;;8;;;;6;;;8;7;8;7;;8;;;;5;6;8;8;5;5;6;;;;;;;;;;;;;;;;;;;;;;;;6;6;;;6;;;;6;5;8;7;;14;8;;;;;;;;;;;;;;;;;;6;;;;;;;5;8;7;;;14;;14;;;;14;14;;;;14;;;;;;;;" names="0,0,96,97,98,99"/>
-                    <segment id="529332386" length="2" startTrkptIdx="5774" segmentTime="2.61" speed="17.65" turnType="" turnAngle="" types="9,23,12,36,2,3,4" pointTypes="" names="0,0,96,97,98,99"/>
-                    <segment id="206007626" length="154" startTrkptIdx="5775" segmentTime="266.14" speed="17.65" turnType="" turnAngle="" types="23,12,16,17,3,4" pointTypes=";;;;;;;;;;;;;;6;6;;;;;;6;;;;;;;;7;;7;8;8;5;6;6;8;5;5;;;;;;;;;;;;6;6;;6;6;;;;;;;;;;;;;;;6;;5;8;5;5;6;6;5;6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;;6;8;7;;;14;;8;6;;5;5;6;;;;;;;;;;;8;7;;8;5;5;8;8;5;5;6;6" names="0,0,96,97,98,99"/>
-                    <segment id="52302394" length="2" startTrkptIdx="5928" segmentTime="9.39" speed="17.65" turnType="" turnAngle="" types="9,23,12,36,2,3,4" pointTypes="" names="0,0,96,97,98,99"/>
-                    <segment id="52302358" length="66" startTrkptIdx="5929" segmentTime="179.46" speed="13.89" turnType="" turnAngle="" types="23,12,15,18,16,17,3,4" pointTypes=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6;;;;6;5;5;7;;;7;5;8;6;6;6;;;;;;;;;;;;;;;;;;" names="0,0,96,97,98,99"/>
-                    <segment id="52302358" length="92" startTrkptIdx="5994" segmentTime="287.75" speed="13.89" turnType="" turnAngle="" types="23,12,15,18,16,17,3,4" pointTypes=";;;;;8;7;8;8;5;6;6;;;;;6;8;8;;;;;;;;;;;;;;;;;;;;;6;8;7;;7;;;6;6;;;;;;;;;;;;;;;;6;6;;6;6;6;6;8;;7;;;;7;7;8;;7;7;7;7;8;8;8;5;6;;;5" names="0,0,96,97,98,99"/>
-                    <segment id="322495997" length="2" startTrkptIdx="6085" segmentTime="1.78" speed="17.65" turnType="" turnAngle="" types="23,12,36,2,3,4" pointTypes=";" names="0,0,96,97,98,99"/>
-                    <segment id="645015825" length="4" startTrkptIdx="6086" segmentTime="4.25" speed="17.65" turnType="KR" turnAngle="44.98" types="57,50,37,16,17" pointTypes=";8;7;" names="0"/>
-                    <segment id="182188233" length="4" startTrkptIdx="6089" segmentTime="20.21" speed="17.65" turnType="TL" turnAngle="-114.29" types="23,12,36,2,3,4" pointTypes=";;6;6" names="0,0,100,101"/>
-                    <segment id="182188233" length="95" startTrkptIdx="6092" segmentTime="408.39" speed="17.65" turnType="" turnAngle="" types="23,12,36,2,3,4" pointTypes="6;6;;;;;;;;;;;;;;;6;;;6;;;;;;;;;;;;6;;6;6;;;;;6;6;;6;;;;;;;;;;;;;;;;;;;;;;;;;6;;;;;6;5;6;;;;;;;;6;;;5;;;;;;;;;" names="0,0,100,101"/>
-                    <segment id="1114698686" length="2" startTrkptIdx="6186" segmentTime="6.03" speed="17.65" turnType="" turnAngle="" types="23,58,59,36,2,3,4" pointTypes=";" names="0,0,100,101"/>
-                    <segment id="1114698687" length="2" startTrkptIdx="6187" segmentTime="1.54" speed="17.65" turnType="" turnAngle="" types="23,12,36,2,3,4" pointTypes=";" names="0,0,100,101"/>
-                    <segment id="1114698688" length="2" startTrkptIdx="6188" segmentTime="2.34" speed="17.65" turnType="" turnAngle="" types="23,12,36,2,3,4" pointTypes="" names="0,0,100,101"/>
-                    <segment id="1114698689" length="2" startTrkptIdx="6189" segmentTime="4.81" speed="17.65" turnType="" turnAngle="" types="23,58,59,36,2,3,4" pointTypes=";" names="0,0,100,101"/>
-                    <segment id="1114698690" length="13" startTrkptIdx="6190" segmentTime="74.22" speed="17.65" turnType="" turnAngle="" types="23,12,36,2,3,4" pointTypes=";;;;;;;;;;;6;" names="0,0,100,101"/>
-                    <segment id="182188237" length="66" startTrkptIdx="6202" segmentTime="412.68" speed="17.65" turnType="" turnAngle="" types="23,12,36,2,3,4" pointTypes="6;;;;;;;;5;5;6;;;;;;;;;6;;;;;;;;6;;;;;;;;;6;;;;;;;;;6;8;;8;8;;;;;;;;;;;;;;;;" names="0,0,100,101"/>
-                    <segment id="150330596" length="25" startTrkptIdx="6267" segmentTime="80.25" speed="17.65" turnType="" turnAngle="" types="23,12,36,2,3,4" pointTypes=";;;;;;;6;;;;;;;;6;6;6;6;;;;;;" names="0,0,100,101"/>
-                    <segment id="150330594" length="3" startTrkptIdx="6291" segmentTime="2.49" speed="17.65" turnType="" turnAngle="" types="9,23,12,36,2,3,4" pointTypes="" names="0,0,100,101"/>
-                    <segment id="674361246" length="5" startTrkptIdx="6293" segmentTime="6.87" speed="17.65" turnType="" turnAngle="" types="23,12,36,2,3,4" pointTypes=";6;" names="0,0,100,101"/>
-                    <segment id="591205153" length="15" startTrkptIdx="6297" segmentTime="24.64" speed="11.11" turnType="TL" turnAngle="-100.10" types="23,12,53,36,2" pointTypes="5;6;6;5;5;5;8;8;7;7;14;;;;" names="0"/>
-                    <segment id="150320298" length="9" startTrkptIdx="6311" segmentTime="22.84" speed="13.89" turnType="" turnAngle="" types="23,12,15,36,2" pointTypes=";;7;5;5;5;5;5;60,61" names="0"/>
-                    <segment id="857637600" length="5" startTrkptIdx="6319" segmentTime="28.40" speed="4.11" turnType="TR" turnAngle="88.78" types="23,12,35,15,36,2,3,4" pointTypes="60,61;5;14;;14" names="0,63,102,103"/>
-                    <segment id="735016176" length="4" startTrkptIdx="6323" segmentTime="8.73" speed="13.89" turnType="TL" turnAngle="-57.77" types="23,12,35,15,13,2,3,4" pointTypes="6;6;6;" names="0,63,102,103"/>
-                    <segment id="150320292" length="5" startTrkptIdx="6326" segmentTime="9.95" speed="13.89" turnType="TR" turnAngle="63.91" types="23,12,35,15,37,13,2,3,4" pointTypes=";14;;;" names="0,63,102,103"/>
-                    <segment id="150316161" length="4" startTrkptIdx="6330" segmentTime="5.24" speed="13.89" turnType="TL" turnAngle="-92.62" types="28,12,35,15,13,2" pointTypes=";;;" names="62"/>
+                    <segment id="1014933515" length="5" startTrkptIdx="0" segmentTime="32.70" speed="3.78" turnType="C" turnAngle="" types="0,1,2,3,4" pointTypes=";5,6,7;8;5,6,7" names="69"/>
+                    <segment id="150588427" length="2" startTrkptIdx="4" segmentTime="0.35" speed="12.50" turnType="TR" turnAngle="91.85" types="9,2,10" pointTypes=";" names="70"/>
+                    <segment id="1155352758" length="7" startTrkptIdx="5" segmentTime="1.52" speed="9.72" turnType="TU" turnAngle="" types="0,2,10" pointTypes="" names="69"/>
+                    <segment id="1156504333" length="6" startTrkptIdx="11" segmentTime="20.04" speed="6.26" turnType="TL" turnAngle="-70.28" types="9,2,10" pointTypes=";;;5,6,7;5,6,7" names="70"/>
+                    <segment id="1155352764" length="2" startTrkptIdx="16" segmentTime="0.27" speed="17.65" turnType="" turnAngle="" types="11,2,12,10,13,14" pointTypes="" names="70,71,72,73,74,75,76"/>
+                    <segment id="1155352755" length="4" startTrkptIdx="17" segmentTime="6.42" speed="2.46" turnType="TR" turnAngle="89.07" types="11,1,15,16,3,12,4,13,14" pointTypes="5,6,7;17,18;" names="77,71,72,73,74,75,76"/>
+                    <segment id="1155352755" length="4" startTrkptIdx="21" segmentTime="25.29" speed="4.52" turnType="C" turnAngle="" types="11,1,15,16,3,12,4,13,14" pointTypes=";19;5,6,7;" names="77,71,72,73,74,75,76"/>
+                    <segment id="405182459" length="6" startTrkptIdx="24" segmentTime="21.83" speed="6.02" turnType="" turnAngle="" types="11,1,15,16,3,12,4,13,14" pointTypes=";5,6,7;20;5,6,7;;" names="77,71,72,73,74,75,76"/>
+                    <segment id="405182459" length="5" startTrkptIdx="30" segmentTime="31.02" speed="3.95" turnType="C" turnAngle="" types="11,1,15,16,3,12,4,13,14" pointTypes=";5,6,7,20;19,20;5,6,7;" names="77,71,72,73,74,75,76"/>
+                    <segment id="1155352751" length="5" startTrkptIdx="34" segmentTime="21.28" speed="5.89" turnType="" turnAngle="" types="11,1,15,16,3,12,4,13,14" pointTypes="5,6,7;;5,6,7;" names="77,71,72,73,74,75,76"/>
+                    <segment id="1155352752" length="2" startTrkptIdx="38" segmentTime="0.20" speed="11.11" turnType="" turnAngle="" types="21,22,11,1,15,16,3,12,4,13,14" pointTypes="" names="77,71,72,73,74,75,76"/>
+                    <segment id="1155352752" length="6" startTrkptIdx="40" segmentTime="36.29" speed="4.99" turnType="C" turnAngle="" types="21,22,11,1,15,16,3,12,4,13,14" pointTypes="5,6,7;19;;5,6,7;" names="77,71,72,73,74,75,76"/>
+                    <segment id="1156818603" length="4" startTrkptIdx="45" segmentTime="5.81" speed="1.54" turnType="TL" turnAngle="-86.32" types="9,1,15,23,10,13,14" pointTypes=";;5,6,7;" names="79,80,81,82"/>
+                    <segment id="1156818603" length="5" startTrkptIdx="49" segmentTime="3.03" speed="11.11" turnType="C" turnAngle="" types="9,1,15,23,10,13,14" pointTypes=";24,18;;;" names="79,80,81,82"/>
+                    <segment id="447793920" length="11" startTrkptIdx="53" segmentTime="44.97" speed="6.17" turnType="" turnAngle="" types="9,1,15,3,4,13,14" pointTypes=";;25;;;20;19;;;;" names="79,80,81,82"/>
+                    <segment id="1156818605" length="2" startTrkptIdx="63" segmentTime="4.79" speed="12.50" turnType="C" turnAngle="3.20" types="9,1,26,4,13,14" pointTypes=";" names="79,80,81,82"/>
+                    <segment id="517506145" length="74" startTrkptIdx="64" segmentTime="245.25" speed="12.50" turnType="" turnAngle="" types="9,1,23,10,13,14" pointTypes=";;;;;;;;;27;20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;27;20;;;;;;20;27;27;;;;;20;28;28;27;20;;29;27;;;;;;;;;;;;" names="83,80,81,82"/>
+                    <segment id="567198398" length="8" startTrkptIdx="137" segmentTime="7.40" speed="12.50" turnType="" turnAngle="" types="9,1,23,10,13,14" pointTypes=";;;;;" names="83,80,81,82"/>
+                    <segment id="1114962540" length="3" startTrkptIdx="144" segmentTime="17.60" speed="1.84" turnType="TL" turnAngle="-57.14" types="30,31,2,23,10" pointTypes=";18,27;27" names="84,85"/>
+                    <segment id="517506141" length="13" startTrkptIdx="146" segmentTime="11.60" speed="12.50" turnType="TL" turnAngle="-83.21" types="9,1,16,23,10,13,14" pointTypes=";;;;20;28;28;28;28;29;32;32;" names="83,80,81,82"/>
+                    <segment id="1152579095" length="3" startTrkptIdx="158" segmentTime="9.17" speed="12.50" turnType="" turnAngle="" types="9,1,16,23,10,13,14" pointTypes=";29;29" names="83,80,81,82"/>
+                    <segment id="517506144" length="20" startTrkptIdx="160" segmentTime="46.24" speed="12.50" turnType="" turnAngle="" types="9,1,16,23,10,13,14" pointTypes=";28;20;;;;;;;;;;;;;;;;;" names="83,80,81,82"/>
+                    <segment id="1151369503" length="7" startTrkptIdx="179" segmentTime="7.68" speed="12.50" turnType="" turnAngle="" types="9,1,16,23,10,13,14" pointTypes=";;;;20;20;" names="83,80,81,82"/>
+                    <segment id="1151369503" length="2" startTrkptIdx="186" segmentTime="0.93" speed="12.50" turnType="C" turnAngle="" types="9,1,16,23,10,13,14" pointTypes=";20" names="83,80,81,82"/>
+                    <segment id="1151369505" length="3" startTrkptIdx="187" segmentTime="22.86" speed="4.30" turnType="TR" turnAngle="76.25" types="9,33,34,13,14" pointTypes=";18;" names="83,80,81,82"/>
+                    <segment id="1150865585" length="89" startTrkptIdx="189" segmentTime="165.47" speed="12.50" turnType="" turnAngle="" types="9,35,4,13,14" pointTypes=";;20;;;;;;;;20;20;20;20;20;20;;;;;;20;28;28;29;;;28;28;29;29;28;27;20;;;;;;;;;;;;;;;;20;;;;;;;;;;;;;;;;;;;;;;;;;20;29;29;;32;32;;29;32;;27;20;27;20;" names="83,80,81,82"/>
+                    <segment id="1150865585" length="121" startTrkptIdx="278" segmentTime="196.48" speed="12.50" turnType="C" turnAngle="" types="9,35,4,13,14" pointTypes=";;;;;;;;;;;;;20;;27;20;;;;;;;;;27;29;32;29;;29;29;28;29;27;;;;;;;;27;28;;;;;;;;;32;;;;;32;;;29;29;28;28;27;27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;20;;;;;;;;;;;;;;;;;;;;;;;;" names="83,80,81,82"/>
+                    <segment id="1151369508" length="28" startTrkptIdx="398" segmentTime="45.77" speed="12.50" turnType="" turnAngle="" types="9,1,3,4,13,14" pointTypes=";;20;29;;;28;;;;;;;;;;;;;;27;20;;;;;" names="83,80,81,82"/>
+                    <segment id="1151369514" length="5" startTrkptIdx="425" segmentTime="4.65" speed="12.50" turnType="" turnAngle="" types="9,35,4,13,14" pointTypes=";;;20;" names="83,80,81,82"/>
+                    <segment id="1151369514" length="33" startTrkptIdx="430" segmentTime="60.48" speed="12.50" turnType="C" turnAngle="" types="9,35,4,13,14" pointTypes=";27;20;;;;;;;;;;20;;;;;;20;;;;;;;;;20;29;29;28;28;28" names="9,9,81,82"/>
+                    <segment id="1150865584" length="2" startTrkptIdx="462" segmentTime="1.63" speed="12.50" turnType="" turnAngle="" types="36,9,37,38,4,13,14" pointTypes="" names="9,9,81,82"/>
+                    <segment id="1151369518" length="28" startTrkptIdx="463" segmentTime="41.17" speed="12.50" turnType="" turnAngle="" types="9,35,4,13,14" pointTypes=";27;27;27;28;27;;;;;;;;;;;;;;;;20;27;29;29;20;20;" names="9,9,81,82"/>
+                    <segment id="1151366175" length="44" startTrkptIdx="490" segmentTime="62.70" speed="12.50" turnType="" turnAngle="" types="9,1,3,4,13,14" pointTypes=";;;;;;;;;;;29;29;;32;32;29;;;;;;;;;;;;;;;;;;;;;;;;;28;;32" names="9,9,81,82"/>
+                    <segment id="1151369519" length="36" startTrkptIdx="533" segmentTime="26.39" speed="12.50" turnType="" turnAngle="" types="9,35,4,13,14" pointTypes=";;;;32;;;;;;;32;;28;20;;;;;;20;27;;;;;;;;;;;;;;" names="9,9,81,82"/>
+                    <segment id="1151369521" length="24" startTrkptIdx="568" segmentTime="23.01" speed="13.89" turnType="" turnAngle="" types="9,1,39,23,10,13,14" pointTypes=";;;;;;;;;;;;;;;;;;;;;20;20;" names="9,9,81,82"/>
+                    <segment id="1151369523" length="4" startTrkptIdx="591" segmentTime="5.03" speed="13.89" turnType="" turnAngle="" types="9,1,39,23,10,13,14" pointTypes=";;;" names="9,9,81,82"/>
+                    <segment id="1151369524" length="2" startTrkptIdx="594" segmentTime="3.54" speed="13.89" turnType="" turnAngle="" types="9,1,39,23,10,13,14" pointTypes=";" names="9,9,81,82"/>
+                    <segment id="1151369524" length="2" startTrkptIdx="595" segmentTime="2.60" speed="13.89" turnType="" turnAngle="" types="9,1,39,23,10,13,14" pointTypes=";20" names="9,9,81,82"/>
+                    <segment id="1151369526" length="14" startTrkptIdx="596" segmentTime="25.20" speed="13.89" turnType="" turnAngle="" types="9,1,39,23,10,13,14" pointTypes=";;;;;20;;20;20;;20" names="9,9,81,82"/>
+                    <segment id="1151366171" length="5" startTrkptIdx="609" segmentTime="4.37" speed="13.89" turnType="" turnAngle="" types="9,1,39,23,10,13,14" pointTypes=";;;;" names="9,9,81,82"/>
+                    <segment id="1151366176" length="4" startTrkptIdx="613" segmentTime="3.13" speed="12.50" turnType="KR" turnAngle="38.53" types="9,1,16,23,10,13,14" pointTypes=";24,8;;20" names="9,9,88,89"/>
+                    <segment id="1151366172" length="2" startTrkptIdx="616" segmentTime="1.31" speed="12.50" turnType="" turnAngle="" types="9,1,23,10,13,14" pointTypes=";27" names="9,9,88,89"/>
+                    <segment id="1151366172" length="6" startTrkptIdx="617" segmentTime="3.66" speed="12.50" turnType="" turnAngle="" types="9,1,23,10,13,14" pointTypes="27;28;28;29;29;29" names="9,9,88,89"/>
+                    <segment id="1151366177" length="25" startTrkptIdx="622" segmentTime="36.27" speed="12.50" turnType="" turnAngle="" types="9,1,23,10,13,14" pointTypes=";28;28;20;;;;;;;;;;;;;;20;20;;27;27" names="9,9,88,89"/>
+                    <segment id="27636114" length="194" startTrkptIdx="646" segmentTime="362.68" speed="12.50" turnType="" turnAngle="" types="9,33,34,13,14" pointTypes=";;;;;;;;;;;;;;;;;;;20;20;27;20;20;20;28;27;27;27;28;28;27;;;;20;27;;;;20;;;;;;;;;;;;;;;;;;;;;;;20;27;27;28;28;28;29;29;28;28;20;20;20;27;27;20;;20;;;28;27;28;20;;;;;;;;;;;;;;;;;;;;;;;;20;20;20;20;20;20;27;20;27;;;;;;;;;;;;;;;;;;;;20;20;20;20;27;27;27;20;;;;;;;;;;;;;;;;;;;;;;;;;20;28;29;20;;;;20;20;27;28;20;20;;;;;;;;;;;" names="9,9,88,89"/>
+                    <segment id="27636114" length="2" startTrkptIdx="840" segmentTime="2.48" speed="12.50" turnType="C" turnAngle="" types="9,33,34,13,14" pointTypes=";20" names="9,9,88,89"/>
+                    <segment id="1114959502" length="37" startTrkptIdx="841" segmentTime="52.52" speed="12.50" turnType="TR" turnAngle="71.74" types="9,1,23,10,13,14" pointTypes=";;;;;;;;;;20;27;20;;;;;;;;;;;;;;;;;;;;;;;;" names="9,9,90,91"/>
+                    <segment id="528872404" length="2" startTrkptIdx="877" segmentTime="0.32" speed="12.50" turnType="TSHL" turnAngle="-139.08" types="9,33,34,13,14" pointTypes=";" names="9,9,92,93"/>
+                    <segment id="528872404" length="48" startTrkptIdx="879" segmentTime="150.13" speed="12.50" turnType="C" turnAngle="" types="9,33,34,13,14" pointTypes=";32;32;;28;27;28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;;;;;;;;;;;;" names="9,9,92,93"/>
+                    <segment id="528872406" length="2" startTrkptIdx="926" segmentTime="1.26" speed="12.50" turnType="" turnAngle="" types="36,9,33,34,13,14" pointTypes="" names="9,9,92,93"/>
+                    <segment id="27636856" length="46" startTrkptIdx="927" segmentTime="197.25" speed="12.50" turnType="" turnAngle="" types="9,33,34,13,14" pointTypes=";28;;;;;;;;20;20;;32;32;;29;28;27;28;29;;29;29;29;29;28;29;32;32;32;29;;27;28;28;32;32;;29;27;27;;20;;20;20" names="9,9,92,93"/>
+                    <segment id="27636856" length="5" startTrkptIdx="972" segmentTime="9.42" speed="12.50" turnType="" turnAngle="" types="9,33,34,13,14" pointTypes="20;20;;;" names="9,9,92,93"/>
+                    <segment id="27636856" length="358" startTrkptIdx="976" segmentTime="654.90" speed="12.50" turnType="C" turnAngle="2.67" types="9,33,34,13,14" pointTypes=";27;27;20;20;;;;;;;;;;;;;;;27;29;32;;;;;32;32;32;32;;32;29;27;28;28;27;20;;;;;;;;;;;;;;;;;;;;;27;27;20;;;;;;;;;;;;;;;;;;20;29;32;;;;;;28;29;28;;;;;32;29;29;29;29;28;27;27;27;20;20;28;27;27;20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;20;20;20;20;20;20;20;20;20;;20;27;28;27;28;27;20;27;28;29;29;;28;20;28;;;;;;;;;29;28;27;29;;32;;;29;28;;;;;;;;;;;;;;;28;20;;;;;20;20;29;29;29;29;27;29;27;28;29;28;27;27;27;27;;;;;;;;;;;;;;;20;27;27;20;27;27;20;;20;20;;;20;;;;;;20;27;27;27;28;29;29;28;28;28;27;20;20;;;;;;;;;;;;;;;20;;;;;;;;;;;27;27;27;27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;20;27;28;29;29;28;27;29;29;20;20;;;;;;;;;;;;;;;;;;;;;;27;27;;27" names="9,9,92,93"/>
+                    <segment id="27636856" length="20" startTrkptIdx="1333" segmentTime="28.04" speed="12.50" turnType="" turnAngle="" types="9,33,34,13,14" pointTypes="27;;;;;;20;27;27;27;27;28;28;28;28;;29;28;27;27" names="9,9,92,93"/>
+                    <segment id="27636856" length="128" startTrkptIdx="1352" segmentTime="149.03" speed="12.50" turnType="" turnAngle="" types="9,33,34,13,14" pointTypes="27;;;;;;;;;;20;;;;20;27;28;20;;20;27;27;27;;;;;;20;;20;;;;;;;;;;;;;;;;;27;28;;;28;28;27;20;27;27;27;;;;;;;;;28;28;;;;;;;;28;32;;;27;;;;;;;;;;;;;;;;;;;;27;28;;;32;27;;;;;;27;32;29;;;;;;;;;;;;;;;" names="9,9,92,93"/>
+                    <segment id="567545448" length="3" startTrkptIdx="1479" segmentTime="1.27" speed="13.89" turnType="TL" turnAngle="-66.00" types="11,1,39,23,12,10,13,14" pointTypes="28;20;" names="9,9,94,73,95,96,97"/>
+                    <segment id="567545448" length="33" startTrkptIdx="1482" segmentTime="51.83" speed="13.89" turnType="C" turnAngle="" types="11,1,39,23,12,10,13,14" pointTypes=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;" names="9,9,94,73,95,96,97"/>
+                    <segment id="567545448" length="23" startTrkptIdx="1514" segmentTime="31.92" speed="13.89" turnType="" turnAngle="" types="11,1,39,23,12,10,13,14" pointTypes=";;20;;;;;;;;;;;;;;;;;;;;" names="9,9,94,73,95,96,97"/>
+                    <segment id="567545447" length="26" startTrkptIdx="1536" segmentTime="49.91" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";;;20;;;;;;;;;;;;;28;27;20;27;27;27;27;;;" names="9,9,94,73,95,96,97"/>
+                    <segment id="297136469" length="63" startTrkptIdx="1561" segmentTime="86.31" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";;;;;;;;;27;;29;27;20;20;27;27;27;27;27;27;27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;;;;;;;" names="9,9,94,73,95,96,97"/>
+                    <segment id="297136469" length="21" startTrkptIdx="1623" segmentTime="38.95" speed="18.85" turnType="C" turnAngle="-1.13" types="11,1,40,23,12,10,13,14" pointTypes=";;;;27;20;;;;;;;;;;;;20;20;27;27" names="9,9,94,73,95,96,97"/>
+                    <segment id="297136469" length="171" startTrkptIdx="1643" segmentTime="344.39" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes="27;20;27;27;20;;;;;;;;;;;;;;;;20;;;28;27;20;27;27;27;20;27;29;28;;;;20;27;28;28;29;29;28;27;27;28;28;28;28;29;29;;;32;;29;;;;;20;27;27;;;;;;;;;;;;;;20;27;29;29;27;27;27;20;;;;;;;;;;;;;;;;;20;28;28;;;32;29;20;27;28;29;28;29;;;29;29;29;29;;;;;;;;;;;;;;28;28;28;20;27;20;20;20;27;27;20;;20;20;;;;;;;;;;;;;;;;;;;;;;;;;" names="9,9,94,73,95,96,97"/>
+                    <segment id="797195897" length="10" startTrkptIdx="1813" segmentTime="43.96" speed="13.89" turnType="" turnAngle="" types="11,1,39,23,12,10,13,14" pointTypes=";;;;28;20;27;29;;32" names="9,9,94,73,95,96,97"/>
+                    <segment id="797195898" length="171" startTrkptIdx="1822" segmentTime="254.38" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";29;29;29;28;28;28;27;27;20;27;20;;;;;;;20;28;28;27;27;27;28;28;29;29;29;27;27;27;27;28;29;20;27;20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;20;27;28;28;27;28;27;20;;;27;28;;29;29;;;29;32;;;;32;;29;29;;29;29;;29;29;27;20;;;;;20;27;28;32;;28;29;28;29;29;29;28;29;29;29;;29;28;28;29;29;27;29;;29;28;29;;;32;32;;32;32;;32;32;32;32;;;;32;32;;;29;29;29;29;27;27" names="9,9,94,73,95,96,97"/>
+                    <segment id="297136470" length="2" startTrkptIdx="1992" segmentTime="1.88" speed="18.85" turnType="" turnAngle="" types="36,11,1,40,16,23,12,10,13,14" pointTypes="" names="9,9,94,73,95,96,97"/>
+                    <segment id="161852162" length="214" startTrkptIdx="1993" segmentTime="285.17" speed="18.52" turnType="" turnAngle="" types="11,1,40,16,23,12,10,13,14" pointTypes=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;27;27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;;;;;;;;;;;;20;;;;;;;;27;28;29;28;27;27;28;27;20;;;;;;7,5;;;;;;;" names="9,9,94,73,95,96,97"/>
+                    <segment id="161852162" length="130" startTrkptIdx="2206" segmentTime="217.53" speed="18.85" turnType="C" turnAngle="2.38" types="11,1,40,16,23,12,10,13,14" pointTypes=";;20;20;;;;;20;20;27;27;27;28;27;27;28;27;29;29;27;20;;;;;;;20;20;20;28;29;28;28;20;;;;;;;;20;;;;;;;;;;;;;;;;;;;;;;;;;;27;20;28;;27;27;27;27;27;27;27;27;20;27;28;29;;28;28;28;28;27;27;27;27;27;27;29;;;;32;;;;;;;;;32;;29;;;;;32;28;28;28;28;28;29;28;28;28;29;28;;28" names="9,9,94,73,95,96,97"/>
+                    <segment id="797195899" length="83" startTrkptIdx="2335" segmentTime="80.09" speed="13.89" turnType="" turnAngle="" types="11,1,39,16,23,12,10,13,14" pointTypes=";;32;32;;32;32;;;;;32;;;;29;29;28;20;;;;27;;;;;;;;;;;;32;29;28;28;29;32;;29;29;;32;28;27;28;29;28;;32;32;;;;;;29;28;28;28;28;27;27;20;20;20;;;;20;27;27;20" names="9,9,94,73,95,96,97"/>
+                    <segment id="524272021" length="2" startTrkptIdx="2417" segmentTime="1.09" speed="18.85" turnType="" turnAngle="" types="36,11,1,40,16,23,12,10,13,14" pointTypes="" names="9,9,94,73,95,96,97"/>
+                    <segment id="524272020" length="287" startTrkptIdx="2418" segmentTime="424.24" speed="18.85" turnType="" turnAngle="" types="11,1,40,16,23,12,10,13,14" pointTypes=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;20;20;27;28;;;27;29;27;28;27;;;;;27;;;;;;;;;;;;27;27;27;27;27;28;28;28;32;;;;;;;;;32;29;;29;29;28;28;29;28;27;;;;;27;29;;;;32;32;29;;;;;;;;;27;28;28;28;29;32;;29;29;29;29;29;29;29;29;;29;28;28;28;28;28;;32;;32;32;;32;32;32;29;27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;20;;20;27;27;28;28;28;27;20;;;;;;;;;;;20;20;20;27;27;27;20;;;;;;;;;;;;;;;;;;20;27;20;;;" names="9,9,94,73,95,96,97"/>
+                    <segment id="524272020" length="2" startTrkptIdx="2704" segmentTime="4.76" speed="18.85" turnType="" turnAngle="" types="11,1,40,16,23,12,10,13,14" pointTypes=";" names="9,9,94,73,95,96,97"/>
+                    <segment id="528876324" length="23" startTrkptIdx="2705" segmentTime="54.17" speed="13.89" turnType="" turnAngle="" types="11,1,39,16,23,12,10,13,14" pointTypes=";;;;;;20;27;29;;32;32;;32;;32;32;32;;;;;32" names="9,9,94,73,95,96,97"/>
+                    <segment id="528876321" length="25" startTrkptIdx="2727" segmentTime="24.16" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";32;;32;32;;;;32;;;;;28;27;27;27;27;27;29;29;28;29;;" names="9,9,94,73,95,96,97"/>
+                    <segment id="528876321" length="3" startTrkptIdx="2752" segmentTime="5.13" speed="18.85" turnType="C" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";;29" names="9,9,94,73,95,96,97"/>
+                    <segment id="1206304035" length="5" startTrkptIdx="2754" segmentTime="26.25" speed="9.72" turnType="TR" turnAngle="89.57" types="0,33,34" pointTypes=";28;29;27;20" names="9"/>
+                    <segment id="1319391809" length="16" startTrkptIdx="2758" segmentTime="33.81" speed="9.72" turnType="TR" turnAngle="87.10" types="0,33,34" pointTypes=";;;;;;;;;;;;;;;" names="9"/>
+                    <segment id="27637031" length="8" startTrkptIdx="2773" segmentTime="11.34" speed="12.50" turnType="TL" turnAngle="-108.45" types="9,1,41,42,43,3,10" pointTypes="29;27;27;28;27;20;;" names="9"/>
+                    <segment id="364256156" length="117" startTrkptIdx="2780" segmentTime="191.55" speed="9.72" turnType="TR" turnAngle="82.89" types="44,41,42,43,23,45" pointTypes=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;28;32;;;;;;;32;27;;28;;;;;;;;;32;;27;27;;;;;29;29;29;;;;;;;;;29;28;20;;;;;;27;32;;46,27;;;27;;;;;;;;32;27;;;;" names="9"/>
+                    <segment id="364256156" length="117" startTrkptIdx="2897" segmentTime="191.55" speed="9.72" turnType="C" turnAngle="" types="44,41,42,43,23,45" pointTypes=";;;;27;32;;;;;;;;27;;;46,27;;32;27;;;;;;20;28;29;;;;;;;;;29;29;29;;;;;27;27;;32;;;;;;;;;28;;27;32;;;;;;;32;28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;" names="9"/>
+                    <segment id="27637031" length="17" startTrkptIdx="3013" segmentTime="47.72" speed="12.50" turnType="TR" turnAngle="85.48" types="9,1,41,42,43,3,10" pointTypes=";;;20;;20;;;;;;;;27;28;28;" names="9"/>
+                    <segment id="161793779" length="5" startTrkptIdx="3029" segmentTime="1.48" speed="12.50" turnType="" turnAngle="" types="9,1,47,42,43,23,45" pointTypes=";;27;;" names="9"/>
+                    <segment id="161793779" length="6" startTrkptIdx="3033" segmentTime="0.67" speed="12.50" turnType="TL" turnAngle="-68.09" types="9,1,47,42,43,23,45" pointTypes=";;;;;" names="9"/>
+                    <segment id="161793779" length="35" startTrkptIdx="3039" segmentTime="170.94" speed="12.50" turnType="C" turnAngle="" types="9,1,47,42,43,23,45" pointTypes=";;;28;27;20;;;;;;;;;;;20;20;;;;;;;;;;;;;;" names="9"/>
+                    <segment id="161793779" length="2" startTrkptIdx="3074" segmentTime="0.18" speed="12.50" turnType="C" turnAngle="" types="9,1,47,42,43,23,45" pointTypes="" names="9"/>
+                    <segment id="93518845" length="46" startTrkptIdx="3075" segmentTime="128.38" speed="9.72" turnType="TR" turnAngle="78.62" types="44,1,41,42,43,23,45" pointTypes=";;;;;;;;;;20;;20;;;;;;;20;;20;20;20;;;;;27;;;27;27;27;28;27;27;;;;;;;;;" names="9"/>
+                    <segment id="93518845" length="2" startTrkptIdx="3121" segmentTime="0.51" speed="9.72" turnType="C" turnAngle="" types="44,1,41,42,43,23,45" pointTypes=";" names="9"/>
+                    <segment id="1216137280" length="2" startTrkptIdx="3122" segmentTime="4.16" speed="13.89" turnType="TR" turnAngle="89.61" types="11,1,39,26,12,4,13,14" pointTypes="20;27" names="9,9,94,73,95,96,97"/>
+                    <segment id="139333798" length="2" startTrkptIdx="3123" segmentTime="14.19" speed="13.89" turnType="" turnAngle="" types="36,11,1,39,26,12,4,13,14" pointTypes="" names="9,9,94,73,95,96,97"/>
+                    <segment id="443530635" length="6" startTrkptIdx="3124" segmentTime="14.66" speed="13.89" turnType="" turnAngle="" types="11,1,39,26,12,4,13,14" pointTypes=";;;;;" names="9,9,94,73,95,96,97"/>
+                    <segment id="161851278" length="2" startTrkptIdx="3129" segmentTime="0.57" speed="17.65" turnType="TR" turnAngle="102.41" types="11,1,2,26,4" pointTypes=";20" names="9"/>
+                    <segment id="51778880" length="10" startTrkptIdx="3130" segmentTime="32.82" speed="17.65" turnType="TSLL" turnAngle="-37.29" types="48,11,1,2,3,4" pointTypes=";27;;;;;;;20;" names="9"/>
+                    <segment id="528806918" length="18" startTrkptIdx="3139" segmentTime="41.31" speed="13.38" turnType="TL" turnAngle="-90.88" types="11,1,3,4" pointTypes=";;;;;;;;;;19;;;;;;;" names="9"/>
+                    <segment id="161779929" length="12" startTrkptIdx="3156" segmentTime="40.08" speed="12.16" turnType="TR" turnAngle="90.12" types="11,1,39,26,49,4,13,14" pointTypes="20;5,6,7;;20;29;32;29;29;;29;28;" names="9,9,98,99,100,101,102"/>
+                    <segment id="796741360" length="25" startTrkptIdx="3167" segmentTime="18.40" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,49,10,13,14" pointTypes="32;;32;;29;28;29;28;27;29;;32;;;29;29;28;28;28;28;28;27;27;29;29" names="9,9,98,99,100,101,102"/>
+                    <segment id="796741360" length="35" startTrkptIdx="3191" segmentTime="72.74" speed="18.85" turnType="C" turnAngle="-1.29" types="11,1,40,23,49,10,13,14" pointTypes="29;;29;;;29;;32;28;27;27;;;27;20;;27;27;27;27;28;28;20;20;20;;20;27;27;28;27;;20;20;" names="9,9,98,99,100,101,102"/>
+                    <segment id="796741360" length="164" startTrkptIdx="3225" segmentTime="613.28" speed="18.85" turnType="C" turnAngle="1.05" types="11,1,40,23,49,10,13,14" pointTypes=";20;20;29;20;20;27;28;29;;29;;;;32;32;32;;29;28;27;28;29;29;28;28;28;27;28;20;20;20;27;;27;;27;32;29;29;29;29;28;27;;;20;;;;;;;;27;20;20;;;;;20;;;28;20;;;;;;;;27;27;27;20;20;27;27;20;;;;;;;;;;;;;;;20;;20;29;28;29;27;20;;27;20;;;;;;;;;;;;20;;;;;;;;;;;;;;;;;20;;;;;20;20;;20;20;;20;;;;;27;20;;;;;;27;27;;;;;20" names="9,9,98,99,100,101,102"/>
+                    <segment id="796741360" length="13" startTrkptIdx="3388" segmentTime="60.37" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,49,10,13,14" pointTypes="20;;;;;;;20;;;;;" names="9,9,98,99,100,101,102"/>
+                    <segment id="796741359" length="23" startTrkptIdx="3400" segmentTime="84.47" speed="13.89" turnType="" turnAngle="" types="11,1,39,23,49,10,13,14" pointTypes="27;20;;;;;;;29;27;;;;;;;;;;;;;" names="9,9,98,99,100,101,102"/>
+                    <segment id="796741358" length="42" startTrkptIdx="3422" segmentTime="363.33" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,49,10,13,14" pointTypes="20;20;;;;;;;;;;;;;;;;;20;20;;;;;20;27;20;20;;20;27;20;;;;;;;;;;" names="9,9,98,99,100,101,102"/>
+                    <segment id="51756776" length="25" startTrkptIdx="3463" segmentTime="56.98" speed="13.89" turnType="" turnAngle="" types="11,1,39,23,49,10,13,14" pointTypes="28;28;28;28;27;;;;;;;;;;;;;;;;;;;;" names="9,9,98,99,100,101,102"/>
+                    <segment id="342413239" length="10" startTrkptIdx="3487" segmentTime="24.57" speed="13.89" turnType="" turnAngle="" types="11,1,39,26,49,4,13,14" pointTypes="20;;;;20;20;;20;20;" names="9,9,98,99,100,101,102"/>
+                    <segment id="342413239" length="7" startTrkptIdx="3496" segmentTime="32.75" speed="13.89" turnType="" turnAngle="" types="11,1,39,26,49,4,13,14" pointTypes=";;;;;;" names="9,9,98,99,100,101,102"/>
+                    <segment id="706094833" length="7" startTrkptIdx="3502" segmentTime="15.26" speed="13.89" turnType="" turnAngle="" types="11,50,39,16,26,49,4,13,14" pointTypes="20;;27;27;20;;" names="9,9,98,99,100,101,102"/>
+                    <segment id="706094832" length="4" startTrkptIdx="3508" segmentTime="9.03" speed="13.89" turnType="" turnAngle="" types="11,1,39,2,26,49,4,13,14" pointTypes=";;;" names="9,9,98,99,100,101,102"/>
+                    <segment id="1303732113" length="2" startTrkptIdx="3511" segmentTime="8.19" speed="13.89" turnType="" turnAngle="" types="11,1,39,2,26,49,4,13,14" pointTypes=";" names="9,9,98,99,100,101,102"/>
+                    <segment id="342413240" length="6" startTrkptIdx="3512" segmentTime="28.32" speed="13.89" turnType="" turnAngle="" types="11,1,39,2,26,49,4,13,14" pointTypes=";" names="9,9,98,99,100,101,102"/>
+                    <segment id="342413240" length="2" startTrkptIdx="3517" segmentTime="2.35" speed="13.89" turnType="C" turnAngle="" types="11,1,39,2,26,49,4,13,14" pointTypes="" names="9,9,98,99,100,101,102"/>
+                    <segment id="706094829" length="2" startTrkptIdx="3519" segmentTime="14.14" speed="13.89" turnType="" turnAngle="" types="11,1,39,2,26,49,4,13,14" pointTypes=";" names="9,9,98,99,100,101,102"/>
+                    <segment id="51758160" length="4" startTrkptIdx="3520" segmentTime="14.72" speed="13.89" turnType="" turnAngle="" types="11,50,39,16,26,49,4,13,14" pointTypes=";;;" names="9,9,98,99,100,101,102"/>
+                    <segment id="51758160" length="2" startTrkptIdx="3523" segmentTime="4.43" speed="13.89" turnType="" turnAngle="" types="11,50,39,16,26,49,4,13,14" pointTypes=";" names="9,9,98,99,100,101,102"/>
+                    <segment id="706094830" length="3" startTrkptIdx="3524" segmentTime="25.18" speed="13.89" turnType="" turnAngle="" types="11,1,39,26,49,4,13,14" pointTypes=";" names="9,9,98,99,100,101,102"/>
+                    <segment id="197536322" length="19" startTrkptIdx="3526" segmentTime="172.66" speed="13.89" turnType="" turnAngle="" types="11,1,39,23,49,10,13,14" pointTypes=";20;20;;;;;;;;;;;;;;20;;20" names="9,9,98,99,100,101,102"/>
+                    <segment id="197536322" length="10" startTrkptIdx="3544" segmentTime="33.82" speed="13.89" turnType="" turnAngle="" types="11,1,39,23,49,10,13,14" pointTypes="20;20;;;;;20;;;" names="9,9,98,99,100,101,102"/>
+                    <segment id="1213418114" length="2" startTrkptIdx="3553" segmentTime="1.14" speed="13.89" turnType="" turnAngle="" types="11,1,39,23,49,10,13,14" pointTypes=";" names="9,9,98,99,100,101,102"/>
+                    <segment id="777533731" length="5" startTrkptIdx="3554" segmentTime="4.23" speed="13.89" turnType="" turnAngle="" types="51,11,1,39,23,49,10,13,14" pointTypes=";;;20;" names="9,9,98,99,100,101,102"/>
+                    <segment id="322781958" length="4" startTrkptIdx="3558" segmentTime="26.97" speed="1.29" turnType="" turnAngle="" types="51,11,1,2,23,49,10,13,14" pointTypes=";7;8;" names="9,9,98,99,100,101,102"/>
+                    <segment id="1056244441" length="5" startTrkptIdx="3561" segmentTime="1.57" speed="17.65" turnType="RNDB1" turnAngle="43.56" types="51,11,52,1,2,26,49,4,13,14" pointTypes="" names="9,9,98,103,99,100,101,102,104"/>
+                    <segment id="322781959" length="6" startTrkptIdx="3565" segmentTime="17.31" speed="2.35" turnType="" turnAngle="" types="51,11,1,2,26,12,4,13,14" pointTypes=";7;;;20;28" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="27637043" length="2" startTrkptIdx="3570" segmentTime="1.25" speed="17.65" turnType="" turnAngle="" types="51,11,1,26,12,4,13,14" pointTypes=";28" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="332190753" length="4" startTrkptIdx="3571" segmentTime="4.21" speed="17.65" turnType="" turnAngle="" types="51,11,1,26,12,4,13,14" pointTypes=";20;20;27" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="930875621" length="2" startTrkptIdx="3574" segmentTime="2.63" speed="17.65" turnType="" turnAngle="" types="11,1,53,26,12,4,13,14" pointTypes=";20" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="930875620" length="7" startTrkptIdx="3575" segmentTime="43.88" speed="16.44" turnType="" turnAngle="" types="11,1,54,26,12,4,13,14" pointTypes=";29;;;;;" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="398637471" length="24" startTrkptIdx="3581" segmentTime="47.37" speed="13.89" turnType="" turnAngle="" types="11,1,39,23,12,10,13,14" pointTypes=";;;;;;;;;;;;27;20;27;20;;;27;27;20;;;" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="398637472" length="59" startTrkptIdx="3604" segmentTime="127.37" speed="16.96" turnType="" turnAngle="" types="11,1,53,55,23,12,10,13,14" pointTypes=";32;32;;;;;;;;;;;;;;;;;;;;;;;;;20;20;27;27;28;28;20;;;;;;;;;;;;;;;;;;;;;5,6,7;;;20;20" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="398637472" length="35" startTrkptIdx="3662" segmentTime="105.53" speed="16.81" turnType="C" turnAngle="-4.06" types="11,1,53,55,23,12,10,13,14" pointTypes="20;20;20;5,6,7;;;;;;;;20;28;28;20;20;;27;20;;20;;;;;;;;20;20;;;;;" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="1052544079" length="7" startTrkptIdx="3696" segmentTime="41.60" speed="12.22" turnType="" turnAngle="" types="11,1,39,23,12,10,13,14" pointTypes=";20;;20;28;5,6,7,28;27" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="1052544078" length="5" startTrkptIdx="3702" segmentTime="5.53" speed="17.65" turnType="" turnAngle="" types="11,1,56,57,23,12,10,13,14" pointTypes=";20;20;20;20" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="1052559204" length="11" startTrkptIdx="3706" segmentTime="47.38" speed="14.71" turnType="" turnAngle="" types="11,1,54,23,12,10,13,14" pointTypes=";20;27;20;20;20;;;;5,6,7;" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="1052559200" length="4" startTrkptIdx="3716" segmentTime="5.31" speed="16.44" turnType="" turnAngle="" types="11,1,54,23,12,10,13,14" pointTypes=";27;27;" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="1052559200" length="2" startTrkptIdx="3719" segmentTime="0.07" speed="16.44" turnType="C" turnAngle="" types="11,1,54,23,12,10,13,14" pointTypes=";28" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="1158562227" length="5" startTrkptIdx="3720" segmentTime="3.17" speed="12.50" turnType="TR" turnAngle="45.06" types="9,31,2,23,10,13,14" pointTypes=";27;27;20" names="9,9,109,110"/>
+                    <segment id="814006423" length="2" startTrkptIdx="3724" segmentTime="0.11" speed="12.50" turnType="" turnAngle="" types="9,1,23,10,13,14" pointTypes=";" names="9,9,109,110"/>
+                    <segment id="814006423" length="4" startTrkptIdx="3725" segmentTime="5.22" speed="12.50" turnType="C" turnAngle="" types="9,1,23,10,13,14" pointTypes=";20;20;" names="9,9,109,110"/>
+                    <segment id="207327172" length="2" startTrkptIdx="3729" segmentTime="10.03" speed="9.72" turnType="TR" turnAngle="92.57" types="0,33,34" pointTypes=";" names="9"/>
+                    <segment id="207327166" length="5" startTrkptIdx="3730" segmentTime="15.78" speed="9.72" turnType="TL" turnAngle="-89.28" types="0,33,34" pointTypes=";;;27;" names="9"/>
+                    <segment id="207327171" length="20" startTrkptIdx="3734" segmentTime="40.94" speed="9.72" turnType="TL" turnAngle="-102.51" types="0,33,34" pointTypes=";;;;;;;;;;;;;;;;;;;" names="9"/>
+                    <segment id="814006415" length="3" startTrkptIdx="3753" segmentTime="1.87" speed="12.50" turnType="TL" turnAngle="-91.13" types="9,1,23,10,13,14" pointTypes=";;" names="9,9,109,110"/>
+                    <segment id="207327186" length="6" startTrkptIdx="3755" segmentTime="52.02" speed="9.72" turnType="TR" turnAngle="79.73" types="0,33,34" pointTypes=";;;;20;" names="9"/>
+                    <segment id="207327186" length="2" startTrkptIdx="3760" segmentTime="20.21" speed="9.72" turnType="C" turnAngle="" types="0,33,34" pointTypes=";20" names="9"/>
+                    <segment id="207327163" length="2" startTrkptIdx="3761" segmentTime="6.87" speed="9.72" turnType="TL" turnAngle="-91.92" types="0,33,34" pointTypes=";" names="9"/>
+                    <segment id="814006422" length="2" startTrkptIdx="3762" segmentTime="16.57" speed="12.50" turnType="TL" turnAngle="-92.56" types="9,1,23,10,13,14" pointTypes=";" names="9,9,109,110"/>
+                    <segment id="814006422" length="11" startTrkptIdx="3763" segmentTime="99.49" speed="12.50" turnType="" turnAngle="" types="9,1,23,10,13,14" pointTypes=";20;28;28;27;20;20;;;;20" names="9,9,109,110"/>
+                    <segment id="139500845" length="46" startTrkptIdx="3773" segmentTime="197.34" speed="12.50" turnType="" turnAngle="" types="9,1,23,10,13,14" pointTypes=";;;;;;20;27;20;20;;20;;;;;20;20;;;;;;20;;20;20;20;20;27;27;28;29;29;29;29;29;29;28;27;20;20;27;29;29;" names="9,9,109,110"/>
+                    <segment id="139500845" length="86" startTrkptIdx="3818" segmentTime="325.83" speed="12.50" turnType="C" turnAngle="" types="9,1,23,10,13,14" pointTypes=";28;;;;;;;;;;;;;;;;;;;;;;;;;20;20;;;;;;;;;;;;;;;;;20;;;;;;;;;;20;27;20;;;;;;20;20;20;20;27;;;;;20;20;;;;;;20;;;;;20;20;" names="9,9,109,110"/>
+                    <segment id="139500845" length="39" startTrkptIdx="3903" segmentTime="269.75" speed="12.50" turnType="" turnAngle="" types="9,1,23,10,13,14" pointTypes=";;;;;;;;;;;;;20;;;;;;20;20;;;;;;;;;;;;;;;;;20;" names="9,9,109,110"/>
+                    <segment id="139500845" length="3" startTrkptIdx="3941" segmentTime="94.38" speed="12.50" turnType="C" turnAngle="" types="9,1,23,10,13,14" pointTypes=";20;20" names="9,9,109,110"/>
+                    <segment id="957145164" length="3" startTrkptIdx="3943" segmentTime="2.57" speed="5.56" turnType="TR" turnAngle="92.29" types="58,59" pointTypes=";;" names="9"/>
+                    <segment id="957145164" length="3" startTrkptIdx="3945" segmentTime="2.57" speed="5.56" turnType="C" turnAngle="" types="58,59" pointTypes=";;" names="9"/>
+                    <segment id="139500845" length="10" startTrkptIdx="3947" segmentTime="76.28" speed="12.50" turnType="TR" turnAngle="84.93" types="9,1,23,10,13,14" pointTypes="20;;20;27;27;20;20;20;;" names="9,9,109,110"/>
+                    <segment id="139500845" length="24" startTrkptIdx="3956" segmentTime="110.61" speed="12.50" turnType="C" turnAngle="" types="9,1,23,10,13,14" pointTypes=";;;;;;;;;;;;;;;;27;;;20;27;20;;" names="9,9,109,110"/>
+                    <segment id="139500845" length="3" startTrkptIdx="3979" segmentTime="3.67" speed="12.50" turnType="C" turnAngle="" types="9,1,23,10,13,14" pointTypes=";20;20" names="9,9,109,110"/>
+                    <segment id="1154342351" length="3" startTrkptIdx="3981" segmentTime="16.33" speed="9.72" turnType="TL" turnAngle="-52.90" types="0,33,34" pointTypes=";;27" names="9"/>
+                    <segment id="1228642479" length="3" startTrkptIdx="3983" segmentTime="12.24" speed="9.72" turnType="TR" turnAngle="112.04" types="0,33,34" pointTypes=";;" names="9"/>
+                    <segment id="139500845" length="9" startTrkptIdx="3985" segmentTime="60.88" speed="12.50" turnType="TL" turnAngle="-69.40" types="9,1,23,10,13,14" pointTypes=";20;;;20;29;;;" names="9,9,109,110"/>
+                    <segment id="397563145" length="7" startTrkptIdx="3993" segmentTime="28.67" speed="11.11" turnType="" turnAngle="" types="9,1,15,16,26,4,13,14" pointTypes=";20;;;;;" names="9,9,109,110"/>
+                    <segment id="139500844" length="2" startTrkptIdx="3999" segmentTime="5.29" speed="8.33" turnType="" turnAngle="" types="36,9,1,60,26,4" pointTypes="" names="9"/>
+                    <segment id="139500843" length="2" startTrkptIdx="4000" segmentTime="1.11" speed="13.89" turnType="" turnAngle="" types="9,1,39,26,4" pointTypes=";" names="9"/>
+                    <segment id="139500843" length="20" startTrkptIdx="4001" segmentTime="24.29" speed="13.89" turnType="C" turnAngle="" types="9,1,39,26,4" pointTypes=";;;;;;;;;;;;;;;;;;;" names="9"/>
+                    <segment id="161761798" length="2" startTrkptIdx="4020" segmentTime="0.58" speed="13.89" turnType="" turnAngle="" types="9,1,39,2,26,4" pointTypes=";" names="9"/>
+                    <segment id="161761798" length="3" startTrkptIdx="4021" segmentTime="1.04" speed="13.89" turnType="C" turnAngle="" types="9,1,39,2,26,4" pointTypes=";;" names="9"/>
+                    <segment id="281221801" length="4" startTrkptIdx="4023" segmentTime="25.92" speed="5.85" turnType="TR" turnAngle="60.17" types="61,1,39,2,26,4" pointTypes=";;18;" names="9"/>
+                    <segment id="86888534" length="2" startTrkptIdx="4026" segmentTime="0.03" speed="12.50" turnType="TL" turnAngle="-91.98" types="9,2,10" pointTypes=";" names="9"/>
+                    <segment id="86888534" length="3" startTrkptIdx="4027" segmentTime="22.77" speed="4.26" turnType="C" turnAngle="" types="9,2,10" pointTypes=";18,20;27" names="9"/>
+                    <segment id="524246114" length="3" startTrkptIdx="4029" segmentTime="20.26" speed="4.92" turnType="" turnAngle="" types="0,2,10" pointTypes=";8,27;" names="9"/>
+                    <segment id="524245114" length="2" startTrkptIdx="4031" segmentTime="5.82" speed="16.44" turnType="TR" turnAngle="92.91" types="61,2,10" pointTypes="20;20" names="9"/>
+                    <segment id="524243912" length="3" startTrkptIdx="4032" segmentTime="20.99" speed="4.69" turnType="" turnAngle="" types="61,2,10" pointTypes=";18,29;32" names="9"/>
+                    <segment id="524243914" length="5" startTrkptIdx="4034" segmentTime="30.70" speed="9.37" turnType="TL" turnAngle="-90.58" types="61,1,39,16,26,4" pointTypes=";;19;;20" names="9"/>
+                    <segment id="524243914" length="7" startTrkptIdx="4038" segmentTime="27.92" speed="13.89" turnType="C" turnAngle="0.13" types="61,1,39,16,26,4" pointTypes="20;20;27;27;27;29;32" names="9"/>
+                    <segment id="1052559186" length="2" startTrkptIdx="4045" segmentTime="10.03" speed="13.89" turnType="" turnAngle="" types="61,1,39,16,26,4" pointTypes=";20" names="9"/>
+                    <segment id="281151405" length="4" startTrkptIdx="4046" segmentTime="1.92" speed="17.65" turnType="KR" turnAngle="29.21" types="62,2,10" pointTypes=";" names="9"/>
+                    <segment id="1052559189" length="5" startTrkptIdx="4049" segmentTime="30.92" speed="13.89" turnType="" turnAngle="" types="11,1,39,16,23,12,10,13,14" pointTypes=";;20;20;" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="139500867" length="2" startTrkptIdx="4053" segmentTime="2.77" speed="13.89" turnType="" turnAngle="" types="36,11,1,39,23,12,10,13,14" pointTypes="" names="9,9,105,103,73,106,107,108,104,111"/>
+                    <segment id="525502763" length="2" startTrkptIdx="4054" segmentTime="2.08" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="525502763" length="9" startTrkptIdx="4055" segmentTime="64.76" speed="18.85" turnType="C" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";;;;;;;20;" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="525502763" length="53" startTrkptIdx="4063" segmentTime="223.80" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";;;;;;;20;20;;;20;;20;27;27;28;29;28;;;;;;;;;;;;20;20;;;;28;;;27;20;;;;20;27;27;27;;;20;;;20" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="799010615" length="13" startTrkptIdx="4115" segmentTime="41.86" speed="13.89" turnType="" turnAngle="" types="11,1,39,23,12,10,13,14" pointTypes=";20;29;29;28;27;28;28;27;27;28;20;" names="9,9,105,103,73,106,107,108,104"/>
+                    <segment id="525502762" length="3" startTrkptIdx="4127" segmentTime="14.19" speed="17.65" turnType="KR" turnAngle="2.02" types="11,1,26,12,4,13,14" pointTypes=";24,18;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="51715389" length="2" startTrkptIdx="4129" segmentTime="22.25" speed="13.89" turnType="" turnAngle="" types="11,1,39,26,12,4,13,14" pointTypes=";27" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="808608391" length="65" startTrkptIdx="4130" segmentTime="234.75" speed="18.85" turnType="" turnAngle="" types="11,1,40,26,12,4,13,14" pointTypes=";;20;;;;;;;;;;;;20;27;20;20;20;27;20;;20;27;27;28;29;28;27;27;27;20;;;;;;;;;;;;;;;;;;20;20;20;;;;;20;;;;;;20;20;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="143840510" length="2" startTrkptIdx="4194" segmentTime="2.55" speed="18.85" turnType="" turnAngle="" types="36,11,1,40,26,12,4,13,14" pointTypes="" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="143840511" length="3" startTrkptIdx="4195" segmentTime="1.98" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="143840511" length="64" startTrkptIdx="4197" segmentTime="334.35" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;27;28;27;;;20;20;27;20;;;;;;;;;;;;20;;;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="1203034572" length="3" startTrkptIdx="4260" segmentTime="2.79" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes="" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="1203034571" length="21" startTrkptIdx="4262" segmentTime="207.82" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";;20;27;29;;;;;;;;;;;;20;;;;27" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="1203034573" length="2" startTrkptIdx="4282" segmentTime="2.69" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="1203034574" length="40" startTrkptIdx="4283" segmentTime="295.96" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";;20;20;20;20;;20;20;;;20;20;;20;27;20;;;20;20;20;;;;;;;;20;;27;20;20;27;27;20;20;27;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="808608392" length="15" startTrkptIdx="4322" segmentTime="124.32" speed="13.89" turnType="" turnAngle="" types="11,1,39,26,12,4,13,14" pointTypes=";;;;;;;;20;;;;;;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="808608393" length="18" startTrkptIdx="4336" segmentTime="284.14" speed="18.85" turnType="" turnAngle="" types="11,1,40,26,12,4,13,14" pointTypes=";;;20;27;;;;;20;;;;;;;;20" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="808608393" length="12" startTrkptIdx="4353" segmentTime="69.40" speed="18.85" turnType="" turnAngle="" types="11,1,40,26,12,4,13,14" pointTypes="20;;;20;20;20;;;;20;20;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="142750409" length="2" startTrkptIdx="4364" segmentTime="2.14" speed="18.85" turnType="" turnAngle="" types="36,11,1,40,26,12,4,13,14" pointTypes="" names="9,9,112,103,73,113,114,115,104,116"/>
+                    <segment id="142750410" length="52" startTrkptIdx="4365" segmentTime="442.31" speed="18.85" turnType="" turnAngle="" types="11,1,40,26,12,4,13,14" pointTypes=";;;;;;;;;;;;;20;;;20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;27;20" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="808608394" length="13" startTrkptIdx="4416" segmentTime="75.14" speed="13.89" turnType="" turnAngle="" types="11,1,39,26,12,4,13,14" pointTypes=";;;20;27;20;20;;;20;;20;20" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="808608395" length="18" startTrkptIdx="4428" segmentTime="182.79" speed="18.85" turnType="" turnAngle="" types="11,1,40,26,12,4,13,14" pointTypes=";;;20;20;;;;;;20;20;20;;20;20;;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="733351016" length="2" startTrkptIdx="4445" segmentTime="0.73" speed="18.85" turnType="" turnAngle="" types="36,11,1,40,26,12,4,13,14" pointTypes="" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="733351017" length="11" startTrkptIdx="4446" segmentTime="34.50" speed="18.85" turnType="" turnAngle="" types="11,1,40,26,12,4,13,14" pointTypes=";;;;;;;;;;20" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="733351017" length="44" startTrkptIdx="4456" segmentTime="154.76" speed="18.85" turnType="" turnAngle="" types="11,1,40,26,12,4,13,14" pointTypes="20;20;28;;;;;;20;20;;27;;;27;20;;20;28;20;28;28;20;20;27;20;;;20;27;28;29;20;20;20;20;28;29;;29;20;;20;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="518844994" length="37" startTrkptIdx="4499" segmentTime="117.42" speed="13.89" turnType="" turnAngle="" types="11,1,39,26,12,4,13,14" pointTypes=";;;20;20;20;;;;20;;;;;20;20;20;27;20;20;20;27;;;;;;;;;;;20;27;20;20;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="92483240" length="2" startTrkptIdx="4535" segmentTime="2.19" speed="13.89" turnType="" turnAngle="" types="36,11,1,39,26,12,4,13,14" pointTypes="" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="92483216" length="57" startTrkptIdx="4536" segmentTime="118.40" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";;;;;;;;29;;28;27;20;20;;;;;;;;;;;;;;;;;;;20;20;;;;;;;;;;;;;;;;;;;;;;20;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="92483216" length="110" startTrkptIdx="4592" segmentTime="244.17" speed="18.85" turnType="C" turnAngle="-0.31" types="11,1,40,23,12,10,13,14" pointTypes=";;;27;27;28;28;28;27;20;20;;;;;20;20;;20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;;;;20;20;;;;;20;;;;27;20;27;20;;20;;;;;;27;20;27;27;20;20;20;20;27;28;28;27;20;20;20;;;20;20;20;20;27;28;20;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="92483216" length="122" startTrkptIdx="4701" segmentTime="258.66" speed="18.85" turnType="" turnAngle="" types="11,1,40,23,12,10,13,14" pointTypes=";;;;;;;;;;;20;;27;27;27;27;28;29;;;29;29;29;32;;;;;29;29;28;27;20;;;;;;;;;;;;;;;;;;;;;;;;;;;;27;;;;20;;;;;20;20;20;;;20;27;29;;;28;28;28;29;;32;32;32;29;29;29;29;29;;;;;;;;;;;;20;20;28;28;28;28;28;28;28;28;29;;32;32;;29;;29" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="152857294" length="15" startTrkptIdx="4822" segmentTime="23.65" speed="18.85" turnType="" turnAngle="" types="11,1,47,40,23,12,10,13,14" pointTypes=";27;20;20;;27;;;20;27;27;;;;20" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="447782570" length="2" startTrkptIdx="4836" segmentTime="7.23" speed="13.89" turnType="TL" turnAngle="-89.22" types="61,1,47,39,26,4" pointTypes="20;" names="9"/>
+                    <segment id="92475544" length="7" startTrkptIdx="4837" segmentTime="29.82" speed="13.89" turnType="TR" turnAngle="89.96" types="61,1,47,39,26,4" pointTypes=";;;;20;20;27" names="9"/>
+                    <segment id="443533896" length="2" startTrkptIdx="4843" segmentTime="2.61" speed="13.89" turnType="" turnAngle="" types="11,47,39,12,10,13,14" pointTypes=";27" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="27636369" length="2" startTrkptIdx="4844" segmentTime="11.20" speed="13.89" turnType="" turnAngle="" types="36,11,1,39,26,12,4,13,14" pointTypes="" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="242416471" length="9" startTrkptIdx="4845" segmentTime="12.18" speed="13.89" turnType="" turnAngle="" types="11,1,39,16,23,12,10,13,14" pointTypes=";;;;;;;;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="242416471" length="7" startTrkptIdx="4853" segmentTime="12.39" speed="13.89" turnType="C" turnAngle="" types="11,1,39,16,23,12,10,13,14" pointTypes=";;;;;;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="242416471" length="2" startTrkptIdx="4859" segmentTime="0.52" speed="13.89" turnType="" turnAngle="" types="11,1,39,16,23,12,10,13,14" pointTypes=";" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="1114710911" length="218" startTrkptIdx="4860" segmentTime="322.01" speed="18.56" turnType="" turnAngle="" types="11,1,40,16,23,12,10,13,14" pointTypes=";;;;20;20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;;;;;;;;;20;27;20;20;20;20;;;;;;20;27;;20;20;;;;;;;;;;;;;;;;;;;;;;;20;28;28;29;20;;;;;;;20;20;27;27;27;27;27;27;28;20;28;20;27;20;20;20;;20;;;;;;;;;;;;;;;;;5,6,7;;;;;;;;;;;;;20;28;28;28;32;;32;29;28;28;20;;;;;;;;;;;;;;;;;;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="1114710910" length="2" startTrkptIdx="5077" segmentTime="2.92" speed="18.85" turnType="" turnAngle="" types="11,1,40,16,23,12,10,13,14" pointTypes=";" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="1114710909" length="3" startTrkptIdx="5078" segmentTime="3.49" speed="18.85" turnType="" turnAngle="" types="11,1,40,16,23,12,10,13,14" pointTypes=";;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="1114710908" length="2" startTrkptIdx="5080" segmentTime="3.31" speed="18.85" turnType="" turnAngle="" types="11,1,40,16,23,12,10,13,14" pointTypes=";" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="1468586458" length="111" startTrkptIdx="5081" segmentTime="185.83" speed="18.85" turnType="" turnAngle="" types="11,1,40,16,23,12,10,13,14" pointTypes=";20;20;27;27;27;28;28;27;20;20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;28;27;28;29;;28;28;28;27;;;20;;;;;20;20;20;;;20;20;27;20;20;;;;;;;;;;;;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="1468586458" length="15" startTrkptIdx="5191" segmentTime="45.38" speed="18.85" turnType="" turnAngle="" types="11,1,40,16,23,12,10,13,14" pointTypes=";;;;;;;;20;28;28;28;28;29;32" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="1468586457" length="3" startTrkptIdx="5205" segmentTime="3.32" speed="18.85" turnType="" turnAngle="" types="11,1,40,16,23,12,10,13,14" pointTypes=";;5,6,7" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="808608396" length="265" startTrkptIdx="5207" segmentTime="398.79" speed="18.62" turnType="" turnAngle="" types="11,1,40,16,23,12,10,13,14" pointTypes="5,6,7;29;;29;29;29;29;29;28;28;27;;27;27;27;20;27;29;27;20;27;20;;;;;;;;20;28;29;29;29;29;;;29;;;29;29;29;28;29;;29;;32;29;28;20;20;28;29;29;28;;;32;;32;;;28;20;27;29;29;29;29;29;;32;32;32;32;;;29;28;28;28;28;29;27;28;29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;27;28;27;27;28;29;28;28;28;28;27;;;;;;;;;;;;;;;;;;;;;;;;;;20;;;;;;;;;;;;;;;;;;;;;;20;20;20;27;29;29;;;20;;;;;;;;;;;;;;20;;20;27;27;28;29;28;27;20;20;;;;;;;;;;;;;;27;29;29;;29;27;20;20;;;;;;;;;;;;;" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="808608396" length="20" startTrkptIdx="5471" segmentTime="31.14" speed="18.85" turnType="" turnAngle="" types="11,1,40,16,23,12,10,13,14" pointTypes=";28;29;28;28;27;20;28;29;29;;32;32;;32;32;32;;29;28" names="9,9,112,103,73,113,114,115,104"/>
+                    <segment id="25756290" length="48" startTrkptIdx="5490" segmentTime="96.38" speed="17.65" turnType="" turnAngle="" types="11,1,23,10,13,14" pointTypes=";20;;;;;;;;;;;;;;;20;;;;;;;;;20;;;20;20;;20;20;20;20;20;20;20;;;;;;;;;;" names="9,9,117,118,119,120"/>
+                    <segment id="377569080" length="82" startTrkptIdx="5537" segmentTime="251.03" speed="17.65" turnType="" turnAngle="" types="11,1,23,10,13,14" pointTypes=";;;;;28;29;28;28;20;28;28;28;27;28;28;28;27;20;;20;20;;;;;;;;;;;;;;;;;;;;;;;;;;20;28;29;27;27;20;20;27;27;27;28;28;28;20;;;;;20;20;;;;;;27;27;28;29;28;20;29;28;;" names="9,9,117,118,119,120"/>
+                    <segment id="377569080" length="172" startTrkptIdx="5618" segmentTime="276.06" speed="17.65" turnType="" turnAngle="" types="11,1,23,10,13,14" pointTypes=";;;;;;;27;27;27;28;29;29;29;29;;29;;28;27;20;20;;;;;;;;;;;;;;;;;;;20;;28;32;;;32;32;32;32;29;;20;28;28;28;29;;;;29;28;27;28;32;32;;;32;32;;29;28;27;20;;;;;;;;;;;;;;;;;;;;20;20;20;;20;29;29;;;;32;32;;;;;;32;;;;;;;29;29;28;28;29;29;28;27;27;27;;;28;28;28;28;28;20;20;27;28;29;29;28;29;;29;29;29;29;29;28;27;27;27;27;27;27;28;29;28;28;27;20;;;;;;;;;;" names="9,9,117,118,119,120"/>
+                    <segment id="1364569937" length="2" startTrkptIdx="5789" segmentTime="4.02" speed="17.65" turnType="" turnAngle="" types="11,1,23,10,13,14" pointTypes=";" names="9,9,117,118,119,120"/>
+                    <segment id="1364569939" length="4" startTrkptIdx="5790" segmentTime="3.37" speed="17.65" turnType="" turnAngle="" types="11,1,23,10,13,14" pointTypes=";;;" names="9,9,117,118,119,120"/>
+                    <segment id="1446187725" length="35" startTrkptIdx="5793" segmentTime="50.34" speed="17.65" turnType="" turnAngle="" types="11,1,23,10,13,14" pointTypes=";;;;;;;;;;;;20;20;27;20;20;27;28;27;27;27;28;28;28;27;20;27;;;;;;;" names="9,9,117,118,119,120"/>
+                    <segment id="1446187724" length="6" startTrkptIdx="5827" segmentTime="3.36" speed="17.65" turnType="" turnAngle="" types="11,1,23,10,13,14" pointTypes=";;;;;" names="9,9,117,118,119,120"/>
+                    <segment id="1364569938" length="110" startTrkptIdx="5832" segmentTime="137.12" speed="17.65" turnType="" turnAngle="" types="11,1,23,10,13,14" pointTypes=";;;;20;27;27;27;27;28;29;29;27;;;20;27;;;20;20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;;;;;;;;;;;;;;27;27;27;20;20;27;27;27;27;28;29;;29;28;28;28;28;29;29;29;29;27;27;28;29;28;;;;;;27;27;28" names="9,9,117,118,119,120"/>
+                    <segment id="1446187723" length="3" startTrkptIdx="5941" segmentTime="3.01" speed="17.65" turnType="" turnAngle="" types="11,1,23,10,13,14" pointTypes=";28;29" names="9,9,117,118,119,120"/>
+                    <segment id="1446187722" length="19" startTrkptIdx="5943" segmentTime="16.70" speed="17.65" turnType="" turnAngle="" types="11,1,23,10,13,14" pointTypes=";27;27;27;20;;;;;;;;;;;;" names="9,9,117,118,119,120"/>
+                    <segment id="529332389" length="244" startTrkptIdx="5961" segmentTime="441.89" speed="17.65" turnType="" turnAngle="" types="11,1,23,10,13,14" pointTypes=";;27;28;29;;;29;28;29;29;;29;27;27;29;29;;32;32;;32;32;32;29;27;20;20;;20;20;;;;20;27;20;27;20;;;;;;;20;20;20;;;20;20;;;;20;;;;;;;;27;20;;;;;;;;;;;;;;;;;20;27;29;;29;32;32;29;27;20;27;;;;;;;20;27;27;28;29;;28;29;32;29;28;28;20;20;;;27;27;20;27;28;;;29;27;;20;;20;27;;29;32;32;32;;28;;;;20;;;28;29;28;29;;28;;;;27;20;28;28;27;27;20;;;;;;;;;;;;;;;;;;;;;;;;20;20;;;20;;;;20;27;28;29;;32;28;;;;;;;;;;;;;;;;;;20;;;;;;;27;28;29;;;32;;32;;;;32;32;;;;32;;;;;;;;" names="9,9,117,118,119,120"/>
+                    <segment id="529332386" length="2" startTrkptIdx="6204" segmentTime="2.61" speed="17.65" turnType="" turnAngle="" types="36,11,1,26,4,13,14" pointTypes="" names="9,9,117,118,119,120"/>
+                    <segment id="206007626" length="154" startTrkptIdx="6205" segmentTime="266.14" speed="17.65" turnType="" turnAngle="" types="11,1,23,10,13,14" pointTypes=";;;;;;;;;;;;;;20;20;;;;;;20;;;;;;;;29;;29;28;28;27;20;20;28;27;27;;;;;;;;;;;;20;20;;20;20;;;;;;;;;;;;;;;20;;27;28;27;27;20;20;27;20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;;20;28;29;;;32;;28;20;;27;27;20;;;;;;;;;;;28;29;;28;27;27;28;28;27;27;20;20" names="9,9,117,118,119,120"/>
+                    <segment id="52302394" length="2" startTrkptIdx="6358" segmentTime="9.39" speed="17.65" turnType="" turnAngle="" types="36,11,1,26,4,13,14" pointTypes="" names="9,9,117,118,119,120"/>
+                    <segment id="52302358" length="66" startTrkptIdx="6359" segmentTime="179.46" speed="13.89" turnType="" turnAngle="" types="11,1,39,16,23,10,13,14" pointTypes=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;;;;20;27;27;29;;;29;27;28;20;20;20;;;;;;;;;;;;;;;;;;" names="9,9,117,118,119,120"/>
+                    <segment id="52302358" length="92" startTrkptIdx="6424" segmentTime="287.75" speed="13.89" turnType="" turnAngle="" types="11,1,39,16,23,10,13,14" pointTypes=";;;;;28;29;28;28;27;20;20;;;;;20;28;28;;;;;;;;;;;;;;;;;;;;;20;28;29;;29;;;20;20;;;;;;;;;;;;;;;;20;20;;20;20;20;20;28;;29;;;;29;29;28;;29;29;29;29;28;28;28;27;20;;;27" names="9,9,117,118,119,120"/>
+                    <segment id="322495997" length="2" startTrkptIdx="6515" segmentTime="1.78" speed="17.65" turnType="" turnAngle="" types="11,1,26,4,13,14" pointTypes=";" names="9,9,117,118,119,120"/>
+                    <segment id="645015825" length="4" startTrkptIdx="6516" segmentTime="4.25" speed="17.65" turnType="KR" turnAngle="44.98" types="62,31,2,23,10" pointTypes=";28;29;" names="9"/>
+                    <segment id="182188233" length="4" startTrkptIdx="6519" segmentTime="20.21" speed="17.65" turnType="TL" turnAngle="-114.29" types="11,1,26,4,13,14" pointTypes=";;20;20" names="9,9,121,122"/>
+                    <segment id="182188233" length="95" startTrkptIdx="6522" segmentTime="408.39" speed="17.65" turnType="" turnAngle="" types="11,1,26,4,13,14" pointTypes="20;20;;;;;;;;;;;;;;;20;;;20;;;;;;;;;;;;20;;20;20;;;;;20;20;;20;;;;;;;;;;;;;;;;;;;;;;;;;20;;;;;20;27;20;;;;;;;;20;;;27;;;;;;;;;" names="9,9,121,122"/>
+                    <segment id="1114698686" length="2" startTrkptIdx="6616" segmentTime="6.03" speed="17.65" turnType="" turnAngle="" types="11,63,64,26,4,13,14" pointTypes=";" names="9,9,121,122"/>
+                    <segment id="1114698687" length="2" startTrkptIdx="6617" segmentTime="1.54" speed="17.65" turnType="" turnAngle="" types="11,1,26,4,13,14" pointTypes=";" names="9,9,121,122"/>
+                    <segment id="1114698688" length="2" startTrkptIdx="6618" segmentTime="2.34" speed="17.65" turnType="" turnAngle="" types="11,1,26,4,13,14" pointTypes="" names="9,9,121,122"/>
+                    <segment id="1114698689" length="2" startTrkptIdx="6619" segmentTime="4.81" speed="17.65" turnType="" turnAngle="" types="11,63,64,26,4,13,14" pointTypes=";" names="9,9,121,122"/>
+                    <segment id="1114698690" length="13" startTrkptIdx="6620" segmentTime="74.22" speed="17.65" turnType="" turnAngle="" types="11,1,26,4,13,14" pointTypes=";;;;;;;;;;;20;" names="9,9,121,122"/>
+                    <segment id="182188237" length="66" startTrkptIdx="6632" segmentTime="412.68" speed="17.65" turnType="" turnAngle="" types="11,1,26,4,13,14" pointTypes="20;;;;;;;;27;27;20;;;;;;;;;20;;;;;;;;20;;;;;;;;;20;;;;;;;;;20;28;;28;28;;;;;;;;;;;;;;;;" names="9,9,121,122"/>
+                    <segment id="150330596" length="25" startTrkptIdx="6697" segmentTime="80.25" speed="17.65" turnType="" turnAngle="" types="11,1,26,4,13,14" pointTypes=";;;;;;;20;;;;;;;;20;20;20;20;;;;;;" names="9,9,121,122"/>
+                    <segment id="150330594" length="3" startTrkptIdx="6721" segmentTime="2.49" speed="17.65" turnType="" turnAngle="" types="36,11,1,26,4,13,14" pointTypes="" names="9,9,121,122"/>
+                    <segment id="674361246" length="5" startTrkptIdx="6723" segmentTime="6.87" speed="17.65" turnType="" turnAngle="" types="11,1,26,4,13,14" pointTypes=";20;" names="9,9,121,122"/>
+                    <segment id="591205153" length="15" startTrkptIdx="6727" segmentTime="24.64" speed="11.11" turnType="TL" turnAngle="-100.10" types="11,1,15,26,4" pointTypes="27;20;20;27;27;27;28;28;29;29;32;;;;" names="9"/>
+                    <segment id="150320298" length="9" startTrkptIdx="6741" segmentTime="22.84" speed="13.89" turnType="" turnAngle="" types="11,1,39,26,4" pointTypes=";;29;27;27;27;27;27;65,66" names="9"/>
+                    <segment id="857637600" length="5" startTrkptIdx="6749" segmentTime="28.40" speed="4.11" turnType="TR" turnAngle="88.78" types="11,1,47,39,26,4,13,14" pointTypes="65,66;27;32;;32" names="9,87,123,124"/>
+                    <segment id="735016176" length="4" startTrkptIdx="6753" segmentTime="8.73" speed="13.89" turnType="TL" turnAngle="-57.77" types="11,1,47,39,3,4,13,14" pointTypes="20;20;20;" names="9,87,123,124"/>
+                    <segment id="150320292" length="5" startTrkptIdx="6756" segmentTime="9.95" speed="13.89" turnType="TR" turnAngle="63.91" types="11,1,47,39,2,3,4,13,14" pointTypes=";32;;;" names="9,87,123,124"/>
+                    <segment id="150316161" length="4" startTrkptIdx="6760" segmentTime="5.24" speed="13.89" turnType="TL" turnAngle="-92.62" types="0,1,47,39,3,4" pointTypes=";;;" names="86"/>
                 </osmand:route>
                 <osmand:types>
-                    <type t="highway" v="tertiary"/>
-                    <type t="surface" v="fine_gravel"/>
+                    <type t="highway" v="residential"/>
+                    <type t="lanes" v="2"/>
+                    <type t="oneway" v="yes"/>
+                    <type t="surface" v="concrete"/>
                     <type t="osmand_highway_integrity_brouting" v="1"/>
+                    <type t="crossing" v="uncontrolled"/>
+                    <type t="crossing:markings" v="zebra"/>
+                    <type t="highway" v="crossing"/>
+                    <type t="highway" v="give_way"/>
+                    <type t="highway" v="tertiary"/>
+                    <type t="osmand_highway_integrity_brouting" v="0"/>
+                    <type t="highway" v="primary"/>
+                    <type t="route_road_1_network" v="cl:regional"/>
                     <type t="route_road_1_shield_color" v="green"/>
                     <type t="road_shield_color_1" v="green"/>
-                    <type t="osmand_ele_decline_3" v="1"/>
+                    <type t="maxspeed" v="40"/>
+                    <type t="oneway" v="no"/>
+                    <type t="direction" v="forward"/>
+                    <type t="highway" v="stop"/>
+                    <type t="traffic_calming" v="hump"/>
                     <type t="osmand_ele_decline_1" v="1"/>
-                    <type t="osmand_ele_decline_7" v="1"/>
+                    <type t="hgv" v="yes"/>
+                    <type t="hgv:conditional" v="yes @ (08:30-11:30,20:00-23:00)"/>
+                    <type t="surface" v="asphalt"/>
+                    <type t="direction" v="backward"/>
+                    <type t="traffic_calming" v="bump"/>
+                    <type t="surface" v="paved"/>
+                    <type t="osmand_ele_decline_3" v="1"/>
                     <type t="osmand_ele_decline_5" v="1"/>
+                    <type t="osmand_ele_decline_7" v="1"/>
+                    <type t="highway" v="tertiary_link"/>
+                    <type t="lanes" v="1"/>
+                    <type t="osmand_ele_decline_11" v="1"/>
+                    <type t="surface" v="unpaved"/>
+                    <type t="osmand_highway_integrity_brouting" v="4"/>
+                    <type t="surface" v="fine_gravel"/>
                     <type t="bridge" v="yes"/>
                     <type t="maxweight" v="10"/>
                     <type t="surface" v="wood"/>
-                    <type t="lanes" v="2"/>
-                    <type t="surface" v="concrete"/>
-                    <type t="osmand_ele_decline_11" v="1"/>
                     <type t="maxspeed" v="50"/>
-                    <type t="surface" v="asphalt"/>
-                    <type t="osmand_highway_integrity_brouting" v="0"/>
-                    <type t="oneway" v="no"/>
-                    <type t="direction" v="backward"/>
-                    <type t="highway" v="give_way"/>
-                    <type t="surface" v="unpaved"/>
-                    <type t="osmand_highway_integrity_brouting" v="4"/>
-                    <type t="highway" v="primary"/>
-                    <type t="route_road_1_network" v="cl:regional"/>
                     <type t="maxspeed" v="70"/>
-                    <type t="highway" v="crossing"/>
-                    <type t="crossing" v="uncontrolled"/>
-                    <type t="highway" v="residential"/>
                     <type t="lit" v="no"/>
                     <type t="sidewalk" v="no"/>
                     <type t="smoothness" v="good"/>
@@ -19547,12 +20920,8 @@
                     <type t="osmand_highway_integrity_brouting" v="-1"/>
                     <type t="highway" v="passing_place"/>
                     <type t="lit" v="yes"/>
-                    <type t="surface" v="paved"/>
-                    <type t="oneway" v="yes"/>
                     <type t="hgv" v="no"/>
-                    <type t="traffic_calming" v="hump"/>
                     <type t="route_road_1_network" v="cl:national"/>
-                    <type t="crossing:markings" v="zebra"/>
                     <type t="lanes" v="4"/>
                     <type t="foot" v="no"/>
                     <type t="junction" v="roundabout"/>
@@ -19561,22 +20930,36 @@
                     <type t="maxspeed:forward" v="70"/>
                     <type t="maxspeed:backward" v="50"/>
                     <type t="maxspeed:forward" v="60"/>
-                    <type t="lanes" v="1"/>
                     <type t="highway" v="track"/>
                     <type t="osmand_highway_integrity_brouting" v="3"/>
-                    <type t="maxspeed" v="40"/>
                     <type t="maxspeed" v="30"/>
                     <type t="highway" v="secondary"/>
-                    <type t="highway" v="stop"/>
                     <type t="highway" v="primary_link"/>
                     <type t="lanes" v="3"/>
                     <type t="lanes:backward" v="1"/>
                     <type t="highway" v="traffic_signals"/>
                     <type t="traffic_signals:direction" v="both"/>
-                    <type t="name" v="Almagro"/>
-                    <type t="ref" v="S-40"/>
+                    <type t="name" v=""/>
+                    <type t="ref" v=""/>
+                    <type t="name" v="Blanco"/>
+                    <type t="name" v="Avenida Arturo Prat"/>
+                    <type t="ref" v="P-20"/>
+                    <type t="road_name_1" v="Ruta P-20"/>
+                    <type t="road_network_1" v="cl:regional"/>
+                    <type t="road_ref_1" v="P-20"/>
+                    <type t="route_road_1_name" v="Ruta P-20"/>
+                    <type t="route_road_1_ref" v="P-20"/>
+                    <type t="name" v="Cochrane"/>
+                    <type t="direction" v=""/>
+                    <type t="name" v="Camino al Membrillo"/>
+                    <type t="ref" v="P-300"/>
                     <type t="road_ref_1" v="P-300"/>
                     <type t="route_road_1_ref" v="P-300"/>
+                    <type t="name" v="Ruta P-300"/>
+                    <type t="destination" v="Arauco"/>
+                    <type t="destination:ref" v="P-300"/>
+                    <type t="name" v="Almagro"/>
+                    <type t="ref" v="S-40"/>
                     <type t="road_ref_1" v="P-340"/>
                     <type t="route_road_1_ref" v="P-340"/>
                     <type t="road_ref_1" v="P-348"/>
@@ -19584,7 +20967,6 @@
                     <type t="road_ref_1" v="P-364"/>
                     <type t="route_road_1_ref" v="P-364"/>
                     <type t="road_name_1" v="Ruta P-40"/>
-                    <type t="road_network_1" v="cl:regional"/>
                     <type t="road_ref_1" v="P-40"/>
                     <type t="route_road_1_name" v="Ruta P-40"/>
                     <type t="route_road_1_ref" v="P-40"/>
