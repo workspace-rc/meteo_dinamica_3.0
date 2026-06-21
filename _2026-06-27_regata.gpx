@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gpx version="1.1" creator="OsmAndRouterV2" xmlns="http://www.topografix.com/GPX/1/1" xmlns:osmand="https://osmand.net/docs/technical/osmand-file-formats/osmand-gpx" xmlns:gpxtpx="https://www8.garmin.com/xmlschemas/TrackPointExtensionv1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 https://www.topografix.com/GPX/1/1/gpx.xsd">
+    <metadata>
+        <name>_2026-06-21_</name>
+    </metadata>
+    <wpt lat="-40.1614933" lon="-71.3631649">
+        <name>Pasaje Prefectura Naval Argentina, San Martín de los Andes</name>
+        <desc>Pasaje Prefectura Naval Argentina, San Martín de los Andes</desc>
+    </wpt>
+    <trk>
+        <name>2026-06-21_19-43_Sun</name>
+        <trkseg>
+            <trkpt lat="-40.1603344" lon="-71.3596993">
+                <ele>645.5</ele>
+                <extensions>
+                    <osmand:speed>4</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1603779" lon="-71.3596585">
+                <ele>645.2</ele>
+                <extensions>
+                    <osmand:speed>4</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1607633" lon="-71.3592991">
+                <ele>645</ele>
+                <extensions>
+                    <osmand:speed>4</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1608391" lon="-71.3591945">
+                <ele>645</ele>
+                <extensions>
+                    <osmand:speed>4.9</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1607981" lon="-71.3590658">
+                <ele>645.3</ele>
+                <extensions>
+                    <osmand:speed>4.9</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1605768" lon="-71.358363">
+                <ele>647</ele>
+                <extensions>
+                    <osmand:speed>4.9</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1605419" lon="-71.3582236">
+                <ele>647</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1607223" lon="-71.358127">
+                <ele>647.5</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1610113" lon="-71.3579741">
+                <ele>648</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1615361" lon="-71.3576952">
+                <ele>647</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.162272" lon="-71.3572901">
+                <ele>645.5</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1623109" lon="-71.3572687">
+                <ele>645.4</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1623499" lon="-71.3572392">
+                <ele>645.4</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1623847" lon="-71.357207">
+                <ele>645.3</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1624175" lon="-71.3571694">
+                <ele>645.2</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1624972" lon="-71.3570731">
+                <ele>645</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1624973" lon="-71.3570731">
+                <ele>645</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1627701" lon="-71.3568234">
+                <ele>645</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1628398" lon="-71.3567753">
+                <ele>645.2</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1629134" lon="-71.3567215">
+                <ele>645.5</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1629935" lon="-71.356668">
+                <ele>645.8</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1630673" lon="-71.3566198">
+                <ele>645.8</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1631452" lon="-71.3565768">
+                <ele>645.9</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1632168" lon="-71.3565473">
+                <ele>645.9</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1632928" lon="-71.3565152">
+                <ele>646</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1633686" lon="-71.356491">
+                <ele>646.2</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1634465" lon="-71.3564696">
+                <ele>646.8</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1635285" lon="-71.3564535">
+                <ele>647.2</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1636064" lon="-71.3564427">
+                <ele>648</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1636821" lon="-71.3564345">
+                <ele>648.8</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.16376" lon="-71.3564318">
+                <ele>649.8</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1638358" lon="-71.3564318">
+                <ele>650.8</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1639137" lon="-71.3564401">
+                <ele>651.5</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1639916" lon="-71.3564535">
+                <ele>652</ele>
+                <extensions>
+                    <osmand:speed>11.1</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1640717" lon="-71.3564696">
+                <ele>652</ele>
+                <extensions>
+                    <osmand:speed>16.4</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1649386" lon="-71.3566786">
+                <ele>663</ele>
+                <extensions>
+                    <osmand:speed>16.4</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1656109" lon="-71.3568422">
+                <ele>671</ele>
+                <extensions>
+                    <osmand:speed>16.4</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1658794" lon="-71.35692">
+                <ele>672</ele>
+                <extensions>
+                    <osmand:speed>16.4</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1660681" lon="-71.3569819">
+                <ele>672.8</ele>
+                <extensions>
+                    <osmand:speed>16.4</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1663549" lon="-71.3571292">
+                <ele>670.8</ele>
+                <extensions>
+                    <osmand:speed>16.4</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1667054" lon="-71.3572606">
+                <ele>671.2</ele>
+                <extensions>
+                    <osmand:speed>16.4</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1670294" lon="-71.3573679">
+                <ele>673.5</ele>
+                <extensions>
+                    <osmand:speed>5.6</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1656533" lon="-71.3664849">
+                <ele>673.5</ele>
+                <extensions>
+                    <osmand:speed>5.6</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.166783" lon="-71.3648905">
+                <extensions>
+                    <osmand:speed>5.6</osmand:speed>
+                </extensions>
+            </trkpt>
+            <trkpt lat="-40.1614933" lon="-71.3631649"/>
+            <extensions>
+                <osmand:route>
+                    <segment id="296308619" length="4" startTrkptIdx="0" segmentTime="17.75" speed="3.99" turnType="C" turnAngle="" types="0,1,2,3,4,5,6,7,8,9" pointTypes=";10;11,12,13;" names="58"/>
+                    <segment id="451972976" length="4" startTrkptIdx="3" segmentTime="18.00" speed="4.94" turnType="TL" turnAngle="-66.11" types="0,14,15,4,8,16" pointTypes=";17,11,13;17,11,13" names="59"/>
+                    <segment id="296308629" length="3" startTrkptIdx="6" segmentTime="5.07" speed="11.11" turnType="TR" turnAngle="85.85" types="18,14,15,19,16,20,8,21,22,23,24,25,26,27,28,29,30,31,32" pointTypes="33;" names="60,61,62,63,64,65,66,67,68,69,70,71"/>
+                    <segment id="296308627" length="2" startTrkptIdx="8" segmentTime="5.67" speed="11.11" turnType="" turnAngle="" types="34,18,14,15,19,16,20,8,21,22,23,24,25,26,27,28,29,30,31,32" pointTypes=";" names="60,61,62,63,64,65,66,67,68,69,70,71"/>
+                    <segment id="258402981" length="7" startTrkptIdx="9" segmentTime="10.81" speed="11.11" turnType="" turnAngle="" types="35,18,14,15,36,19,37,16,20,8,21,22,23,24,25,26,27,28,29,30,31,32" pointTypes=";;;;;;" names="60,61,62,63,64,65,66,67,68,69,70,71"/>
+                    <segment id="297214271" length="2" startTrkptIdx="15" segmentTime="3.33" speed="11.11" turnType="" turnAngle="" types="18,14,2,15,19,38,39,16,20,40,41,42,21,22,23,24,25,26,43,44,45,27,28,29,30,31,32,46,47,48" pointTypes="49,50" names="0,61,62,73,63,74,64,65,75,66,67,76,68,77,69,70,71"/>
+                    <segment id="1351039949" length="18" startTrkptIdx="16" segmentTime="13.63" speed="11.11" turnType="KR" turnAngle="6.47" types="35,18,14,15,51,19,52,20,40,41,21,22,23,24,25,26,43,44,45,27,28,29,30,31,32,46,47,48" pointTypes=";;;;;;;;;;;49,50;;;;;;" names="0,61,62,73,63,74,64,65,75,66,67,76,68,77,69,70,71"/>
+                    <segment id="1351039948" length="3" startTrkptIdx="33" segmentTime="10.59" speed="16.44" turnType="" turnAngle="" types="18,14,53,51,19,52,20,40,41,21,22,23,24,25,26,43,44,45,27,28,29,30,31,32,46,47,48" pointTypes=";;" names="0,61,62,73,63,74,64,65,75,66,67,76,68,77,69,70,71"/>
+                    <segment id="215909800" length="6" startTrkptIdx="35" segmentTime="9.99" speed="16.44" turnType="" turnAngle="" types="35,18,14,53,51,19,52,20,40,41,21,22,23,24,25,26,43,44,45,27,28,29,30,31,32,46,47,48" pointTypes=";;;54;;" names="0,61,62,73,63,74,64,65,75,66,67,76,68,77,69,70,71"/>
+                    <segment id="1231944750" length="2" startTrkptIdx="40" segmentTime="0.00" speed="5.56" turnType="C" turnAngle="" types="55" pointTypes=";" names="72"/>
+                    <segment id="1231944750" length="2" startTrkptIdx="41" segmentTime="0.00" speed="5.56" turnType="C" turnAngle="" types="55" pointTypes=";" names="72"/>
+                </osmand:route>
+                <osmand:types>
+                    <type t="highway" v="living_street"/>
+                    <type t="lanes" v="1"/>
+                    <type t="lit" v="yes"/>
+                    <type t="maxspeed" v="20"/>
+                    <type t="oneway" v="yes"/>
+                    <type t="smoothness" v="intermediate"/>
+                    <type t="surface" v="sett"/>
+                    <type t="width" v="6"/>
+                    <type t="osmand_highway_integrity_brouting" v="1"/>
+                    <type t="cycleway" v="shared_lane"/>
+                    <type t="osmand_ele_decline_3" v="1"/>
+                    <type t="highway" v="crossing"/>
+                    <type t="tactile_paving" v="no"/>
+                    <type t="crossing" v="uncontrolled"/>
+                    <type t="lanes" v="2"/>
+                    <type t="maxspeed" v="40"/>
+                    <type t="surface" v="concrete"/>
+                    <type t="crossing:markings" v="yes"/>
+                    <type t="highway" v="primary"/>
+                    <type t="oneway" v="no"/>
+                    <type t="route_road_1_network" v="ar:national"/>
+                    <type t="route_road_1_shield_color" v="white"/>
+                    <type t="route_road_1_shield_shape" v="pentagon"/>
+                    <type t="route_road_1_shield_order" v="1"/>
+                    <type t="route_road_2_shield_color" v="white"/>
+                    <type t="route_road_2_shield_shape" v="pentagon"/>
+                    <type t="route_road_2_shield_order" v="1"/>
+                    <type t="road_shield_color_1" v="white"/>
+                    <type t="road_shield_shape_1" v="pentagon"/>
+                    <type t="road_shield_order_1" v="1"/>
+                    <type t="road_shield_color_2" v="white"/>
+                    <type t="road_shield_shape_2" v="pentagon"/>
+                    <type t="road_shield_order_2" v="1"/>
+                    <type t="osmand_ele_decline_1" v="1"/>
+                    <type t="hgv" v="yes"/>
+                    <type t="foot" v="yes"/>
+                    <type t="maxspeed:type" v="AR:urban"/>
+                    <type t="oneway:conditional" v="yes @ (Dec 1 - Mar 31); no @ (Apr 1 - Nov 30)"/>
+                    <type t="sidewalk:right:surface" v="compacted"/>
+                    <type t="smoothness" v="good"/>
+                    <type t="route_road_2_network" v="ar:national"/>
+                    <type t="osmand_highway_integrity_brouting" v="0"/>
+                    <type t="sidewalk" v="yes"/>
+                    <type t="route_road_3_shield_color" v="white"/>
+                    <type t="route_road_3_shield_shape" v="pentagon"/>
+                    <type t="route_road_3_shield_order" v="1"/>
+                    <type t="road_shield_color_3" v="white"/>
+                    <type t="road_shield_shape_3" v="pentagon"/>
+                    <type t="road_shield_order_3" v="1"/>
+                    <type t="enforcement" v="maxspeed"/>
+                    <type t="highway" v="speed_camera"/>
+                    <type t="maxspeed:type" v="sign"/>
+                    <type t="surface" v="asphalt"/>
+                    <type t="maxspeed" v="60"/>
+                    <type t="osmand_ele_decline_5" v="1"/>
+                    <type t="route" v="ferry"/>
+                    <type t="name" v=""/>
+                    <type t="ref" v=""/>
+                    <type t="name" v="Miguel A. Camino"/>
+                    <type t="name" v="General Villegas"/>
+                    <type t="name" v="Juez del Valle"/>
+                    <type t="ref" v="RN40"/>
+                    <type t="road_name_1" v="Ruta Nacional 40"/>
+                    <type t="road_network_1" v="ar:national"/>
+                    <type t="road_ref_1" v="40"/>
+                    <type t="road_ref_2" v="40"/>
+                    <type t="route_road_1_name" v="Ruta Nacional 40"/>
+                    <type t="route_road_1_ref" v="40"/>
+                    <type t="route_road_2_ref" v="40"/>
+                    <type t="route_road_1_name:de" v="Nationalstraße 40"/>
+                    <type t="route_road_1_name:es" v="Ruta Nacional 40"/>
+                    <type t="route_road_1_name:fr" v="Route nationale 40"/>
+                    <type t="name" v="Excursión Isla Santa Teresita"/>
+                    <type t="road_name_2" v="Camino de los Siete Lagos"/>
+                    <type t="road_network_2" v="ar:national"/>
+                    <type t="road_ref_3" v="40"/>
+                    <type t="route_road_2_name" v="Camino de los Siete Lagos"/>
+                    <type t="route_road_3_ref" v="40"/>
+                </osmand:types>
+            </extensions>
+        </trkseg>
+    </trk>
+    <extensions>
+        <osmand:points_groups>
+            <group name=""/>
+        </osmand:points_groups>
+    </extensions>
+</gpx>
