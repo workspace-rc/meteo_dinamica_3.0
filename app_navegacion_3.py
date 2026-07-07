@@ -146,7 +146,7 @@ def main():
 
             num_subtramos = int(distancia_total_km // DIST_SUBTRAMO) + 1
                         
-                        from zoneinfo import ZoneInfo
+            from zoneinfo import ZoneInfo
             
             # Definimos la hora de salida base en Chile
             hora_inicio_base = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
