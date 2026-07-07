@@ -148,10 +148,7 @@ def main():
                         
             from zoneinfo import ZoneInfo
             
-            # Definimos la hora de salida base en Chile
-            hora_inicio_base = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
-            # Le asignamos la zona horaria oficial de Chile (identifica invierno/verano automáticamente)
-            hora_inicio = hora_inicio_base.replace(tzinfo=ZoneInfo("America/Santiago"))
+            hora_inicio = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
             
             resultados = []
             barra_progreso = st.progress(0)
@@ -163,9 +160,15 @@ def main():
                 punto = linea.interpolate(min(pos, 1.0), normalized=True)
                 lon, lat = punto.x, punto.y
                 
-                # Calculamos el avance en el trayecto respetando el huso horario de Chile
+                # 1. Cálculo matemático lineal del viaje (en base a velocidad)
                 horas_transcurridas = (i * DIST_SUBTRAMO) / VEL_PROMEDIO
                 hora_paso = hora_inicio + timedelta(hours=horas_transcurridas)
+                
+                # 2. AJUSTE DINÁMICO DE FRONTERA (Si ya cruzó a Chile)
+                # Si el punto está al oeste de la cordillera (ej: lon < -71.6)
+                # y estamos en invierno (asumiendo que en invierno restamos 1 hora respecto a Arg)
+                if lon < -71.6:
+                hora_paso = hora_paso - timedelta(hours=1)
 
                 data = consultar_datos(lat, lon, FECHA_TRAMO)
                 if data:
