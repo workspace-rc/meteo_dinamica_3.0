@@ -145,7 +145,13 @@ def main():
 
 
             num_subtramos = int(distancia_total_km // DIST_SUBTRAMO) + 1
-            hora_inicio = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
+                        
+                        from zoneinfo import ZoneInfo
+            
+            # Definimos la hora de salida base en Chile
+            hora_inicio_base = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
+            # Le asignamos la zona horaria oficial de Chile (identifica invierno/verano automáticamente)
+            hora_inicio = hora_inicio_base.replace(tzinfo=ZoneInfo("America/Santiago"))
             
             resultados = []
             barra_progreso = st.progress(0)
@@ -156,7 +162,10 @@ def main():
                 pos = (i * DIST_SUBTRAMO) / distancia_total_km
                 punto = linea.interpolate(min(pos, 1.0), normalized=True)
                 lon, lat = punto.x, punto.y
-                hora_paso = hora_inicio + timedelta(hours=(i * DIST_SUBTRAMO) / VEL_PROMEDIO)
+                
+                # Calculamos el avance en el trayecto respetando el huso horario de Chile
+                horas_transcurridas = (i * DIST_SUBTRAMO) / VEL_PROMEDIO
+                hora_paso = hora_inicio + timedelta(hours=horas_transcurridas)
 
                 data = consultar_datos(lat, lon, FECHA_TRAMO)
                 if data:
