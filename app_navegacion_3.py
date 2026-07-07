@@ -168,7 +168,7 @@ def main():
                 # Si el punto está al oeste de la cordillera (ej: lon < -71.6)
                 # y estamos en invierno (asumiendo que en invierno restamos 1 hora respecto a Arg)
                 if lon < -71.6:
-                hora_paso = hora_paso - timedelta(hours=1)
+                    hora_paso = hora_paso - timedelta(hours=1)
 
                 data = consultar_datos(lat, lon, FECHA_TRAMO)
                 if data:
