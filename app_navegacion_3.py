@@ -58,8 +58,34 @@ HORA_SALIDA = st.sidebar.number_input("Hora de salida (0-23)", min_value=0, max_
 HORA_FORMATEADA = f"{int(HORA_SALIDA):02d}:00"
 VEL_PROMEDIO = st.sidebar.slider("Velocidad promedio (km/h)", 20, 120, 50, step=10)
 DIST_SUBTRAMO = st.sidebar.slider("Resolución: Chequeo cada (km)", 0, 100, 20, step=10)
-DEMORA_ADUANA = st.sidebar.slider("⏳ Demora estimada en Aduana (horas)", 0.0, 5.0, 1.0, step=0.5, key="demora_aduana_key")
+st.sidebar.subheader("⏳ Parámetros de Frontera")
+st.sidebar.slider("Demora en Aduana (horas)", 0.0, 5.0, 1.0, step=0.5, key="demora_aduana_key")
 DEMORA_ADUANA = st.session_state.demora_aduana_key
+
+# Esta variable "paso_detectado" se actualizará más adelante cuando el usuario 
+# seleccione el archivo. Aquí la inicializamos para evitar errores de ejecución.
+es_hua_hum = False
+tiene_reserva = False
+hora_zarpe = None
+
+# Verificamos si ya hay un archivo seleccionado en la interfaz para saber si es Hua Hum
+if "csv_ruta_seleccionada" in st.session_state:
+    nombre_archivo_limpio = st.session_state.csv_ruta_seleccionada.lower().replace(" ", "").replace("_", "").replace("-", "")
+    if "huahum" in nombre_archivo_limpio:
+        es_hua_hum = True
+
+if es_hua_hum:
+    st.sidebar.markdown("---")
+    st.sidebar.subheader("🚢 Transbordador Pirehueico")
+    tiene_reserva = st.sidebar.checkbox("¿Tiene reserva de ferri?", value=True)
+    
+    if tiene_reserva:
+        from datetime import time
+        # Selección del horario de zarpe reservado
+        hora_zarpe = st.sidebar.time_input("Horario de zarpe reservado", time(14, 0))
+# =========================================================================
+
+
 
 # Filtramos archivos que terminen en .csv O .gpx
 archivos_disponibles = [f for f in os.listdir('.') if f.endswith(".csv") or f.endswith(".gpx")]
@@ -197,11 +223,7 @@ def main():
             from zoneinfo import ZoneInfo
             hora_inicio = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
 
-            # =========================================================================
-            # 3. EL ÚLTIMO CÓDIGO PROPUESTO (Aviso dinámico de HEA y HES)
-            #    Pégalo justo aquí, antes del bucle for.
-            # =========================================================================
-
+            # --- Aviso dinámico de HEA y HES ---
             if es_cruce_frontera:
                 # Encontrar el kilómetro real del hito fronterizo
                 km_frontera = 0.0
