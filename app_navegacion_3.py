@@ -58,7 +58,7 @@ HORA_SALIDA = st.sidebar.number_input("Hora de salida (0-23)", min_value=0, max_
 HORA_FORMATEADA = f"{int(HORA_SALIDA):02d}:00"
 VEL_PROMEDIO = st.sidebar.slider("Velocidad promedio (km/h)", 20, 120, 50, step=10)
 DIST_SUBTRAMO = st.sidebar.slider("Resolución: Chequeo cada (km)", 0, 100, 20, step=10)
-
+DEMORA_ADUANA = st.sidebar.slider("⏳ Demora estimada en Aduana (horas)", 0.0, 5.0, 1.0, step=0.5)
 
 # --- 3. INTERFAZ (SIDEBAR) ---
 # Filtramos archivos que terminen en .csv O .gpx
@@ -79,6 +79,10 @@ def main():
     if CSV_RUTA and st.sidebar.button("🚀 Iniciar Análisis", use_container_width=True):
         contenedor_estado = st.empty()
         contenedor_estado.info(f"⏳ Procesando ruta: {CSV_RUTA}...")
+        
+        # --- SALVAVIDAS: Si no se definió en el sidebar, asumimos 0 horas ---
+        if 'DEMORA_ADUANA' not in locals() and 'DEMORA_ADUANA' not in globals():
+            DEMORA_ADUANA = 0.0
         
         try:
             import re
