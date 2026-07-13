@@ -53,36 +53,40 @@ def consultar_datos(lat, lon, fecha_str):
 # --- 3. INTERFAZ (SIDEBAR) ---
 st.sidebar.header("⚙️ Parámetros de Travesía")
 
-# 1. PRIMERO: Cargamos y seleccionamos el archivo (con un key para guardarlo en memoria)
+# --- SELECTOR DE ARCHIVOS ÚNICO (Con ordenamiento numérico) ---
 archivos_disponibles = [f for f in os.listdir('.') if f.endswith(".csv") or f.endswith(".gpx")]
 
-# Ajusta esta línea con el nombre exacto de tu selector de archivos (ej: selectbox)
-# Es vital agregar: key="csv_ruta_seleccionada"
-CSV_RUTA = st.sidebar.selectbox(
-    "Selecciona la ruta", 
-    archivos_disponibles, 
-    key="csv_ruta_seleccionada"
-)
+# Ordenamiento natural (01, 02, 10...) de tu código original
+import re
+archivos_disponibles.sort(key=lambda f: int(re.search(r'\d+', f).group()) if re.search(r'\d+', f) else 0)
 
+# Este es el único y definitivo selector de archivos de ruta
+CSV_RUTA = st.sidebar.selectbox(
+    "Archivo de ruta:", 
+    options=archivos_disponibles,
+    key="csv_ruta_seleccionada"
+) if archivos_disponibles else None
+
+# Parámetros temporales y de velocidad
 fecha_dt = st.sidebar.date_input("Fecha del tramo", value=datetime.now())
 FECHA_TRAMO = fecha_dt.strftime("%Y-%m-%d")
 HORA_SALIDA = st.sidebar.number_input("Hora de salida (0-23)", min_value=0, max_value=23, value=9, step=1)
 HORA_FORMATEADA = f"{int(HORA_SALIDA):02d}:00"
 VEL_PROMEDIO = st.sidebar.slider("Velocidad promedio (km/h)", 20, 120, 50, step=10)
 DIST_SUBTRAMO = st.sidebar.slider("Resolución: Chequeo cada (km)", 0, 100, 20, step=10)
+
+# Parámetros de Frontera
 st.sidebar.subheader("⏳ Parámetros de Frontera")
 st.sidebar.slider("Demora en Aduana (horas)", 0.0, 5.0, 1.0, step=0.5, key="demora_aduana_key")
 DEMORA_ADUANA = st.session_state.demora_aduana_key
 
-# Esta variable "paso_detectado" se actualizará más adelante cuando el usuario 
-# seleccione el archivo. Aquí la inicializamos para evitar errores de ejecución.
+# Lógica dinámica para el Transbordador (Se activa solo si se detecta Hua Hum)
 es_hua_hum = False
 tiene_reserva = False
 hora_zarpe = None
 
-# Verificamos si ya hay un archivo seleccionado en la interfaz para saber si es Hua Hum
-if "csv_ruta_seleccionada" in st.session_state:
-    nombre_archivo_limpio = st.session_state.csv_ruta_seleccionada.lower().replace(" ", "").replace("_", "").replace("-", "")
+if CSV_RUTA:
+    nombre_archivo_limpio = CSV_RUTA.lower().replace(" ", "").replace("_", "").replace("-", "")
     if "huahum" in nombre_archivo_limpio:
         es_hua_hum = True
 
@@ -95,17 +99,6 @@ if es_hua_hum:
         from datetime import time
         # Selección del horario de zarpe reservado
         hora_zarpe = st.sidebar.time_input("Horario de zarpe reservado", time(14, 0))
-# =========================================================================
-
-
-
-# Filtramos archivos que terminen en .csv O .gpx
-archivos_disponibles = [f for f in os.listdir('.') if f.endswith(".csv") or f.endswith(".gpx")]
-
-# Ordenamiento natural (01, 02, 10...)
-archivos_disponibles.sort(key=lambda f: int(re.search(r'\d+', f).group()) if re.search(r'\d+', f) else 0)
-
-CSV_RUTA = st.sidebar.selectbox("Archivo de ruta:", options=archivos_disponibles) if archivos_disponibles else None
 
 # --- 4. LÓGICA PRINCIPAL ---
 def main():
