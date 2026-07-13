@@ -52,6 +52,18 @@ def consultar_datos(lat, lon, fecha_str):
 
 # --- 3. INTERFAZ (SIDEBAR) ---
 st.sidebar.header("⚙️ Parámetros de Travesía")
+
+# 1. PRIMERO: Cargamos y seleccionamos el archivo (con un key para guardarlo en memoria)
+archivos_disponibles = [f for f in os.listdir('.') if f.endswith(".csv") or f.endswith(".gpx")]
+
+# Ajusta esta línea con el nombre exacto de tu selector de archivos (ej: selectbox)
+# Es vital agregar: key="csv_ruta_seleccionada"
+CSV_RUTA = st.sidebar.selectbox(
+    "Selecciona la ruta", 
+    archivos_disponibles, 
+    key="csv_ruta_seleccionada"
+)
+
 fecha_dt = st.sidebar.date_input("Fecha del tramo", value=datetime.now())
 FECHA_TRAMO = fecha_dt.strftime("%Y-%m-%d")
 HORA_SALIDA = st.sidebar.number_input("Hora de salida (0-23)", min_value=0, max_value=23, value=9, step=1)
