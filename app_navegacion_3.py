@@ -61,7 +61,6 @@ DIST_SUBTRAMO = st.sidebar.slider("Resolución: Chequeo cada (km)", 0, 100, 20, 
 DEMORA_ADUANA = st.sidebar.slider("⏳ Demora estimada en Aduana (horas)", 0.0, 5.0, 1.0, step=0.5, key="demora_aduana_key")
 DEMORA_ADUANA = st.session_state.demora_aduana_key
 
-# --- 3. INTERFAZ (SIDEBAR) ---
 # Filtramos archivos que terminen en .csv O .gpx
 archivos_disponibles = [f for f in os.listdir('.') if f.endswith(".csv") or f.endswith(".gpx")]
 
@@ -198,47 +197,48 @@ def main():
             from zoneinfo import ZoneInfo
             hora_inicio = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
 
-# =========================================================================
-# 3. EL ÚLTIMO CÓDIGO PROPUESTO (Aviso dinámico de HEA y HES)
-#    Pégalo justo aquí, antes del bucle for.
-# =========================================================================
-if es_cruce_frontera:
-    # Encontrar el kilómetro real del hito fronterizo
-    km_frontera = 0.0
-    for i in range(num_subtramos):
-        pos = (i * DIST_SUBTRAMO) / distancia_total_km
-        punto = linea.interpolate(min(pos, 1.0), normalized=True)
-        if (sentido_viaje == "ARG-CHI" and punto.x <= lon_frontera) or \
-           (sentido_viaje == "CHI-ARG" and punto.x >= lon_frontera):
-            km_frontera = round(i * DIST_SUBTRAMO, 1)
-            break
-    
-    # Calcular las horas estimadas
-    horas_hasta_frontera = km_frontera / VEL_PROMEDIO
-    dt_hea = hora_inicio + timedelta(hours=horas_hasta_frontera)
-    
-    bandera_origen = "🇦🇷" if sentido_viaje == "ARG-CHI" else "🇨🇱"
-    bandera_destino = "🇨🇱" if sentido_viaje == "ARG-CHI" else "🇦🇷"
-    
-    if sentido_viaje == "ARG-CHI":
-        dt_hes = dt_hea + timedelta(hours=DEMORA_ADUANA) - timedelta(hours=1)
-    else:
-        dt_hes = dt_hea + timedelta(hours=DEMORA_ADUANA) + timedelta(hours=1)
-    
-    hea_str = dt_hea.strftime("%H:%M")
-    hes_str = dt_hes.strftime("%H:%M")
-    
-    # Mostrar la alerta limpia en la app
-    st.warning(
-        f"⚠️ **Frontera: {paso_detectado}** (Km {km_frontera}) | "
-        f"**HEA:** {hea_str} {bandera_origen} | "
-        f"**Espera:** {DEMORA_ADUANA}h | "
-        f"**HES:** {hes_str} {bandera_destino}"
-    )
+            # =========================================================================
+            # 3. EL ÚLTIMO CÓDIGO PROPUESTO (Aviso dinámico de HEA y HES)
+            #    Pégalo justo aquí, antes del bucle for.
+            # =========================================================================
+
+            if es_cruce_frontera:
+                # Encontrar el kilómetro real del hito fronterizo
+                km_frontera = 0.0
+                for i in range(num_subtramos):
+                    pos = (i * DIST_SUBTRAMO) / distancia_total_km
+                    punto = linea.interpolate(min(pos, 1.0), normalized=True)
+                    if (sentido_viaje == "ARG-CHI" and punto.x <= lon_frontera) or \
+                       (sentido_viaje == "CHI-ARG" and punto.x >= lon_frontera):
+                        km_frontera = round(i * DIST_SUBTRAMO, 1)
+                        break
+                
+                # Calcular las horas estimadas
+                horas_hasta_frontera = km_frontera / VEL_PROMEDIO
+                dt_hea = hora_inicio + timedelta(hours=horas_hasta_frontera)
+                
+                bandera_origen = "🇦🇷" if sentido_viaje == "ARG-CHI" else "🇨🇱"
+                bandera_destino = "🇨🇱" if sentido_viaje == "ARG-CHI" else "🇦🇷"
+                
+                if sentido_viaje == "ARG-CHI":
+                    dt_hes = dt_hea + timedelta(hours=DEMORA_ADUANA) - timedelta(hours=1)
+                else:
+                    dt_hes = dt_hea + timedelta(hours=DEMORA_ADUANA) + timedelta(hours=1)
+                
+                hea_str = dt_hea.strftime("%H:%M")
+                hes_str = dt_hes.strftime("%H:%M")
+                
+                # Mostrar la alerta limpia en la app
+                st.warning(
+                    f"⚠️ **Frontera: {paso_detectado}** (Km {km_frontera}) | "
+                    f"**HEA:** {hea_str} {bandera_origen} | "
+                    f"**Espera:** {DEMORA_ADUANA}h | "
+                    f"**HES:** {hes_str} {bandera_destino}"
+                )
             
-# =========================================================================
-# 4. BUCLE FOR DEL TRAYECTO (Pégalo debajo del aviso)
-# =========================================================================
+            # =========================================================================
+            # 4. BUCLE FOR DEL TRAYECTO (Pégalo debajo del aviso)
+            # =========================================================================
     
             resultados = []
             barra_progreso = st.progress(0)
