@@ -135,23 +135,74 @@ def main():
             # Eliminar duplicados de posición consecutivos
             df_ruta = df_ruta[(df_ruta[['X', 'Y']].shift() != df_ruta[['X', 'Y']]).any(axis=1)]
 
-            # --- 4. CÁLCULO DE GEOMETRÍA (Aquí se define la línea) ---
+            # =========================================================================
+            # --- TABLA DE REFERENCIA DE PASOS FRONTERIZOS ---
+            # =========================================================================
+            PASOS_FRONTERA = {
+                "pehuenche": {"nombre": "Paso Pehuenche", "lon_frontera": -70.43},
+                "pichachen": {"nombre": "Paso Pichachén", "lon_frontera": -71.14},
+                "pinohachado": {"nombre": "Paso Pino Hachado", "lon_frontera": -71.08},
+                "pino": {"nombre": "Paso Pino Hachado", "lon_frontera": -71.08},
+                "hachado": {"nombre": "Paso Pino Hachado", "lon_frontera": -71.08},
+                "mamuil": {"nombre": "Paso Mamuil Malal", "lon_frontera": -71.40},
+                "malal": {"nombre": "Paso Mamuil Malal", "lon_frontera": -71.40},
+                "carirrine": {"nombre": "Paso Carirriñe", "lon_frontera": -71.67},
+                "huahum": {"nombre": "Paso Hua Hum", "lon_frontera": -71.69},
+                "samore": {"nombre": "Paso Cardenal Samoré", "lon_frontera": -71.82},
+                "cardenal": {"nombre": "Paso Cardenal Samoré", "lon_frontera": -71.82}
+            }
+
+            # 1. Limpieza del nombre del archivo para buscar coincidencias
+            nombre_archivo_limpio = CSV_RUTA.lower().replace(" ", "").replace("_", "").replace("-", "")
+            
+            paso_detectado = None
+            lon_frontera = None
+
+            for clave, info in PASOS_FRONTERA.items():
+                if clave in nombre_archivo_limpio:
+                    paso_detectado = info["nombre"]
+                    lon_frontera = info["lon_frontera"]
+                    break
+
+            # 2. Determinar geográficamente el origen y destino
+            lon_origen = df_ruta.iloc[0]['X']
+            lon_destino = df_ruta.iloc[-1]['X']
+
+            # 3. Identificar el Sentido y si es un cruce real de esa frontera
+            es_cruce_frontera = False
+            sentido_viaje = "interno" # por defecto
+
+            if lon_frontera is not None:
+                # Comprobamos si el viaje efectivamente cruza la línea de la frontera detectada
+                if (lon_origen > lon_frontera and lon_destino < lon_frontera):
+                    es_cruce_frontera = True
+                    sentido_viaje = "ARG-CHI"  # De Este a Oeste (Ida a Chile)
+                elif (lon_origen < lon_frontera and lon_destino > lon_frontera):
+                    es_cruce_frontera = True
+                    sentido_viaje = "CHI-ARG"  # De Oeste a Este (Vuelta a Argentina)
+
+            # Informar al usuario en la interfaz del análisis detectado
+            if es_cruce_frontera:
+                st.sidebar.success(f"🗺️ Cruce detectado: {paso_detectado} ({sentido_viaje})")
+            else:
+                st.sidebar.info("🚗 Trayecto interno (Sin cruce de frontera activa)")
+            # =========================================================================
+            
+            # --- CÁLCULO DE GEOMETRÍA ---
             puntos = list(zip(df_ruta['X'], df_ruta['Y']))
             linea = LineString(puntos)
             distancia_total_km = linea.length * 111.1
             
-            # --- CONTINÚA TU CÓDIGO ORIGINAL DESDE AQUÍ ---
-            # (El bucle for de consulta de clima, la tabla de resultados y el mapa)
-
-
             num_subtramos = int(distancia_total_km // DIST_SUBTRAMO) + 1
-                        
-            from zoneinfo import ZoneInfo
             
+            # --- MANEJO HORARIO BASE ---
+            from zoneinfo import ZoneInfo
             hora_inicio = datetime.strptime(f"{FECHA_TRAMO} {HORA_FORMATEADA}", "%Y-%m-%d %H:%M")
             
             resultados = []
             barra_progreso = st.progress(0)
+            
+            aduana_procesada = False
 
             for i in range(num_subtramos):
                 barra_progreso.progress((i + 1) / num_subtramos)
@@ -160,20 +211,47 @@ def main():
                 punto = linea.interpolate(min(pos, 1.0), normalized=True)
                 lon, lat = punto.x, punto.y
                 
-                # 1. Cálculo matemático lineal del viaje (en base a velocidad)
+                # 1. Tiempo lineal de viaje
                 horas_transcurridas = (i * DIST_SUBTRAMO) / VEL_PROMEDIO
-                hora_paso = hora_inicio + timedelta(hours=horas_transcurridas)
                 
-                # 2. AJUSTE DINÁMICO DE FRONTERA (Si ya cruzó a Chile)
-                # Si el punto está al oeste de la cordillera (ej: lon < -71.6)
-                # y estamos en invierno (asumiendo que en invierno restamos 1 hora respecto a Arg)
-                if lon < -71.6:
-                    hora_paso = hora_paso - timedelta(hours=1)
+                # 2. LÓGICA DINÁMICA DE FRONTERA
+                if es_cruce_frontera:
+                    # CASO IDA: Cruzando de Argentina a Chile (Hacia el Oeste)
+                    if sentido_viaje == "ARG-CHI":
+                        if lon <= lon_frontera: # Ya cruzamos la frontera hacia Chile
+                            if not aduana_procesada:
+                                horas_transcurridas += DEMORA_ADUANA
+                                aduana_procesada = True
+                            
+                            # Hora en Chile: Sumamos demora y restamos 1 hora por huso chileno de invierno
+                            hora_paso = hora_inicio + timedelta(hours=horas_transcurridas) - timedelta(hours=1)
+                        else:
+                            # Aún en Argentina
+                            hora_paso = hora_inicio + timedelta(hours=horas_transcurridas)
+                            
+                    # CASO VUELTA: Cruzando de Chile a Argentina (Hacia el Este)
+                    elif sentido_viaje == "CHI-ARG":
+                        if lon >= lon_frontera: # Ya cruzamos la frontera hacia Argentina
+                            if not aduana_procesada:
+                                horas_transcurridas += DEMORA_ADUANA
+                                aduana_procesada = True
+                            
+                            # Hora en Argentina: Sumamos demora y sumamos 1 hora para volver al huso de Arg
+                            hora_paso = hora_inicio + timedelta(hours=horas_transcurridas) + timedelta(hours=1)
+                        else:
+                            # Aún en Chile
+                            hora_paso = hora_inicio + timedelta(hours=horas_transcurridas)
+                else:
+                    # Trayecto local sin cruce: se calcula directo sin demoras ni saltos de huso
+                    hora_paso = hora_inicio + timedelta(hours=horas_transcurridas)
 
+                # --- CONSULTA DE CLIMA ---
                 data = consultar_datos(lat, lon, FECHA_TRAMO)
                 if data:
                     horario = data['hourly']
                     idx = hora_paso.hour 
+                    
+                    # (Continúa la extracción de variables de clima y guardado en resultados...)
                     
                     # Extracción de variables
                     temp = horario['temperature_2m'][idx]
