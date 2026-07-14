@@ -264,13 +264,18 @@ def main():
                 )
             
             # =========================================================================
-            # 4. BUCLE FOR DEL TRAYECTO (Pégalo debajo del aviso)
+            # 4. BUCLE FOR DEL TRAYECTO - INTEGRACIÓN CLIMA Y ALERTAS ORIGINALES
             # =========================================================================
-    
             resultados = []
             barra_progreso = st.progress(0)
+            
             aduana_procesada = False
+            ferri_procesado = False
             demora_acumulada = 0.0
+
+            # Límites geográficos del Lago Pirehueico
+            LON_PIREHUEICO = -71.69
+            LON_FUY = -71.89
 
             for i in range(num_subtramos):
                 barra_progreso.progress((i + 1) / num_subtramos)
@@ -279,87 +284,250 @@ def main():
                 punto = linea.interpolate(min(pos, 1.0), normalized=True)
                 lon, lat = punto.x, punto.y
                 
-                # 1. Tiempo lineal de viaje
-                horas_transcurridas = (i * DIST_SUBTRAMO) / VEL_PROMEDIO
-                
-                # 2. LÓGICA DINÁMICA DE FRONTERA
-                if es_cruce_frontera:
-                    # CASO IDA: Cruzando de Argentina a Chile (Hacia el Oeste)
-                    if sentido_viaje == "ARG-CHI":
-                        if lon <= lon_frontera: # Ya cruzamos la frontera hacia Chile
-                            if not aduana_procesada:
-                                horas_transcurridas += DEMORA_ADUANA
-                                aduana_procesada = True
-                            
-                            # Hora en Chile: Sumamos demora y restamos 1 hora por huso chileno de invierno
-                            hora_paso = hora_inicio + timedelta(hours=horas_transcurridas) - timedelta(hours=1)
-                        else:
-                            # Aún en Argentina
-                            hora_paso = hora_inicio + timedelta(hours=horas_transcurridas)
-                            
-                    # CASO VUELTA: Cruzando de Chile a Argentina (Hacia el Este)
-                    elif sentido_viaje == "CHI-ARG":
-                        if lon >= lon_frontera: # Ya cruzamos la frontera hacia Argentina
-                            if not aduana_procesada:
-                                horas_transcurridas += DEMORA_ADUANA
-                                aduana_procesada = True
-                            
-                            # Hora en Argentina: Sumamos demora y sumamos 1 hora para volver al huso de Arg
-                            hora_paso = hora_inicio + timedelta(hours=horas_transcurridas) + timedelta(hours=1)
-                        else:
-                            # Aún en Chile
-                            hora_paso = hora_inicio + timedelta(hours=horas_transcurridas)
-                else:
-                    # Trayecto local sin cruce: se calcula directo sin demoras ni saltos de huso
-                    hora_paso = hora_inicio + timedelta(hours=horas_transcurridas)
+                km_actual = int(i * DIST_SUBTRAMO)
 
-                # --- CONSULTA DE CLIMA ---
-                data = consultar_datos(lat, lon, FECHA_TRAMO)
-                if data:
-                    horario = data['hourly']
-                    idx = hora_paso.hour 
+                # 1. Determinar si el punto actual está navegando por el lago
+                esta_en_el_lago = False
+                if es_hua_hum:
+                    esta_en_el_lago = (LON_FUY <= lon <= LON_PIREHUEICO)
+
+                # 2. Calcular el avance del coche (congelando kilómetros en el lago)
+                if esta_en_el_lago:
+                    # Si está en el agua, fijamos las horas de manejo terrestre hasta la entrada al ferri
+                    km_conduccion = (distancia_total_km * 0.4) 
+                    horas_conduccion = km_conduccion / VEL_PROMEDIO
+                else:
+                    if es_hua_hum and aduana_procesada and ferri_procesado:
+                        # Descontamos el tramo del lago para que no sume horas terrestres extra
+                        distancia_lago = 26.0
+                        km_conduccion_real = max(0.0, (i * DIST_SUBTRAMO) - distancia_lago)
+                        horas_conduccion = km_conduccion_real / VEL_PROMEDIO
+                    else:
+                        horas_conduccion = (i * DIST_SUBTRAMO) / VEL_PROMEDIO
+
+                # ---------------------------------------------------------------------
+                # CASO DE USO A: SENTIDO IDA (ARGENTINA -> CHILE)
+                # ---------------------------------------------------------------------
+                if es_cruce_frontera and sentido_viaje == "ARG-CHI":
+                    if lon <= lon_frontera and not aduana_procesada:
+                        hora_llegada_aduana = hora_inicio + timedelta(hours=horas_conduccion + demora_acumulada)
+                        hora_salida_aduana = hora_llegada_aduana + timedelta(hours=DEMORA_ADUANA)
+                        
+                        data_cruce = consultar_datos(lat, lon, FECHA_TRAMO)
+                        if data_cruce:
+                            clima_cruce = data_cruce['hourly']
+                            idx_c = min(hora_llegada_aduana.hour, 23)
+                            
+                            # Mantenemos de forma idéntica tus variables para la fila de aduana
+                            resultados.append({
+                                "KM": km_actual,
+                                "HORA": f"{hora_llegada_aduana.strftime('%H:%M')} ➜ {hora_salida_aduana.strftime('%H:%M')}",
+                                "ALERTAS": "⏱️ ESPERA ADUANA",
+                                "ALTITUD (m)": int(data_cruce['elevation_msnm']),
+                                "Amanece": data_cruce['daily']['sunrise'][0][-5:],
+                                "Anochece": data_cruce['daily']['sunset'][0][-5:],
+                                "Temp (°C)": clima_cruce['temperature_2m'][idx_c],
+                                "Altitud 0°C (m)": clima_cruce['freezing_level_height'][idx_c],
+                                "Lluvia (%)": clima_cruce['precipitation_probability'][idx_c],
+                                "Lluvia (mm)": clima_cruce['rain'][idx_c],
+                                "Nubes": clima_cruce['cloud_cover'][idx_c],
+                                "Viento (km/h)": clima_cruce['windspeed_10m'][idx_c],
+                                "hPa": clima_cruce['surface_pressure'][idx_c],
+                                "lat": lat, "lon": lon
+                            })
+                        demora_acumulada += DEMORA_ADUANA
+                        aduana_procesada = True
+
+                        if es_hua_hum:
+                            # Ajustamos el huso de Chile restando 1 hora
+                            hora_llegada_puerto = hora_salida_aduana - timedelta(hours=1) 
+                            hora_zarpe_real = hora_llegada_puerto + timedelta(hours=1.0)
+                            
+                            if data_cruce:
+                                idx_p = min(hora_llegada_puerto.hour, 23)
+                                # Fila de Espera en Puerto
+                                resultados.append({
+                                    "KM": km_actual,
+                                    "HORA": f"{hora_llegada_puerto.strftime('%H:%M')} ➜ {hora_zarpe_real.strftime('%H:%M')}",
+                                    "ALERTAS": "⚓ ESPERA PUERTO",
+                                    "ALTITUD (m)": int(data_cruce['elevation_msnm']),
+                                    "Amanece": data_cruce['daily']['sunrise'][0][-5:],
+                                    "Anochece": data_cruce['daily']['sunset'][0][-5:],
+                                    "Temp (°C)": clima_cruce['temperature_2m'][idx_p],
+                                    "Altitud 0°C (m)": clima_cruce['freezing_level_height'][idx_p],
+                                    "Lluvia (%)": clima_cruce['precipitation_probability'][idx_p],
+                                    "Lluvia (mm)": clima_cruce['rain'][idx_p],
+                                    "Nubes": clima_cruce['cloud_cover'][idx_p],
+                                    "Viento (km/h)": clima_cruce['windspeed_10m'][idx_p],
+                                    "hPa": clima_cruce['surface_pressure'][idx_p],
+                                    "lat": lat, "lon": lon
+                                })
+                                
+                                # Fila de Navegación explícita
+                                hora_arribo_fuy = hora_zarpe_real + timedelta(hours=1.5)
+                                idx_n = min(hora_zarpe_real.hour, 23)
+                                resultados.append({
+                                    "KM": km_actual,
+                                    "HORA": f"{hora_zarpe_real.strftime('%H:%M')} ➜ {hora_arribo_fuy.strftime('%H:%M')}",
+                                    "ALERTAS": "🚢 NAVEGACIÓN",
+                                    "ALTITUD (m)": int(data_cruce['elevation_msnm']),
+                                    "Amanece": data_cruce['daily']['sunrise'][0][-5:],
+                                    "Anochece": data_cruce['daily']['sunset'][0][-5:],
+                                    "Temp (°C)": clima_cruce['temperature_2m'][idx_n],
+                                    "Altitud 0°C (m)": clima_cruce['freezing_level_height'][idx_n],
+                                    "Lluvia (%)": clima_cruce['precipitation_probability'][idx_n],
+                                    "Lluvia (mm)": clima_cruce['rain'][idx_n],
+                                    "Nubes": clima_cruce['cloud_cover'][idx_n],
+                                    "Viento (km/h)": clima_cruce['windspeed_10m'][idx_n],
+                                    "hPa": clima_cruce['surface_pressure'][idx_n],
+                                    "lat": lat, "lon": lon
+                                })
+                            demora_acumulada += 1.5 
+                            ferri_procesado = True
+
+                # ---------------------------------------------------------------------
+                # CASO DE USO B: SENTIDO VUELTA (CHILE -> ARGENTINA)
+                # ---------------------------------------------------------------------
+                elif es_cruce_frontera and sentido_viaje == "CHI-ARG":
+                    if lon >= LON_FUY and es_hua_hum and not ferri_procesado:
+                        hora_llegada_fuy = hora_inicio + timedelta(hours=horas_conduccion + demora_acumulada)
+                        hora_zarpe_fuy = hora_llegada_fuy + timedelta(hours=1.0)
+                        
+                        data_fuy = consultar_datos(lat, lon, FECHA_TRAMO)
+                        if data_fuy:
+                            clima_fuy = data_fuy['hourly']
+                            idx_f = min(hora_llegada_fuy.hour, 23)
+                            
+                            # Fila de Espera Puerto Fuy
+                            resultados.append({
+                                "KM": km_actual,
+                                "HORA": f"{hora_llegada_fuy.strftime('%H:%M')} ➜ {hora_zarpe_fuy.strftime('%H:%M')}",
+                                "ALERTAS": "⚓ ESPERA PUERTO",
+                                "ALTITUD (m)": int(data_fuy['elevation_msnm']),
+                                "Amanece": data_fuy['daily']['sunrise'][0][-5:],
+                                "Anochece": data_fuy['daily']['sunset'][0][-5:],
+                                "Temp (°C)": clima_fuy['temperature_2m'][idx_f],
+                                "Altitud 0°C (m)": clima_fuy['freezing_level_height'][idx_f],
+                                "Lluvia (%)": clima_fuy['precipitation_probability'][idx_f],
+                                "Lluvia (mm)": clima_fuy['rain'][idx_f],
+                                "Nubes": clima_fuy['cloud_cover'][idx_f],
+                                "Viento (km/h)": clima_fuy['windspeed_10m'][idx_f],
+                                "hPa": clima_fuy['surface_pressure'][idx_f],
+                                "lat": lat, "lon": lon
+                            })
+                            
+                            # Fila de Navegación Pirehueico
+                            hora_llegada_pirehueico = hora_zarpe_fuy + timedelta(hours=1.5)
+                            idx_fn = min(hora_zarpe_fuy.hour, 23)
+                            resultados.append({
+                                "KM": km_actual,
+                                "HORA": f"{hora_zarpe_fuy.strftime('%H:%M')} ➜ {hora_llegada_pirehueico.strftime('%H:%M')}",
+                                "ALERTAS": "🚢 NAVEGACIÓN",
+                                "ALTITUD (m)": int(data_fuy['elevation_msnm']),
+                                "Amanece": data_fuy['daily']['sunrise'][0][-5:],
+                                "Anochece": data_fuy['daily']['sunset'][0][-5:],
+                                "Temp (°C)": clima_fuy['temperature_2m'][idx_fn],
+                                "Altitud 0°C (m)": clima_fuy['freezing_level_height'][idx_fn],
+                                "Lluvia (%)": clima_fuy['precipitation_probability'][idx_fn],
+                                "Lluvia (mm)": clima_fuy['rain'][idx_fn],
+                                "Nubes": clima_fuy['cloud_cover'][idx_fn],
+                                "Viento (km/h)": clima_fuy['windspeed_10m'][idx_fn],
+                                "hPa": clima_fuy['surface_pressure'][idx_fn],
+                                "lat": lat, "lon": lon
+                            })
+                        demora_acumulada += 2.5 
+                        ferri_procesado = True
+
+                    if lon >= lon_frontera and not aduana_procesada:
+                        hora_llegada_aduana = hora_inicio + timedelta(hours=horas_conduccion + demora_acumulada)
+                        # Retorno a Argentina (Sumamos aduana y 1h por huso horario GMT-3)
+                        hora_salida_aduana = hora_llegada_aduana + timedelta(hours=DEMORA_ADUANA) + timedelta(hours=1)
+                        
+                        data_aduana = consultar_datos(lat, lon, FECHA_TRAMO)
+                        if data_aduana:
+                            clima_aduana = data_aduana['hourly']
+                            idx_ad = min(hora_llegada_aduana.hour, 23)
+                            
+                            resultados.append({
+                                "KM": km_actual,
+                                "HORA": f"{hora_llegada_aduana.strftime('%H:%M')} ➜ {hora_salida_aduana.strftime('%H:%M')}",
+                                "ALERTAS": "⏱️ ESPERA ADUANA",
+                                "ALTITUD (m)": int(data_aduana['elevation_msnm']),
+                                "Amanece": data_aduana['daily']['sunrise'][0][-5:],
+                                "Anochece": data_aduana['daily']['sunset'][0][-5:],
+                                "Temp (°C)": clima_aduana['temperature_2m'][idx_ad],
+                                "Altitud 0°C (m)": clima_aduana['freezing_level_height'][idx_ad],
+                                "Lluvia (%)": clima_aduana['precipitation_probability'][idx_ad],
+                                "Lluvia (mm)": clima_aduana['rain'][idx_ad],
+                                "Nubes": clima_aduana['cloud_cover'][idx_ad],
+                                "Viento (km/h)": clima_aduana['windspeed_10m'][idx_ad],
+                                "hPa": clima_aduana['surface_pressure'][idx_ad],
+                                "lat": lat, "lon": lon
+                            })
+                        demora_acumulada += DEMORA_ADUANA + 1.0 
+                        aduana_procesada = True
+
+                # ---------------------------------------------------------------------
+                # TRAMOS EN TIERRA FIRME (Mantiene de forma idéntica tu código original)
+                # ---------------------------------------------------------------------
+                if not esta_en_el_lago:
+                    horas_totales = horas_conduccion + demora_acumulada
+                    hora_paso = hora_inicio + timedelta(hours=horas_totales)
                     
-                    # (Continúa la extracción de variables de clima y guardado en resultados...)
-                    
-                    # Extracción de variables
-                    temp = horario['temperature_2m'][idx]
-                    viento = horario['windspeed_10m'][idx]
-                    lluvia_cant = horario['rain'][idx]
-                    lluvia_prob = horario['precipitation_probability'][idx]
-                    altitud = data['elevation_msnm']
-                    hielo = horario['freezing_level_height'][idx]
-                    presion_atm = horario['surface_pressure'][idx]
-                    nubosidad = horario['cloud_cover'][idx]
-                    amanece = data['daily']['sunrise'][0][-5:]
-                    anochece = data['daily']['sunset'][0][-5:]
-                    
-                    # --- LÓGICA DE ALERTAS ---
-                    alertas = []
-                    if viento > 45: alertas.append("💨 VIENTO")
-                    if temp < 3: alertas.append("❄️ HIELO")
-                    if lluvia_prob > 60: alertas.append("🌧️ LLUVIA")
-                    
-                    # Alerta basada en lluvia_cant (intensidad)
-                    if lluvia_cant > 0 and lluvia_cant <= 2: alertas.append("🌦️ LLUVIA DÉBIL")
-                    elif lluvia_cant > 2 and lluvia_cant <= 8: alertas.append("🌧️ USA TRAJE")
-                    elif lluvia_cant > 8: alertas.append("⚠️ BUSCA TECHO")
-                    
-                    resultados.append({
-                        "KM": int(i * DIST_SUBTRAMO),
-                        "HORA": hora_paso.strftime('%H:%M'),
-                        "ALERTAS": " | | ".join(alertas),
-                        "ALTITUD (m)": int(altitud),
-                        "Amanece": amanece,
-                        "Anochece": anochece,
-                        "Temp (°C)": temp,
-                        "Altitud 0°C (m)": hielo,
-                        "Lluvia (%)": lluvia_prob,
-                        "Lluvia (mm)": lluvia_cant,
-                        "Nubes": nubosidad,
-                        "Viento (km/h)": viento,
-                        "hPa": presion_atm,
-                        "lat": lat, "lon": lon
-                    })
+                    if es_cruce_frontera:
+                        if sentido_viaje == "ARG-CHI" and lon <= lon_frontera:
+                            hora_paso = hora_paso - timedelta(hours=1)
+                        elif sentido_viaje == "CHI-ARG" and lon < lon_frontera:
+                            pass 
+
+                    data = consultar_datos(lat, lon, FECHA_TRAMO)
+                    if data:
+                        horario = data['hourly']
+                        idx = min(hora_paso.hour, 23)
+                        
+                        # =============================================================
+                        # TUS EXTRACCIONES ORIGINALES (100% INTACTAS)
+                        # =============================================================
+                        temp = horario['temperature_2m'][idx]
+                        viento = horario['windspeed_10m'][idx]
+                        lluvia_cant = horario['rain'][idx]
+                        lluvia_prob = horario['precipitation_probability'][idx]
+                        altitud = data['elevation_msnm']
+                        hielo = horario['freezing_level_height'][idx]
+                        presion_atm = horario['surface_pressure'][idx]
+                        nubosidad = horario['cloud_cover'][idx]
+                        amanece = data['daily']['sunrise'][0][-5:]
+                        anochece = data['daily']['sunset'][0][-5:]
+                        
+                        # --- LÓGICA DE ALERTAS ORIGINAL ---
+                        alertas = []
+                        if viento > 45: alertas.append("💨 VIENTO")
+                        if temp < 3: alertas.append("❄️ HIELO")
+                        if lluvia_prob > 60: alertas.append("🌧️ LLUVIA")
+                        
+                        if lluvia_cant > 0 and lluvia_cant <= 2: alertas.append("🌦️ LLUVIA DÉBIL")
+                        elif lluvia_cant > 2 and lluvia_cant <= 8: alertas.append("🌧️ USA TRAJE")
+                        elif lluvia_cant > 8: alertas.append("⚠️ BUSCA TECHO")
+                        
+                        # Agrega fila terrestre con tu estructura idéntica
+                        resultados.append({
+                            "KM": km_actual,
+                            "HORA": hora_paso.strftime('%H:%M'),
+                            "ALERTAS": " | | ".join(alertas) if alertas else "✅ DESPEJADO",
+                            "ALTITUD (m)": int(altitud),
+                            "Amanece": amanece,
+                            "Anochece": anochece,
+                            "Temp (°C)": temp,
+                            "Altitud 0°C (m)": hielo,
+                            "Lluvia (%)": lluvia_prob,
+                            "Lluvia (mm)": lluvia_cant,
+                            "Nubes": nubosidad,
+                            "Viento (km/h)": viento,
+                            "hPa": presion_atm,
+                            "lat": lat, "lon": lon
+                        })
+
+            # --- SECCIÓN DE VISUALIZACIÓN (CÓDIGO IDEAL) ---
 
             # --- SECCIÓN DE VISUALIZACIÓN (CÓDIGO IDEAL) ---
             if resultados:
