@@ -303,6 +303,30 @@ def main():
             hora_llegada_puerto_registro = None
             nombre_puerto_registro = ""
 
+         def obtener_bandera_pais(lon, sentido_viaje, aduana_procesada, es_cruce_frontera):
+             """
+             Retorna la bandera del país correspondiente a la ubicación actual.
+             Frontera física aproximada: lon_frontera ≈ -71.86
+             """
+             # Límite aproximado de la frontera física en Hua Hum
+             lon_frontera = -71.8654  
+    
+             if sentido_viaje == "ARG-CHI":
+                 # Si vamos de ARG a CHI: antes de la aduana/frontera es ARG, después es CHI
+                 if lon > lon_frontera and not aduana_procesada:
+                     return "🇦🇷"
+                 else:
+                     return "🇨🇱"
+             elif sentido_viaje == "CHI-ARG":
+                 # Si vamos de CHI a ARG: antes de la frontera es CHI, después es ARG
+                 if lon < lon_frontera and not aduana_procesada:
+                     return "🇨🇱"
+                 else:
+                     return "🇦🇷"
+             else:
+                 # Por defecto, si no es una ruta fronteriza
+                 return "🇦🇷" if lon > -71.8654 else "🇨🇱"   
+          
             for i in range(num_subtramos):
                 barra_progreso.progress((i + 1) / num_subtramos)
                 
@@ -352,7 +376,7 @@ def main():
                             # Fila de Aduana (Aduana Argentina está en huso ARG)
                             resultados.append({
                                 "KM": km_actual,
-                                "HORA": f"{hora_llegada_aduana.strftime('%H:%M')} ➔ {hora_salida_aduana.strftime('%H:%M')}",
+                                "HORA": f"🇦🇷 {hora_llegada_aduana.strftime('%H:%M')} ➔ {hora_salida_aduana.strftime('%H:%M')}",
                                 "ALERTAS": "⏳ ESPERA ADUANA",
                                 "ALTITUD (m)": int(data_cruce['elevation_msnm']),
                                 "Amanece": data_cruce['daily']['sunrise'][0][-5:],
@@ -389,7 +413,7 @@ def main():
                                 # Fila de Espera en Puerto (Desde llegada hasta la hora real de zarpe)
                                 resultados.append({
                                     "KM": km_actual,
-                                    "HORA": f"{hora_llegada_puerto.strftime('%H:%M')} ➔ {hora_zarpe_real.strftime('%H:%M')}",
+                                    "HORA": f"🇨🇱 {hora_llegada_puerto.strftime('%H:%M')} ➔ {hora_zarpe_real.strftime('%H:%M')}",
                                     "ALERTAS": "⚓ ESPERA PUERTO",
                                     "ALTITUD (m)": int(data_cruce['elevation_msnm']),
                                     "Amanece": data_cruce['daily']['sunrise'][0][-5:],
@@ -409,7 +433,7 @@ def main():
                                 idx_n = min(hora_zarpe_real.hour, 23)
                                 resultados.append({
                                     "KM": km_actual,
-                                    "HORA": f"{hora_zarpe_real.strftime('%H:%M')} ➔ {hora_arribo_fuy.strftime('%H:%M')}",
+                                    "HORA": f"🇨🇱 {hora_zarpe_real.strftime('%H:%M')} ➔ {hora_arribo_fuy.strftime('%H:%M')}",
                                     "ALERTAS": "🚢 NAVEGACIÓN",
                                     "ALTITUD (m)": int(data_cruce['elevation_msnm']),
                                     "Amanece": data_cruce['daily']['sunrise'][0][-5:],
@@ -454,7 +478,7 @@ def main():
                             # Fila de Espera Puerto (Desde llegada hasta el zarpe programado)
                             resultados.append({
                                 "KM": km_actual,
-                                "HORA": f"{hora_llegada_fuy.strftime('%H:%M')} ➔ {hora_zarpe_fuy.strftime('%H:%M')}",
+                                "HORA": f"🇨🇱 {hora_llegada_fuy.strftime('%H:%M')} ➔ {hora_zarpe_fuy.strftime('%H:%M')}",
                                 "ALERTAS": "⚓ ESPERA PUERTO",
                                 "ALTITUD (m)": int(data_fuy['elevation_msnm']),
                                 "Amanece": data_fuy['daily']['sunrise'][0][-5:],
@@ -474,7 +498,7 @@ def main():
                             idx_fn = min(hora_zarpe_fuy.hour, 23)
                             resultados.append({
                                 "KM": km_actual,
-                                "HORA": f"{hora_zarpe_fuy.strftime('%H:%M')} ➔ {hora_llegada_pirehueico.strftime('%H:%M')}",
+                                "HORA": f"🇨🇱 {hora_zarpe_fuy.strftime('%H:%M')} ➔ {hora_llegada_pirehueico.strftime('%H:%M')}",
                                 "ALERTAS": "🚢 NAVEGACIÓN",
                                 "ALTITUD (m)": int(data_fuy['elevation_msnm']),
                                 "Amanece": data_fuy['daily']['sunrise'][0][-5:],
@@ -506,7 +530,7 @@ def main():
                             # Fila de Espera Aduana (Aduana Chilena está en huso Chile)
                             resultados.append({
                                 "KM": km_actual,
-                                "HORA": f"{hora_llegada_aduana.strftime('%H:%M')} ➔ {hora_salida_aduana.strftime('%H:%M')}",
+                                "HORA": f"🇨🇱 {hora_llegada_aduana.strftime('%H:%M')} ➔ {hora_salida_aduana.strftime('%H:%M')}",
                                 "ALERTAS": "⏳ ESPERA ADUANA",
                                 "ALTITUD (m)": int(data_aduana['elevation_msnm']),
                                 "Amanece": data_aduana['daily']['sunrise'][0][-5:],
@@ -559,7 +583,10 @@ def main():
                         
                         resultados.append({
                             "KM": km_actual,
-                            "HORA": hora_paso.strftime('%H:%M'),
+                            bandera = obtener_bandera_pais(lat, lon, sentido_viaje, aduana_procesada, es_cruce_frontera)
+                        resultados.append({
+                            "KM": km_actual,
+                            "HORA": f"{bandera} {hora_paso.strftime('%H:%M')}", # <--- ¡Aquí se agrega la bandera!
                             "ALERTAS": " | | ".join(alertas) if alertas else "✅  DESPEJADO",
                             "ALTITUD (m)": int(altitud),
                             "Amanece": amanece,
