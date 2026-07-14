@@ -329,7 +329,7 @@ def main():
                     else:
                         horas_conduccion = (i * DIST_SUBTRAMO) / VEL_PROMEDIO
 
-                # ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
                 # CASO DE USO A: SENTIDO IDA (ARGENTINA -> CHILE)
                 # ---------------------------------------------------------------------
                 if es_cruce_frontera and sentido_viaje == "ARG-CHI":
@@ -342,11 +342,11 @@ def main():
                             clima_cruce = data_cruce['hourly']
                             idx_c = min(hora_llegada_aduana.hour, 23)
                             
-                            # Fila de Aduana
+                            # Fila de Aduana (Aduana Argentina está en huso ARG)
                             resultados.append({
                                 "KM": km_actual,
-                                "HORA": f"{hora_llegada_aduana.strftime('%H:%M')} ➜ {hora_salida_aduana.strftime('%H:%M')}",
-                                "ALERTAS": "⏱️ ESPERA ADUANA",
+                                "HORA": f"{hora_llegada_aduana.strftime('%H:%M')} ➔ {hora_salida_aduana.strftime('%H:%M')}",
+                                "ALERTAS": "⏳ ESPERA ADUANA",
                                 "ALTITUD (m)": int(data_cruce['elevation_msnm']),
                                 "Amanece": data_cruce['daily']['sunrise'][0][-5:],
                                 "Anochece": data_cruce['daily']['sunset'][0][-5:],
@@ -359,26 +359,30 @@ def main():
                                 "hPa": clima_cruce['surface_pressure'][idx_c],
                                 "lat": lat, "lon": lon
                             })
-                        demora_acumulada += DEMORA_ADUANA
+                        
+                        # Al salir de la aduana y cruzar la frontera física, aplicamos la diferencia horaria (-1 hora en Chile)
+                        # De esta forma, todo el viaje en Chile se calculará sobre la hora local chilena
+                        demora_acumulada += DEMORA_ADUANA - 1.0
                         aduana_procesada = True
 
                         if es_hua_hum:
-                            # Ajustamos el huso de Chile restando 1 hora
-                            hora_llegada_puerto = hora_salida_aduana - timedelta(hours=1) 
-                            hora_zarpe_real = hora_llegada_puerto + timedelta(hours=1.0)
+                            # Hora de llegada al puerto de Pirehueico (Huso Chile)
+                            hora_llegada_puerto = hora_inicio + timedelta(hours=horas_conduccion + demora_acumulada)
+                            
+                            # El zarpe real tiene una hora fija programada en el día (Huso Chile)
+                            hora_zarpe_real = datetime.combine(fecha_dt, HORA_ZARPE_FERRI)
                             
                             # --- CÁLCULO DE ANTICIPACIÓN (IDA) ---
-                            zarpe_datetime = datetime.combine(fecha_dt, HORA_ZARPE_FERRI)
-                            margen_embarque_minutos = (zarpe_datetime - hora_llegada_puerto).total_seconds() / 60
+                            margen_embarque_minutos = (hora_zarpe_real - hora_llegada_puerto).total_seconds() / 60
                             hora_llegada_puerto_registro = hora_llegada_puerto
                             nombre_puerto_registro = "Puerto Pirehueico"
                             
                             if data_cruce:
                                 idx_p = min(hora_llegada_puerto.hour, 23)
-                                # Fila de Espera en Puerto
+                                # Fila de Espera en Puerto (Desde llegada hasta la hora real de zarpe)
                                 resultados.append({
                                     "KM": km_actual,
-                                    "HORA": f"{hora_llegada_puerto.strftime('%H:%M')} ➜ {hora_zarpe_real.strftime('%H:%M')}",
+                                    "HORA": f"{hora_llegada_puerto.strftime('%H:%M')} ➔ {hora_zarpe_real.strftime('%H:%M')}",
                                     "ALERTAS": "⚓ ESPERA PUERTO",
                                     "ALTITUD (m)": int(data_cruce['elevation_msnm']),
                                     "Amanece": data_cruce['daily']['sunrise'][0][-5:],
@@ -393,12 +397,12 @@ def main():
                                     "lat": lat, "lon": lon
                                 })
                                 
-                                # Fila de Navegación
+                                # Fila de Navegación (Empieza estrictamente a la hora de zarpe y dura 1.5 horas)
                                 hora_arribo_fuy = hora_zarpe_real + timedelta(hours=1.5)
                                 idx_n = min(hora_zarpe_real.hour, 23)
                                 resultados.append({
                                     "KM": km_actual,
-                                    "HORA": f"{hora_zarpe_real.strftime('%H:%M')} ➜ {hora_arribo_fuy.strftime('%H:%M')}",
+                                    "HORA": f"{hora_zarpe_real.strftime('%H:%M')} ➔ {hora_arribo_fuy.strftime('%H:%M')}",
                                     "ALERTAS": "🚢 NAVEGACIÓN",
                                     "ALTITUD (m)": int(data_cruce['elevation_msnm']),
                                     "Amanece": data_cruce['daily']['sunrise'][0][-5:],
@@ -412,7 +416,11 @@ def main():
                                     "hPa": clima_cruce['surface_pressure'][idx_n],
                                     "lat": lat, "lon": lon
                                 })
-                            demora_acumulada += 1.5 
+                            
+                            # Sincronizamos la demora acumulada con el fin de la navegación
+                            # Al salir del transbordador, el tiempo transcurrido es exactamente (hora_arribo_fuy - hora_inicio)
+                            total_horas_hasta_fuy = (hora_arribo_fuy - hora_inicio).total_seconds() / 3600
+                            demora_acumulada = total_horas_hasta_fuy - horas_conduccion
                             ferri_procesado = True
 
                 # ---------------------------------------------------------------------
@@ -420,12 +428,14 @@ def main():
                 # ---------------------------------------------------------------------
                 elif es_cruce_frontera and sentido_viaje == "CHI-ARG":
                     if lon >= LON_FUY and es_hua_hum and not ferri_procesado:
+                        # Llegada a Puerto Fuy (Huso Chile)
                         hora_llegada_fuy = hora_inicio + timedelta(hours=horas_conduccion + demora_acumulada)
-                        hora_zarpe_fuy = hora_llegada_fuy + timedelta(hours=1.0)
+                        
+                        # El zarpe real programado en el día (Huso Chile)
+                        hora_zarpe_fuy = datetime.combine(fecha_dt, HORA_ZARPE_FERRI)
                         
                         # --- CÁLCULO DE ANTICIPACIÓN (VUELTA) ---
-                        zarpe_datetime = datetime.combine(fecha_dt, HORA_ZARPE_FERRI)
-                        margen_embarque_minutos = (zarpe_datetime - hora_llegada_fuy).total_seconds() / 60
+                        margen_embarque_minutos = (hora_zarpe_fuy - hora_llegada_fuy).total_seconds() / 60
                         hora_llegada_puerto_registro = hora_llegada_fuy
                         nombre_puerto_registro = "Puerto Fuy"
                         
@@ -434,10 +444,10 @@ def main():
                             clima_fuy = data_fuy['hourly']
                             idx_f = min(hora_llegada_fuy.hour, 23)
                             
-                            # Fila de Espera Puerto
+                            # Fila de Espera Puerto (Desde llegada hasta el zarpe programado)
                             resultados.append({
                                 "KM": km_actual,
-                                "HORA": f"{hora_llegada_fuy.strftime('%H:%M')} ➜ {hora_zarpe_fuy.strftime('%H:%M')}",
+                                "HORA": f"{hora_llegada_fuy.strftime('%H:%M')} ➔ {hora_zarpe_fuy.strftime('%H:%M')}",
                                 "ALERTAS": "⚓ ESPERA PUERTO",
                                 "ALTITUD (m)": int(data_fuy['elevation_msnm']),
                                 "Amanece": data_fuy['daily']['sunrise'][0][-5:],
@@ -452,12 +462,12 @@ def main():
                                 "lat": lat, "lon": lon
                             })
                             
-                            # Fila de Navegación
+                            # Fila de Navegación (Estrictamente a la hora de zarpe fijada + 1.5 horas)
                             hora_llegada_pirehueico = hora_zarpe_fuy + timedelta(hours=1.5)
                             idx_fn = min(hora_zarpe_fuy.hour, 23)
                             resultados.append({
                                 "KM": km_actual,
-                                "HORA": f"{hora_zarpe_fuy.strftime('%H:%M')} ➜ {hora_llegada_pirehueico.strftime('%H:%M')}",
+                                "HORA": f"{hora_zarpe_fuy.strftime('%H:%M')} ➔ {hora_llegada_pirehueico.strftime('%H:%M')}",
                                 "ALERTAS": "🚢 NAVEGACIÓN",
                                 "ALTITUD (m)": int(data_fuy['elevation_msnm']),
                                 "Amanece": data_fuy['daily']['sunrise'][0][-5:],
@@ -471,22 +481,26 @@ def main():
                                 "hPa": clima_fuy['surface_pressure'][idx_fn],
                                 "lat": lat, "lon": lon
                             })
-                        demora_acumulada += 2.5 
+                        
+                        # Sincronizamos la demora acumulada con el desembarco en Pirehueico
+                        total_horas_hasta_pirehueico = (hora_llegada_pirehueico - hora_inicio).total_seconds() / 3600
+                        demora_acumulada = total_horas_hasta_pirehueico - horas_conduccion
                         ferri_procesado = True
 
                     if lon >= lon_frontera and not aduana_procesada:
                         hora_llegada_aduana = hora_inicio + timedelta(hours=horas_conduccion + demora_acumulada)
-                        hora_salida_aduana = hora_llegada_aduana + timedelta(hours=DEMORA_ADUANA) + timedelta(hours=1)
+                        hora_salida_aduana = hora_llegada_aduana + timedelta(hours=DEMORA_ADUANA)
                         
                         data_aduana = consultar_datos(lat, lon, FECHA_TRAMO)
                         if data_aduana:
                             clima_aduana = data_aduana['hourly']
                             idx_ad = min(hora_llegada_aduana.hour, 23)
                             
+                            # Fila de Espera Aduana (Aduana Chilena está en huso Chile)
                             resultados.append({
                                 "KM": km_actual,
-                                "HORA": f"{hora_llegada_aduana.strftime('%H:%M')} ➜ {hora_salida_aduana.strftime('%H:%M')}",
-                                "ALERTAS": "⏱️ ESPERA ADUANA",
+                                "HORA": f"{hora_llegada_aduana.strftime('%H:%M')} ➔ {hora_salida_aduana.strftime('%H:%M')}",
+                                "ALERTAS": "⏳ ESPERA ADUANA",
                                 "ALTITUD (m)": int(data_aduana['elevation_msnm']),
                                 "Amanece": data_aduana['daily']['sunrise'][0][-5:],
                                 "Anochece": data_aduana['daily']['sunset'][0][-5:],
@@ -499,7 +513,9 @@ def main():
                                 "hPa": clima_aduana['surface_pressure'][idx_ad],
                                 "lat": lat, "lon": lon
                             })
-                        demora_acumulada += DEMORA_ADUANA + 1.0 
+                        
+                        # Al cruzar la frontera física al territorio argentino, sumamos 1 hora (huso ARG)
+                        demora_acumulada += DEMORA_ADUANA + 1.0
                         aduana_procesada = True
 
                 # ---------------------------------------------------------------------
@@ -508,12 +524,6 @@ def main():
                 if not esta_en_el_lago:
                     horas_totales = horas_conduccion + demora_acumulada
                     hora_paso = hora_inicio + timedelta(hours=horas_totales)
-                    
-                    if es_cruce_frontera:
-                        if sentido_viaje == "ARG-CHI" and lon <= lon_frontera:
-                            hora_paso = hora_paso - timedelta(hours=1)
-                        elif sentido_viaje == "CHI-ARG" and lon < lon_frontera:
-                            pass 
 
                     data = consultar_datos(lat, lon, FECHA_TRAMO)
                     if data:
@@ -543,7 +553,7 @@ def main():
                         resultados.append({
                             "KM": km_actual,
                             "HORA": hora_paso.strftime('%H:%M'),
-                            "ALERTAS": " | | ".join(alertas) if alertas else "✅ DESPEJADO",
+                            "ALERTAS": " | | ".join(alertas) if alertas else "✅  DESPEJADO",
                             "ALTITUD (m)": int(altitud),
                             "Amanece": amanece,
                             "Anochece": anochece,
