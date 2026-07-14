@@ -98,7 +98,7 @@ if es_hua_hum:
     if tiene_reserva:
         from datetime import time
         # Selección del horario de zarpe reservado
-        hora_zarpe = st.sidebar.time_input("Horario de zarpe reservado", time(14, 0))
+        hora_zarpe = st.sidebar.time_input("Horario de zarpe reservado", time(0, 0))
 
 # --- 4. LÓGICA PRINCIPAL ---
 def main():
@@ -277,10 +277,18 @@ def main():
             LON_PIREHUEICO = -71.69
             LON_FUY = -71.89
 
-            # [CONFIGURACIÓN] Define aquí la hora programada en que sale el ferri (14:00 por defecto)
+            # [CONFIGURACIÓN] Define aquí la hora programada en que sale el ferri
             # Nota: Puedes convertir esto en un selector de Streamlit si lo deseas
-            from datetime import datetime, time
-            HORA_ZARPE_FERRI = time(14, 0) # Representa las 14:00 hs
+            from datetime import datetime, time, timedelta
+            # Generamos una lista de horas en punto (00:00, 01:00, 02:00 ... 23:00)
+            lista_horas_en_punto = [time(i, 0) for i in range(24)]
+            # Creamos el selector interactivo en la aplicación
+            HORA_ZARPE_FERRI = st.selectbox(
+                "🚢 Selecciona la hora de salida del Ferri:",
+                options=lista_horas_en_punto,
+                format_func=lambda t: t.strftime("%H:%M"),
+                index=12  # Por defecto preselecciona las 12:00
+            )
 
             # Variables para guardar el cálculo de margen y usarlo fuera del bucle
             margen_embarque_minutos = None
@@ -544,8 +552,9 @@ def main():
             # =========================================================================
             # --- SECCIÓN DE VISUALIZACIÓN INTEGRADA Y ALERTAS ---
             # =========================================================================
-            import pandas as pd
-                        
+            import pandas as pandas_global  # Importación local segura con alias único
+            df_final = pandas_global.DataFrame(resultados)
+            
             # Calcular distancias terrestres seguras
             if es_hua_hum:
                 distancia_lago = 26.0
@@ -641,7 +650,6 @@ def main():
                 pickable=True,
             )
 
-            # Nota: Corregimos la clave "Altitud (msnm)" por "ALTITUD (m)" para que coincida con tus columnas
             st.pydeck_chart(pdk.Deck(
                 map_provider="carto",
                 map_style="light", 
