@@ -96,26 +96,30 @@ if es_hua_hum:
     tiene_reserva = st.sidebar.checkbox("¿Tiene reserva de ferri?", value=True)
     
     if tiene_reserva:
-        # Creamos las opciones de hora de forma segura usando strings para evitar conflictos
+        # 1. Generamos las opciones de hora como simples cadenas de texto
         opciones_horas_str = [f"{str(i).zfill(2)}:00" for i in range(24)]
         
-        # Selector en la barra lateral utilizando strings legibles
+        # 2. Selector en el sidebar utilizando strings planos
         hora_seleccionada_str = st.sidebar.selectbox(
             "🚢 Selecciona la hora de salida del Ferri:",
             options=opciones_horas_str,
             index=12  # Por defecto preselecciona las 12:00
         )
         
-        # Convertimos de forma segura a un objeto de tiempo para tus cálculos matemáticos posteriores
-        hora_partes = [int(p) for p in hora_seleccionada_str.split(":")]
-        
-        # Importamos localmente con un alias completamente único para evitar cualquier colisión
-        import datetime as dt_modulo_seguro
-        HORA_ZARPE_FERRI = dt_modulo_seguro.time(hora_partes[0], hora_partes[1])
+        # 3. Guardamos la hora seleccionada como un objeto de tiempo de forma ultra aislada
+        import sys
+        modulo_datetime = sys.modules.get('datetime')
+        if modulo_datetime is None:
+            import datetime as modulo_datetime
+            
+        partes = [int(p) for p in hora_seleccionada_str.split(":")]
+        HORA_ZARPE_FERRI = modulo_datetime.time(partes[0], partes[1])
     else:
-        # Valor por defecto si no tiene reserva (ejemplo: medianoche o una hora base)
-        import datetime as dt_modulo_seguro
-        HORA_ZARPE_FERRI = dt_modulo_seguro.time(0, 0)
+        import sys
+        modulo_datetime = sys.modules.get('datetime')
+        if modulo_datetime is None:
+            import datetime as modulo_datetime
+        HORA_ZARPE_FERRI = modulo_datetime.time(0, 0)
 
 # --- 4. LÓGICA PRINCIPAL ---
 def main():
