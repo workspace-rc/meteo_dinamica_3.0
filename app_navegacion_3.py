@@ -583,7 +583,8 @@ def main():
                         
                         resultados.append({
                             "KM": km_actual,
-                            bandera = obtener_bandera_pais(lat, lon, sentido_viaje, aduana_procesada, es_cruce_frontera)
+                        bandera = obtener_bandera_pais(lat, lon, sentido_viaje, aduana_procesada, es_cruce_frontera)
+                       
                         resultados.append({
                             "KM": km_actual,
                             "HORA": f"{bandera} {hora_paso.strftime('%H:%M')}", # <--- ¡Aquí se agrega la bandera!
