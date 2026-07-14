@@ -368,7 +368,7 @@ def main():
                             hora_zarpe_real = hora_llegada_puerto + timedelta(hours=1.0)
                             
                             # --- CÁLCULO DE ANTICIPACIÓN (IDA) ---
-                            zarpe_datetime = datetime.combine(FECHA_TRAMO, HORA_ZARPE_FERRI)
+                            zarpe_datetime = datetime.combine(fecha_dt, HORA_ZARPE_FERRI)
                             margen_embarque_minutos = (zarpe_datetime - hora_llegada_puerto).total_seconds() / 60
                             hora_llegada_puerto_registro = hora_llegada_puerto
                             nombre_puerto_registro = "Puerto Pirehueico"
@@ -424,7 +424,7 @@ def main():
                         hora_zarpe_fuy = hora_llegada_fuy + timedelta(hours=1.0)
                         
                         # --- CÁLCULO DE ANTICIPACIÓN (VUELTA) ---
-                        zarpe_datetime = datetime.combine(FECHA_TRAMO, HORA_ZARPE_FERRI)
+                        zarpe_datetime = datetime.combine(fecha_dt, HORA_ZARPE_FERRI)
                         margen_embarque_minutos = (zarpe_datetime - hora_llegada_fuy).total_seconds() / 60
                         hora_llegada_puerto_registro = hora_llegada_fuy
                         nombre_puerto_registro = "Puerto Fuy"
