@@ -560,7 +560,6 @@ def main():
                     if data:
                         horario = data['hourly']
                         idx = min(hora_paso.hour, 23)
-                        
                         temp = horario['temperature_2m'][idx]
                         viento = horario['windspeed_10m'][idx]
                         lluvia_cant = horario['rain'][idx]
@@ -581,7 +580,7 @@ def main():
                         elif lluvia_cant > 2 and lluvia_cant <= 8: alertas.append("🌧️ USA TRAJE")
                         elif lluvia_cant > 8: alertas.append("⚠️ BUSCA TECHO")
                                                                  
-                        bandera = obtener_bandera_pais(lat, lon, sentido_viaje, aduana_procesada, es_cruce_frontera)
+                        bandera = obtener_bandera_pais(lon, sentido_viaje, aduana_procesada, es_cruce_frontera)
                        
                         resultados.append({
                             "KM": km_actual,
