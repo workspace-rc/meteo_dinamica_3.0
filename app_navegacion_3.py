@@ -9,6 +9,30 @@ import os
 import io
 import re
 
+def obtener_bandera_pais(lon, sentido_viaje, aduana_procesada, es_cruce_frontera):
+             """
+             Retorna la bandera del país correspondiente a la ubicación actual.
+             Frontera física aproximada: lon_frontera ≈ -71.86
+             """
+             # Límite aproximado de la frontera física en Hua Hum
+             lon_frontera = -71.8654  
+    
+             if sentido_viaje == "ARG-CHI":
+                 # Si vamos de ARG a CHI: antes de la aduana/frontera es ARG, después es CHI
+                 if lon > lon_frontera and not aduana_procesada:
+                     return "🇦🇷"
+                 else:
+                     return "🇨🇱"
+             elif sentido_viaje == "CHI-ARG":
+                 # Si vamos de CHI a ARG: antes de la frontera es CHI, después es ARG
+                 if lon < lon_frontera and not aduana_procesada:
+                     return "🇨🇱"
+                 else:
+                     return "🇦🇷"
+             else:
+                 # Por defecto, si no es una ruta fronteriza
+                 return "🇦🇷" if lon > -71.8654 else "🇨🇱"   
+
 # --- 1. CONFIGURACIÓN DE PÁGINA ---
 st.set_page_config(page_title="Navegador Meteorológico Chile", layout="wide")
 
@@ -303,30 +327,6 @@ def main():
             hora_llegada_puerto_registro = None
             nombre_puerto_registro = ""
 
-         def obtener_bandera_pais(lon, sentido_viaje, aduana_procesada, es_cruce_frontera):
-             """
-             Retorna la bandera del país correspondiente a la ubicación actual.
-             Frontera física aproximada: lon_frontera ≈ -71.86
-             """
-             # Límite aproximado de la frontera física en Hua Hum
-             lon_frontera = -71.8654  
-    
-             if sentido_viaje == "ARG-CHI":
-                 # Si vamos de ARG a CHI: antes de la aduana/frontera es ARG, después es CHI
-                 if lon > lon_frontera and not aduana_procesada:
-                     return "🇦🇷"
-                 else:
-                     return "🇨🇱"
-             elif sentido_viaje == "CHI-ARG":
-                 # Si vamos de CHI a ARG: antes de la frontera es CHI, después es ARG
-                 if lon < lon_frontera and not aduana_procesada:
-                     return "🇨🇱"
-                 else:
-                     return "🇦🇷"
-             else:
-                 # Por defecto, si no es una ruta fronteriza
-                 return "🇦🇷" if lon > -71.8654 else "🇨🇱"   
-          
             for i in range(num_subtramos):
                 barra_progreso.progress((i + 1) / num_subtramos)
                 
@@ -674,7 +674,7 @@ def main():
             # MAPA INTERACTIVO DE LA RUTA (PYDECK)
             # -------------------------------------------------------------------------
             st.subheader("🗺️ Trazado de la Ruta y Puntos de Análisis")
-            st.markdown(f"##### 📍 **Distancia Total:** {distancia_total_km} km | ⏳ **Tiempo de Conducción Neto:** {int(tiempo_conduccion)}h {int((tiempo_conduccion - int(tiempo_conduccion)) * 60)}min (@{VEL_PROMEDIO} km/h)")
+            st.markdown(f"##### 📍 **Distancia Total:** {distancia_total_km:.0f} km | ⏳ **Tiempo de Conducción Neto:** {int(tiempo_conduccion)}h {int((tiempo_conduccion - int(tiempo_conduccion)) * 60)}min (@{VEL_PROMEDIO} km/h)")
             
             view_state = pdk.ViewState(
                 latitude=df_final['lat'].mean(),
