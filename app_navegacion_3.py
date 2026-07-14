@@ -10,28 +10,23 @@ import io
 import re
 
 def obtener_bandera_pais(lon, sentido_viaje, aduana_procesada, es_cruce_frontera):
-             """
-             Retorna la bandera del país correspondiente a la ubicación actual.
-             Frontera física aproximada: lon_frontera ≈ -71.86
-             """
-             # Límite aproximado de la frontera física en Hua Hum
-             lon_frontera = -71.8654  
+    """
+    Retorna la bandera del país de manera lógica.
+    Evita saltos de bandera por coordenadas GPS intermedias utilizando el estado de la aduana.
+    """
+    if not es_cruce_frontera:
+        # Si no es un viaje internacional, definimos por la frontera física general
+        return "🇦🇷" if lon > -71.8654 else "🇨🇱"
     
-             if sentido_viaje == "ARG-CHI":
-                 # Si vamos de ARG a CHI: antes de la aduana/frontera es ARG, después es CHI
-                 if lon > lon_frontera and not aduana_procesada:
-                     return "🇦🇷"
-                 else:
-                     return "🇨🇱"
-             elif sentido_viaje == "CHI-ARG":
-                 # Si vamos de CHI a ARG: antes de la frontera es CHI, después es ARG
-                 if lon < lon_frontera and not aduana_procesada:
-                     return "🇨🇱"
-                 else:
-                     return "🇦🇷"
-             else:
-                 # Por defecto, si no es una ruta fronteriza
-                 return "🇦🇷" if lon > -71.8654 else "🇨🇱"   
+    if sentido_viaje == "ARG-CHI":
+        # De Argentina a Chile: eres Argentina hasta que pasas y procesas la aduana
+        return "🇨🇱" if aduana_procesada else "🇦🇷"
+        
+    elif sentido_viaje == "CHI-ARG":
+        # De Chile a Argentina: eres Chile hasta que pasas y procesas la aduana
+        return "🇦🇷" if aduana_procesada else "🇨🇱"
+        
+    return "🇨🇱"   
 
 # --- 1. CONFIGURACIÓN DE PÁGINA ---
 st.set_page_config(page_title="Navegador Meteorológico Chile", layout="wide")
