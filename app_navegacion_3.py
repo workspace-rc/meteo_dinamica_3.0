@@ -4,7 +4,7 @@ import pydeck as pdk
 import pandas as pd
 import numpy as np
 from shapely.geometry import LineString
-from datetime import datetime, timedelta
+from datetime import datetime, time, timedelta
 import os
 import io
 import re
@@ -545,8 +545,7 @@ def main():
             # --- SECCIÓN DE VISUALIZACIÓN INTEGRADA Y ALERTAS ---
             # =========================================================================
             import pandas as pd
-            df_final = pd.DataFrame(resultados)
-            
+                        
             # Calcular distancias terrestres seguras
             if es_hua_hum:
                 distancia_lago = 26.0
