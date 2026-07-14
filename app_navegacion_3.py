@@ -100,7 +100,7 @@ if es_hua_hum:
         # Generamos una lista de horas en punto (00:00, 01:00, 02:00 ... 23:00)
         lista_horas_en_punto = [time(i, 0) for i in range(24)]
         # Creamos el selector interactivo en la aplicación
-        HORA_ZARPE_FERRI = st.selectbox(
+        HORA_ZARPE_FERRI = st.sidebar.selectbox(
             "🚢 Selecciona la hora de salida del Ferri:",
             options=lista_horas_en_punto,
             format_func=lambda t: t.strftime("%H:%M"),
@@ -289,6 +289,7 @@ def main():
             from datetime import datetime, time, timedelta
             # Generamos una lista de horas en punto (00:00, 01:00, 02:00 ... 23:00)
             lista_horas_en_punto = [time(i, 0) for i in range(24)]
+            
             # Creamos el selector interactivo en la aplicación
             HORA_ZARPE_FERRI = st.selectbox(
                 "🚢 Selecciona la hora de salida del Ferri:",
