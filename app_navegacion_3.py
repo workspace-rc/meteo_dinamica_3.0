@@ -264,7 +264,7 @@ def main():
                 )
             
             # =========================================================================
-            # 4. BUCLE FOR DEL TRAYECTO - INTEGRACIÓN CLIMA Y ALERTAS ORIGINALES
+            # 4. BUCLE FOR DEL TRAYECTO (BIMODAL CON ALERTA DE ANTICIPACIÓN)
             # =========================================================================
             resultados = []
             barra_progreso = st.progress(0)
@@ -276,6 +276,16 @@ def main():
             # Límites geográficos del Lago Pirehueico
             LON_PIREHUEICO = -71.69
             LON_FUY = -71.89
+
+            # [CONFIGURACIÓN] Define aquí la hora programada en que sale el ferri (14:00 por defecto)
+            # Nota: Puedes convertir esto en un selector de Streamlit si lo deseas
+            from datetime import datetime, time
+            HORA_ZARPE_FERRI = time(14, 0) # Representa las 14:00 hs
+
+            # Variables para guardar el cálculo de margen y usarlo fuera del bucle
+            margen_embarque_minutos = None
+            hora_llegada_puerto_registro = None
+            nombre_puerto_registro = ""
 
             for i in range(num_subtramos):
                 barra_progreso.progress((i + 1) / num_subtramos)
@@ -293,12 +303,10 @@ def main():
 
                 # 2. Calcular el avance del coche (congelando kilómetros en el lago)
                 if esta_en_el_lago:
-                    # Si está en el agua, fijamos las horas de manejo terrestre hasta la entrada al ferri
                     km_conduccion = (distancia_total_km * 0.4) 
                     horas_conduccion = km_conduccion / VEL_PROMEDIO
                 else:
                     if es_hua_hum and aduana_procesada and ferri_procesado:
-                        # Descontamos el tramo del lago para que no sume horas terrestres extra
                         distancia_lago = 26.0
                         km_conduccion_real = max(0.0, (i * DIST_SUBTRAMO) - distancia_lago)
                         horas_conduccion = km_conduccion_real / VEL_PROMEDIO
@@ -318,7 +326,7 @@ def main():
                             clima_cruce = data_cruce['hourly']
                             idx_c = min(hora_llegada_aduana.hour, 23)
                             
-                            # Mantenemos de forma idéntica tus variables para la fila de aduana
+                            # Fila de Aduana
                             resultados.append({
                                 "KM": km_actual,
                                 "HORA": f"{hora_llegada_aduana.strftime('%H:%M')} ➜ {hora_salida_aduana.strftime('%H:%M')}",
@@ -343,6 +351,12 @@ def main():
                             hora_llegada_puerto = hora_salida_aduana - timedelta(hours=1) 
                             hora_zarpe_real = hora_llegada_puerto + timedelta(hours=1.0)
                             
+                            # --- CÁLCULO DE ANTICIPACIÓN (IDA) ---
+                            zarpe_datetime = datetime.combine(FECHA_TRAMO, HORA_ZARPE_FERRI)
+                            margen_embarque_minutos = (zarpe_datetime - hora_llegada_puerto).total_seconds() / 60
+                            hora_llegada_puerto_registro = hora_llegada_puerto
+                            nombre_puerto_registro = "Puerto Pirehueico"
+                            
                             if data_cruce:
                                 idx_p = min(hora_llegada_puerto.hour, 23)
                                 # Fila de Espera en Puerto
@@ -363,7 +377,7 @@ def main():
                                     "lat": lat, "lon": lon
                                 })
                                 
-                                # Fila de Navegación explícita
+                                # Fila de Navegación
                                 hora_arribo_fuy = hora_zarpe_real + timedelta(hours=1.5)
                                 idx_n = min(hora_zarpe_real.hour, 23)
                                 resultados.append({
@@ -393,12 +407,18 @@ def main():
                         hora_llegada_fuy = hora_inicio + timedelta(hours=horas_conduccion + demora_acumulada)
                         hora_zarpe_fuy = hora_llegada_fuy + timedelta(hours=1.0)
                         
+                        # --- CÁLCULO DE ANTICIPACIÓN (VUELTA) ---
+                        zarpe_datetime = datetime.combine(FECHA_TRAMO, HORA_ZARPE_FERRI)
+                        margen_embarque_minutos = (zarpe_datetime - hora_llegada_fuy).total_seconds() / 60
+                        hora_llegada_puerto_registro = hora_llegada_fuy
+                        nombre_puerto_registro = "Puerto Fuy"
+                        
                         data_fuy = consultar_datos(lat, lon, FECHA_TRAMO)
                         if data_fuy:
                             clima_fuy = data_fuy['hourly']
                             idx_f = min(hora_llegada_fuy.hour, 23)
                             
-                            # Fila de Espera Puerto Fuy
+                            # Fila de Espera Puerto
                             resultados.append({
                                 "KM": km_actual,
                                 "HORA": f"{hora_llegada_fuy.strftime('%H:%M')} ➜ {hora_zarpe_fuy.strftime('%H:%M')}",
@@ -416,7 +436,7 @@ def main():
                                 "lat": lat, "lon": lon
                             })
                             
-                            # Fila de Navegación Pirehueico
+                            # Fila de Navegación
                             hora_llegada_pirehueico = hora_zarpe_fuy + timedelta(hours=1.5)
                             idx_fn = min(hora_zarpe_fuy.hour, 23)
                             resultados.append({
@@ -440,7 +460,6 @@ def main():
 
                     if lon >= lon_frontera and not aduana_procesada:
                         hora_llegada_aduana = hora_inicio + timedelta(hours=horas_conduccion + demora_acumulada)
-                        # Retorno a Argentina (Sumamos aduana y 1h por huso horario GMT-3)
                         hora_salida_aduana = hora_llegada_aduana + timedelta(hours=DEMORA_ADUANA) + timedelta(hours=1)
                         
                         data_aduana = consultar_datos(lat, lon, FECHA_TRAMO)
@@ -468,7 +487,7 @@ def main():
                         aduana_procesada = True
 
                 # ---------------------------------------------------------------------
-                # TRAMOS EN TIERRA FIRME (Mantiene de forma idéntica tu código original)
+                # TRAMOS EN TIERRA FIRME
                 # ---------------------------------------------------------------------
                 if not esta_en_el_lago:
                     horas_totales = horas_conduccion + demora_acumulada
@@ -485,9 +504,6 @@ def main():
                         horario = data['hourly']
                         idx = min(hora_paso.hour, 23)
                         
-                        # =============================================================
-                        # TUS EXTRACCIONES ORIGINALES (100% INTACTAS)
-                        # =============================================================
                         temp = horario['temperature_2m'][idx]
                         viento = horario['windspeed_10m'][idx]
                         lluvia_cant = horario['rain'][idx]
@@ -499,7 +515,6 @@ def main():
                         amanece = data['daily']['sunrise'][0][-5:]
                         anochece = data['daily']['sunset'][0][-5:]
                         
-                        # --- LÓGICA DE ALERTAS ORIGINAL ---
                         alertas = []
                         if viento > 45: alertas.append("💨 VIENTO")
                         if temp < 3: alertas.append("❄️ HIELO")
@@ -509,7 +524,6 @@ def main():
                         elif lluvia_cant > 2 and lluvia_cant <= 8: alertas.append("🌧️ USA TRAJE")
                         elif lluvia_cant > 8: alertas.append("⚠️ BUSCA TECHO")
                         
-                        # Agrega fila terrestre con tu estructura idéntica
                         resultados.append({
                             "KM": km_actual,
                             "HORA": hora_paso.strftime('%H:%M'),
@@ -527,76 +541,139 @@ def main():
                             "lat": lat, "lon": lon
                         })
 
-            # --- SECCIÓN DE VISUALIZACIÓN (CÓDIGO IDEAL) ---
-
-            # --- SECCIÓN DE VISUALIZACIÓN (CÓDIGO IDEAL) ---
-            if resultados:
-                df_final = pd.DataFrame(resultados)
-
-                st.subheader("📋 Resultados del Análisis")
-                st.dataframe(df_final, use_container_width=True)
-
-                # distancia total
-                distancia_final = df_final['KM'].max()
-
-                #tiempo total estimado según velocidad promedio
-                tiempo_total_horas = distancia_final / VEL_PROMEDIO
-                horas = int(tiempo_total_horas)
-                minutos = int((tiempo_total_horas - horas) * 60)
+            # =========================================================================
+            # --- SECCIÓN DE VISUALIZACIÓN INTEGRADA Y ALERTAS ---
+            # =========================================================================
+            import pandas as pd
+            df_final = pd.DataFrame(resultados)
+            
+            # Calcular distancias terrestres seguras
+            if es_hua_hum:
+                distancia_lago = 26.0
+                distancia_terrestre = max(0.0, distancia_total_km - distancia_lago)
+            else:
+                distancia_terrestre = distancia_total_km
                 
-                st.subheader("🗺️ Trazado de la Ruta y Puntos de Análisis")
-                st.markdown(f"##### 📍 **Distancia Total:** {distancia_final} km | ⏳ **Tiempo Estimado:** {horas}h {minutos}min (@{VEL_PROMEDIO} km/h)")
-                
-                view_state = pdk.ViewState(
-                    latitude=df_final['lat'].mean(),
-                    longitude=df_final['lon'].mean(),
-                    zoom=6,
-                    pitch=0
-                )
+            tiempo_conduccion = distancia_terrestre / VEL_PROMEDIO
+            tiempo_total_viaje = tiempo_conduccion + demora_acumulada
 
-                capa_ruta = pdk.Layer(
-                    "PathLayer",
-                    data=[{"path": df_final[['lon', 'lat']].values.tolist()}],
-                    get_path="path",
-                    get_color=[255, 0, 0, 150], 
-                    get_width=5,
-                    width_min_pixels=3,
-                )
+            # 1. ----------------------------------------------------------------------
+            # ALERTA DE ANTICIPACIÓN EN EL PUERTO (BANNER VISUAL)
+            # -------------------------------------------------------------------------
+            if es_hua_hum and margen_embarque_minutos is not None:
+                # Caso A: Llegas después de la hora de zarpe (Retraso)
+                if margen_embarque_minutos < 0:
+                    st.error(
+                        f"🚨 **¡EMBARQUE EN RIESGO EXTREMO / PERDIDO!** El ferri zarpa a las **{HORA_ZARPE_FERRI.strftime('%H:%M')}**. "
+                        f"Estimas llegar a {nombre_puerto_registro} a las **{hora_llegada_puerto_registro.strftime('%H:%M')}** "
+                        f"({int(abs(margen_embarque_minutos))} minutos tarde)."
+                    )
+                # Caso B: Llegas con menos de 1 hora (60 min) de anticipación
+                elif margen_embarque_minutos < 60:
+                    st.warning(
+                        f"⚠️ **ADVERTENCIA DE ANTICIPACIÓN:** Estimas llegar a {nombre_puerto_registro} a las **{hora_llegada_puerto_registro.strftime('%H:%M')}** "
+                        f"para el zarpe de las **{HORA_ZARPE_FERRI.strftime('%H:%M')}**. "
+                        f"Tienes solo **{int(margen_embarque_minutos)} minutos** de margen (Se exige mínimo 1 hora de anticipación)."
+                    )
+                # Caso C: Llegas con tiempo suficiente de sobra
+                else:
+                    st.success(
+                        f"✅ **Embarque seguro:** Estimas llegar a {nombre_puerto_registro} a las **{hora_llegada_puerto_registro.strftime('%H:%M')}**. "
+                        f"Cuentas con un excelente margen de **{int(margen_embarque_minutos)} minutos** antes del zarpe ({HORA_ZARPE_FERRI.strftime('%H:%M')})."
+                    )
 
-                capa_puntos = pdk.Layer(
-                    "ScatterplotLayer",
-                    data=df_final,
-                    get_position="[lon, lat]",
-                    get_color=[30, 144, 255, 200], 
-                    get_radius=1500,
-                    radius_min_pixels=6,
-                    pickable=True,
-                )
+            # 2. ----------------------------------------------------------------------
+            # PANEL DE MÉTRICAS (Rendimiento del Viaje)
+            # -------------------------------------------------------------------------
+            lista_alertas_col = df_final['ALERTAS'].str.lower().tolist()
+            if any("nieve" in c or "❄️" in c for c in lista_alertas_col):
+                clima_general = "Nevadas ❄️"
+            elif any("lluvia" in c or "🌧️" in c or "🌦️" in c for c in lista_alertas_col):
+                clima_general = "Lluvias 🌧️"
+            elif any("nubes" in c or "nublado" in c for c in lista_alertas_col):
+                clima_general = "Nublado ☁️"
+            else:
+                clima_general = "Despejado ☀️"
 
-                st.pydeck_chart(pdk.Deck(
-                    # MAPA SATELITAL
-                    map_provider="carto",
-                    map_style="light", 
-                    initial_view_state=view_state,
-                    layers=[capa_ruta, capa_puntos],
-                    tooltip={
-                        "html": "<b>Subtramo:</b> {KM} km<br/><b>Altitud:</b> {Altitud (msnm)} msnm<br/><b>Hora:</b> {HORA}<br/><b>Alertas:</b> {ALERTAS}",
-                        "style": {"backgroundColor": "#002b36", "color": "white"}
-                    }
-                ))
+            # Formateamos el tiempo total de viaje a horas y minutos legibles
+            horas_total_int = int(tiempo_total_viaje)
+            minutos_total_int = int((tiempo_total_viaje - horas_total_int) * 60)
 
-                # --- Lógica de Descarga ---
-                dia_num = CSV_RUTA.replace("prevision_dia ", "").replace(".csv", "")
-                ahora_analisis = datetime.now().strftime("%Y%m%d_%H%M")
-                nombre_salida = f"Tramo{dia_num}_{FECHA_TRAMO}_Analizado_{ahora_analisis}.csv"
-                csv_bytes = df_final.to_csv(index=False).encode('utf-8')
-                
-                st.download_button(
-                    label=f"📥 Descargar {nombre_salida}",
-                    data=csv_bytes,
-                    file_name=nombre_salida,
-                    mime='text/csv'
-                )
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                st.metric("⏱️ Tiempo de Viaje", f"{horas_total_int}h {minutos_total_int}m")
+            with col2:
+                st.metric("⏳ Espera Aduana", f"{DEMORA_ADUANA} hs" if es_cruce_frontera else "0.0 hs")
+            with col3:
+                tiempo_navegacion = "2.5 hs" if es_hua_hum else "0.0 hs"
+                st.metric("🚢 Navegación / Puerto", tiempo_navegacion)
+            with col4:
+                st.metric("🌡️ Clima General", clima_general)
+
+            # 3. ----------------------------------------------------------------------
+            # MAPA INTERACTIVO DE LA RUTA (PYDECK)
+            # -------------------------------------------------------------------------
+            st.subheader("🗺️ Trazado de la Ruta y Puntos de Análisis")
+            st.markdown(f"##### 📍 **Distancia Total:** {distancia_total_km} km | ⏳ **Tiempo de Conducción Neto:** {int(tiempo_conduccion)}h {int((tiempo_conduccion - int(tiempo_conduccion)) * 60)}min (@{VEL_PROMEDIO} km/h)")
+            
+            view_state = pdk.ViewState(
+                latitude=df_final['lat'].mean(),
+                longitude=df_final['lon'].mean(),
+                zoom=6,
+                pitch=0
+            )
+
+            capa_ruta = pdk.Layer(
+                "PathLayer",
+                data=[{"path": df_final[['lon', 'lat']].values.tolist()}],
+                get_path="path",
+                get_color=[255, 0, 0, 150], 
+                get_width=5,
+                width_min_pixels=3,
+            )
+
+            capa_puntos = pdk.Layer(
+                "ScatterplotLayer",
+                data=df_final,
+                get_position="[lon, lat]",
+                get_color=[30, 144, 255, 200], 
+                get_radius=1500,
+                radius_min_pixels=6,
+                pickable=True,
+            )
+
+            # Nota: Corregimos la clave "Altitud (msnm)" por "ALTITUD (m)" para que coincida con tus columnas
+            st.pydeck_chart(pdk.Deck(
+                map_provider="carto",
+                map_style="light", 
+                initial_view_state=view_state,
+                layers=[capa_ruta, capa_puntos],
+                tooltip={
+                    "html": "<b>Subtramo:</b> {KM} km<br/><b>Altitud:</b> {ALTITUD (m)} msnm<br/><b>Hora:</b> {HORA}<br/><b>Alertas:</b> {ALERTAS}",
+                    "style": {"backgroundColor": "#002b36", "color": "white"}
+                }
+            ))
+
+            # 4. ----------------------------------------------------------------------
+            # TABLA DE RESULTADOS DETALLADOS
+            # -------------------------------------------------------------------------
+            st.subheader("📋 Resultados del Análisis")
+            st.dataframe(df_final, use_container_width=True)
+
+            # 5. ----------------------------------------------------------------------
+            # SISTEMA DE DESCARGA DE REPORTE CSV
+            # -------------------------------------------------------------------------
+            dia_num = CSV_RUTA.replace("prevision_dia ", "").replace(".csv", "")
+            ahora_analisis = datetime.now().strftime("%Y%m%d_%H%M")
+            nombre_salida = f"Tramo{dia_num}_{FECHA_TRAMO}_Analizado_{ahora_analisis}.csv"
+            csv_bytes = df_final.to_csv(index=False).encode('utf-8')
+            
+            st.download_button(
+                label=f"📥 Descargar {nombre_salida}",
+                data=csv_bytes,
+                file_name=nombre_salida,
+                mime='text/csv'
+            )
 
         except Exception as e:
             st.error(f"❌ Error durante el proceso: {e}")
