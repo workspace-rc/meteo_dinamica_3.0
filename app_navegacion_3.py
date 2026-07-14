@@ -96,9 +96,16 @@ if es_hua_hum:
     tiene_reserva = st.sidebar.checkbox("¿Tiene reserva de ferri?", value=True)
     
     if tiene_reserva:
-        from datetime import time
-        # Selección del horario de zarpe reservado
-        hora_zarpe = st.sidebar.time_input("Horario de zarpe reservado", time(0, 0))
+        from datetime import datetime, time, timedelta
+        # Generamos una lista de horas en punto (00:00, 01:00, 02:00 ... 23:00)
+        lista_horas_en_punto = [time(i, 0) for i in range(24)]
+        # Creamos el selector interactivo en la aplicación
+        HORA_ZARPE_FERRI = st.selectbox(
+            "🚢 Selecciona la hora de salida del Ferri:",
+            options=lista_horas_en_punto,
+            format_func=lambda t: t.strftime("%H:%M"),
+            index=12  # Por defecto preselecciona las 12:00
+        )
 
 # --- 4. LÓGICA PRINCIPAL ---
 def main():
