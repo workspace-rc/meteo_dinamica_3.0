@@ -580,9 +580,7 @@ def main():
                         if lluvia_cant > 0 and lluvia_cant <= 2: alertas.append("🌦️ LLUVIA DÉBIL")
                         elif lluvia_cant > 2 and lluvia_cant <= 8: alertas.append("🌧️ USA TRAJE")
                         elif lluvia_cant > 8: alertas.append("⚠️ BUSCA TECHO")
-                        
-                        resultados.append({
-                            "KM": km_actual,
+                                                                 
                         bandera = obtener_bandera_pais(lat, lon, sentido_viaje, aduana_procesada, es_cruce_frontera)
                        
                         resultados.append({
