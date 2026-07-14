@@ -314,22 +314,29 @@ def main():
 
                 # 1. Determinar si el punto actual está navegando por el lago
                 esta_en_el_lago = False
+                
+                # 2. Calcular las horas de conducción netas sobre tierra firme de forma matemática estricta
                 if es_hua_hum:
-                    esta_en_el_lago = (LON_FUY <= lon <= LON_PIREHUEICO)
-
-                # 2. Calcular el avance del coche (congelando kilómetros en el lago)
-                if esta_en_el_lago:
-                    km_conduccion = (distancia_total_km * 0.4) 
-                    horas_conduccion = km_conduccion / VEL_PROMEDIO
-                else:
-                    if es_hua_hum and aduana_procesada and ferri_procesado:
-                        distancia_lago = 26.0
-                        km_conduccion_real = max(0.0, (i * DIST_SUBTRAMO) - distancia_lago)
-                        horas_conduccion = km_conduccion_real / VEL_PROMEDIO
+                    if esta_en_el_lago:
+                        # Si está en el transbordador, el coche no se mueve por tierra firme.
+                        # Guardamos el kilometraje de conducción justo antes de entrar al puerto.
+                        # Aproximamos la distancia terrestre recorrida hasta este punto (KM 80 en tu ruta)
+                        km_conduccion_real = 80.0 
+                    elif ferri_procesado:
+                        # Si ya cruzamos, restamos exactamente la distancia que se hizo navegando (26 km de lago)
+                        # para que no se sumen como si hubiésemos conducido en auto.
+                        km_conduccion_real = max(0.0, (i * DIST_SUBTRAMO) - 26.0)
                     else:
-                        horas_conduccion = (i * DIST_SUBTRAMO) / VEL_PROMEDIO
+                        # Si aún no llegamos al ferri, conducimos normalmente por los kilómetros recorridos
+                        km_conduccion_real = i * DIST_SUBTRAMO
+                else:
+                    # Ruta estándar sin transbordadores
+                    km_conduccion_real = i * DIST_SUBTRAMO
 
-# ---------------------------------------------------------------------
+                # Las horas de manejo reales solo se calculan en base a la conducción por tierra
+                horas_conduccion = km_conduccion_real / VEL_PROMEDIO
+
+                # ---------------------------------------------------------------------
                 # CASO DE USO A: SENTIDO IDA (ARGENTINA -> CHILE)
                 # ---------------------------------------------------------------------
                 if es_cruce_frontera and sentido_viaje == "ARG-CHI":
