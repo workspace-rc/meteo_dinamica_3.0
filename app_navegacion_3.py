@@ -288,9 +288,9 @@ def main():
                 bandera_destino = "🇨🇱" if sentido_viaje == "ARG-CHI" else "🇦🇷"
                 
                 if sentido_viaje == "ARG-CHI":
-                    dt_hes = dt_hea + timedelta(hours=DEMORA_ADUANA) - timedelta(hours=1)
+                    dt_hes = dt_hea + timedelta(hours=DEMORA_ADUANA) - timedelta(hours=0)
                 else:
-                    dt_hes = dt_hea + timedelta(hours=DEMORA_ADUANA) + timedelta(hours=1)
+                    dt_hes = dt_hea + timedelta(hours=DEMORA_ADUANA) + timedelta(hours=0)
                 
                 hea_str = dt_hea.strftime("%H:%M")
                 hes_str = dt_hes.strftime("%H:%M")
