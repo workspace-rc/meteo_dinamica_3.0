@@ -288,9 +288,9 @@ def main():
                 bandera_destino = "🇨🇱" if sentido_viaje == "ARG-CHI" else "🇦🇷"
                 
                 if sentido_viaje == "ARG-CHI":
-                    dt_hes = dt_hea + timedelta(hours=DEMORA_ADUANA) - timedelta(hours=0)
+                    dt_hes = dt_hea + timedelta(hours=DEMORA_ADUANA) - timedelta(hours=1)
                 else:
-                    dt_hes = dt_hea + timedelta(hours=DEMORA_ADUANA) + timedelta(hours=0)
+                    dt_hes = dt_hea + timedelta(hours=DEMORA_ADUANA) + timedelta(hours=1)
                 
                 hea_str = dt_hea.strftime("%H:%M")
                 hes_str = dt_hes.strftime("%H:%M")
@@ -388,7 +388,7 @@ def main():
                         
                         # Al salir de la aduana y cruzar la frontera física, aplicamos la diferencia horaria (-1 hora en Chile)
                         # De esta forma, todo el viaje en Chile se calculará sobre la hora local chilena
-                        demora_acumulada += DEMORA_ADUANA - 1.0
+                        demora_acumulada += DEMORA_ADUANA - 0.0
                         aduana_procesada = True
 
                         if es_hua_hum:
@@ -541,7 +541,7 @@ def main():
                             })
                         
                         # Al cruzar la frontera física al territorio argentino, sumamos 1 hora (huso ARG)
-                        demora_acumulada += DEMORA_ADUANA + 1.0
+                        demora_acumulada += DEMORA_ADUANA + 0.0
                         aduana_procesada = True
 
                 # ---------------------------------------------------------------------
